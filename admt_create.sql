@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS warehouse.location;
 
 
 CREATE TABLE IF NOT EXISTS warehouse.location(
-  	id SERIAL PRIMARY KEY NOT NULL,
+  	location_id SERIAL PRIMARY KEY NOT NULL,
   	city VARCHAR(100) NULL,
   	district VARCHAR(100) NULL,
 	province VARCHAR(100) NULL,
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS warehouse.location(
 
 CREATE TABLE IF NOT EXISTS warehouse.date
 (
-  id              SERIAL PRIMARY KEY NOT NULL,
+  date_id              SERIAL PRIMARY KEY NOT NULL,
   date_actual              DATE NOT NULL,
   day_name                 VARCHAR(9) NOT NULL,
   day_of_week              INT NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS warehouse.date
 CREATE INDEX d_date_date_actual_idx ON date(date_actual);
 
 INSERT INTO warehouse.date
-SELECT TO_CHAR(datum,'yyyymmdd')::INT AS date_dim_id,
+SELECT TO_CHAR(datum,'yyyymmdd')::INT AS date_id,
        datum AS date_actual,
        TO_CHAR(datum,'Day') AS day_name,
        EXTRACT(isodow FROM datum) AS day_of_week,
@@ -76,7 +76,7 @@ ORDER BY 1;
 
 
 CREATE TABLE IF NOT EXISTS warehouse.visitor(
-	id SERIAL PRIMARY KEY NOT NULL,
+	visitor_id SERIAL PRIMARY KEY NOT NULL,
 	visitor_name VARCHAR(100),
 	visitor_telephone VARCHAR(100),
 	visitor_email VARCHAR(100),
@@ -85,50 +85,63 @@ CREATE TABLE IF NOT EXISTS warehouse.visitor(
 	visitor_type VARCHAR(50),
 	visitor_gender VARCHAR(10),
 	visitor_language VARCHAR(50),
-	location_id int REFERENCES warehouse.location(id)
+	location_id int REFERENCES warehouse.location(location_id)
 );
 
 
 CREATE TABLE IF NOT EXISTS warehouse.sales_representative(
-	id SERIAL PRIMARY KEY NOT NULL,
+	sales_rep_id SERIAL PRIMARY KEY NOT NULL,
 	sales_rep_name VARCHAR(100) NOT NULL,
 	sales_rep_telephone VARCHAR(100) NOT NULL,
 	sales_rep_email VARCHAR(100) NOT NULL,
 	sales_rep_gender VARCHAR(10) NOT NULL,
 	sales_rep_language VARCHAR(50) NOT NULL,
-	location_id int REFERENCES warehouse.location(id) NOT NULL
+	location_id int REFERENCES warehouse.location(location_id) NOT NULL
 );
 
 
 CREATE TABLE IF NOT EXISTS warehouse.showroom(
-	id SERIAL PRIMARY KEY NOT NULL,
+	showroom_id SERIAL PRIMARY KEY NOT NULL,
 	showroom_name VARCHAR(100) NOT NULL,
 	showroom_telephone VARCHAR(100) NOT NULL,
 	showroom_address VARCHAR(100) NOT NULL,
 	showroom_size int NOT NULL,
 	showroom_manager VARCHAR(100) NOT NULL,
-	location_id int REFERENCES warehouse.location(id) NOT NULL
+	location_id int REFERENCES warehouse.location(location_id) NOT NULL
 );
 
 
 CREATE TABLE IF NOT EXISTS warehouse.department(
-	id SERIAL PRIMARY KEY NOT NULL,
+	department_id SERIAL PRIMARY KEY NOT NULL,
 	department_name VARCHAR(100) NOT NULL
 );
 
+INSERT INTO warehouse.department (department_name) VALUES
+('Küche'), 
+('Wohnzimmer'), 
+('Schlafzimmer'),  
+('Badezimmer'),
+('Kinder'), 
+('Hotel'), 
+('Büro');
+
+
 CREATE TABLE IF NOT EXISTS warehouse.order(
-	id SERIAL PRIMARY KEY NOT NULL,
+	order_id SERIAL PRIMARY KEY NOT NULL,
 	order_number VARCHAR(100) NOT NULL,
 	order_total_price numeric NOT NULL
 );
 
 
 CREATE TABLE IF NOT EXISTS warehouse.showroom_visit(
-	id SERIAL PRIMARY KEY NOT NULL,
-	visitor_id int REFERENCES warehouse.visitor(id) NOT NULL,
-	sales_rep_id int REFERENCES warehouse.sales_representative(id) NOT NULL,
-	showroom_id int REFERENCES warehouse.showroom(id) NOT NULL,
-	department_id int REFERENCES warehouse.department(id) NOT NULL,
-	date_id int REFERENCES warehouse.date(id) NOT NULL,
-	order_id int REFERENCES warehouse.order(id)
+	showroom_visit_id SERIAL PRIMARY KEY NOT NULL,
+	visitor_id int REFERENCES warehouse.visitor(visitor_id) NOT NULL,
+	sales_rep_id int REFERENCES warehouse.sales_representative(sales_rep_id) NOT NULL,
+	showroom_id int REFERENCES warehouse.showroom(showroom_id) NOT NULL,
+	department_id int REFERENCES warehouse.department(department_id) NOT NULL,
+	date_id int REFERENCES warehouse.date(date_id) NOT NULL,
+	order_id int REFERENCES warehouse.order(order_id),
+
+	duration int NOT NULL,
+	number_of_visitors int NOT NULL
 );
