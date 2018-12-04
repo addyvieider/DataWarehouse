@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS warehouse.sales_representative;
 DROP TABLE IF EXISTS warehouse.date;
 DROP TABLE IF EXISTS warehouse.department;
 DROP TABLE IF EXISTS warehouse.order;
+DROP TABLE IF EXISTS warehouse.visitor_type;
 
 DROP INDEX IF EXISTS d_date_date_actual_idx;
 DROP TABLE IF EXISTS warehouse.location;
@@ -64,7 +65,7 @@ SELECT TO_CHAR(datum,'yyyymmdd')::INT AS date_id,
          WHEN EXTRACT(quarter FROM datum) = 3 THEN 'Third'
          WHEN EXTRACT(quarter FROM datum) = 4 THEN 'Fourth'
        END AS quarter_name,
-	   EXTRACT(isoyear FROM datum) AS year_actual,
+	   EXTRACT(year FROM datum) AS year_actual,
        TO_CHAR(datum,'mmyyyy') AS mmyyyy,
        TO_CHAR(datum,'mmddyyyy') AS mmddyyyy,
        FALSE,
@@ -82,7 +83,6 @@ CREATE TABLE IF NOT EXISTS warehouse.visitor(
 	visitor_email VARCHAR(100),
 	customer_number VARCHAR(100),
 	visitor_sector VARCHAR(50),
-	visitor_type VARCHAR(50),
 	visitor_gender VARCHAR(10),
 	visitor_language VARCHAR(50),
 	location_id int REFERENCES warehouse.location(location_id)
@@ -133,14 +133,26 @@ CREATE TABLE IF NOT EXISTS warehouse.order(
 );
 
 
+CREATE TABLE IF NOT EXISTS warehouse.visitor_type(
+	visitor_type_id SERIAL PRIMARY KEY NOT NULL,
+	visitor_type_name VARCHAR(100) NOT NULL
+);
+
+INSERT INTO warehouse.visitor_type (visitor_type_name) VALUES
+('Single'), 
+('Pair'), 
+('Family'),  
+('Group');
+
 CREATE TABLE IF NOT EXISTS warehouse.showroom_visit(
 	showroom_visit_id SERIAL PRIMARY KEY NOT NULL,
-	visitor_id int REFERENCES warehouse.visitor(visitor_id) NOT NULL,
+	visitor_id int REFERENCES warehouse.visitor(visitor_id),
 	sales_rep_id int REFERENCES warehouse.sales_representative(sales_rep_id) NOT NULL,
 	showroom_id int REFERENCES warehouse.showroom(showroom_id) NOT NULL,
 	department_id int REFERENCES warehouse.department(department_id) NOT NULL,
 	date_id int REFERENCES warehouse.date(date_id) NOT NULL,
 	order_id int REFERENCES warehouse.order(order_id),
+	visitor_type_id int REFERENCES warehouse.visitor_type(visitor_type_id),
 
 	duration int NOT NULL,
 	number_of_visitors int NOT NULL
