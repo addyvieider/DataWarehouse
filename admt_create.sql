@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS warehouse.date
   holiday_name			   VARCHAR(50)
 );
 
-CREATE INDEX d_date_date_actual_idx ON date(date_actual);
+CREATE INDEX d_date_date_actual_idx ON warehouse.date(date_actual);
 
 INSERT INTO warehouse.date
 SELECT TO_CHAR(datum,'yyyymmdd')::INT AS date_id,
