@@ -1,0 +1,106 @@
+%++++++++++++++++++++++++++++++++++++++++
+% Don't modify this section unless you know what you're doing!
+\documentclass[letterpaper,12pt]{article}
+\usepackage{tabularx} % extra features for tabular environment
+\usepackage{amsmath}  % improve math presentation
+\usepackage{graphicx} % takes care of graphic including machinery
+\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+\usepackage{cite} % takes care of citations
+\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\usepackage[numbib,nottoc]{tocbibind}
+\usepackage{longtable}
+\usepackage{float}
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor=blue         
+}
+%++++++++++++++++++++++++++++++++++++++++
+
+
+\begin{document}
+
+\title{ADMT 2018 - Project }
+\author{Group 02: Andreas Vieider (13177) & Laurin Stricker (13412)}
+\date{\today}
+\maketitle
+
+% \begin{abstract}
+
+% \end{abstract}
+
+
+\section{Introduction}
+
+The domain of our fictional company is the one of furniture production and retail. The company is located in the province of Bolzano and has several showrooms in the area and one production center.
+
+\subsection{Business processes}
+
+\subsubsection{CRM - Showroom visit}
+
+One CRM process is the collection of data about visitors at the different showrooms. A visitor can either be one who is just looking around without intention of buying anything (Seeleute), a future potential customer or an already existing customer. A visit can lead to an order.
+
+Business questions:
+\begin{itemize}
+        \item Which is the best running showroom (most visitors, most orders, etc.)
+        \item Where are the customers from (with different granularity)
+        \item Which department are the customers the most interested in
+        \item Compare the number of visitors to the number of customers for a time period and/or showroom
+\end{itemize}
+
+\subsubsection{Production}
+
+The company logs every step in the production process, especially duration, defects and machine failures.
+
+Business questions:
+\begin{itemize}
+        \item What is the average time to produce a particular product
+        \item Which is the product with the highest/lowest error rate
+        \item How much effort/time is spent per order
+        \item Which orders/products generated the most machine failures
+\end{itemize}
+
+\section{Conceptual Design}
+
+\begin{longtable}[c]{L{3cm}L{4cm}L{3cm}}
+        \caption{Fact table} 
+        \label{tab:tabFactTable} \\
+        
+        \toprule
+        Fact & Dimensions & Measures \\
+        \midrule
+        \endfirsthead
+        \toprule
+        Fact & Dimensions & Measures \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+      
+        Showroom visit & Date, Showroom, Visitor, Order, Detail, Department, Sales representative & Duration, Amount of people \\
+        \hline
+        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration, Raw material cost \\
+      
+\end{longtable}
+
+% The inputs (shown in Figure~\ref{fig:input}) are. 
+
+% \begin{figure}[H] 
+%   \centering
+%       \includegraphics[width=\columnwidth]{figures/input.PNG}
+%         \caption{
+%                 \label{fig:input}  
+%                 Input
+%         }
+% \end{figure}
+
+\section{Conclusions}
+In conclusion, the best solution was submitted using k=15 and without de-biasing with a score of about 0.079.
+
+\bibliography{references}{}
+\bibliographystyle{plain}
+
+
+\end{document}
