@@ -75,6 +75,17 @@ FROM (SELECT '2010-01-01'::DATE+ SEQUENCE.DAY AS datum
       GROUP BY SEQUENCE.DAY) DQ
 ORDER BY 1;	
 
+Alter Table warehouse.date
+Add season varchar(20);
+
+UPDATE warehouse.date
+	SET season = case
+					when month_actual in (12, 1, 2) then 'winter'
+      				when month_actual in (3, 4, 5) then 'spring'
+      				when month_actual in (6, 7, 8) then 'summer'
+      				when month_actual in (9, 10, 11) then 'autumn'
+				end;
+
 
 CREATE TABLE IF NOT EXISTS warehouse.visitor(
 	visitor_id SERIAL PRIMARY KEY NOT NULL,
