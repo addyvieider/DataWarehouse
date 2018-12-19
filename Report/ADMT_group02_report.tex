@@ -250,7 +250,7 @@ GROUP by v.visitor_sector
         \addlinespace
         \endhead
         \hline
-        1282369	& 570822 & 6 & 5 & 4 & 20180323 & 2 & 90 & 2 \\
+        1282369	& \color{red} 570822 & 6 & \color{red} 5 & 4 & \color{red}20180323 & 2 & 90 & 2 \\
         \hline
         1282370	& 570823 & 5 & 5 & 2 & 20160107 & 4 & 167 & 4 \\
         \hline
@@ -281,6 +281,101 @@ GROUP by v.visitor_sector
         1282383 & 570827 & 12 & 5 & 2 & 20121012 & 3 & 71 & 7 \\
         \hline
 \end{longtable}
+
+\begin{longtable}{p{1.3cm}p{1.6cm}p{1.8cm}p{3.6cm}p{2cm}p{.7cm}p{1.2cm}p{1.5cm}}
+        \caption{Visitor}
+        \hline
+        \toprule
+        ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
+        \midrule
+        \endfirsthead
+        \toprule
+        ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        \color{red} 570822 & Melanie Eder &  &  & \color{red} Gastronomy & F & german & 9 \\
+        \hline
+        570823 & Julian Schmidt &  & j.schmidt@email.com & \color{red} Private & M & german & 9 \\
+        \hline
+        570824 & Marcel Schwarz & 306 9579783 & m.schwarz@email.com & \color{red} Hotel & M & german & 9 \\
+        \hline
+        570825 & Denise Fuchs & 396 5305260 & d.fuchs@email.com & \color{red} Public & F & german & 9 \\
+        \hline
+        570826 & Sophie Wimmer & 322 7641804 & s.wimmer@email.com & \color{red} Private & F & german & 9 \\
+        \hline
+\end{longtable} 
+
+\begin{longtable}{p{0.25cm}p{3.9cm}p{2.2cm}p{2.9cm}p{.7cm}p{3.1cm}p{1.1cm}}
+        \caption{Showroom}
+        \hline
+        \toprule
+        ID & Name & Telephone & Address & Size & Manager & Loc.\_id \\
+        \midrule
+        \endfirsthead
+        \toprule
+        ID & Name & Telephone & Address & Size & Manager & Loc.\_id \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        1 & Showroom-LATSCH & 0477 069655 & Herrengasse 8 & 581 & Paul Wolf & 42 \\
+        \hline
+        2 & Showroom-M{\"U}HLBACH & 0474 039227 & Platzerstr. 58 & 349 & Christoph Steiner & 54 \\
+        \hline
+        3 & Showroom-M{\"O}LTEN & 0470 429676 & Vernag 97 & 857 & Christoph Steiner & 51 \\
+        \hline
+        4 & Showroom-SALURN & 0475 248487 & Gewerbezone 44 & 198 & Johannes Egger & 77 \\
+        \hline
+        \color{red} 5 & \color{red} Showroom-BOZEN & 0473 723301 & St. Urban 73 & 447 & Sabine Schneider & 9 \\
+        \hline
+\end{longtable} 
+
+\begin{longtable}{p{1.6cm}p{2.1cm}p{1.4cm}p{1.5cm}p{1.6cm}p{1cm}p{1cm}p{1.1cm}p{1.2cm}}
+        \caption{Date}
+        \hline
+        \toprule
+        ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
+        \midrule
+        \endfirsthead
+        \toprule
+        ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        20160102 & 2010-01-02 & 6 & Saturday & January & First & 2016 & false & Winter \\
+        20170103 & 2010-01-03 & 7 & Sunday & January & First & 2017 & false & Winter \\
+        20180108 & \color{red} 2018-01-08 & 5 & Friday & January & First & 2018 & false & Winter \\
+        20190109 & 2010-01-09 & 6 & Saturday & January & First & 2019 & false & Winter \\
+        20200110 & 2010-01-10 & 7 & Sunday & January & First & 2020 & false & Winter \\
+\hline
+\end{longtable} 
+
+\begin{longtable}{p{3cm}p{4cm}}
+        \caption{Result of the query}
+        \hline
+        \toprule
+        Sector & Number of visitors \\
+        \midrule
+        \endfirsthead
+        \toprule
+        Sector & Number of visitors \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        Gastronomy & 2985 \\
+        Hotel & 4223 \\
+        Private & 5629 \\
+        Public & 1371 \\
+\hline
+\end{longtable} 
 
 \subsubsection{Fact: Production}
 
