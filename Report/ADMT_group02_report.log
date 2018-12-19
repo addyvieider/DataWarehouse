@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.15)  18 DEC 2018 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.15)  19 DEC 2018 11:43
 entering extended mode
 **"c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex"
 ("c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex"
@@ -262,38 +262,59 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box32
 \@float@everytoks=\toks25
 \@floatcapt=\box33
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 19.
+) ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count119
+\lst@gtempboxa=\box34
+\lst@token=\toks26
+\lst@length=\count120
+\lst@currlwidth=\dimen134
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen135
+\lst@width=\dimen136
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen137
+ ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box35
+) ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+Package hyperref Info: Option `colorlinks' set `true' on input line 20.
  (ADMT_group02_report.aux)
 \openout1 = `ADMT_group02_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen134
-\scratchbox=\box34
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen135
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count127
+\scratchdimen=\dimen138
+\scratchbox=\box36
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen139
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks28
 ) ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
@@ -338,7 +359,7 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box35
+\AtBeginShipoutBox=\box37
 ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
  ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
@@ -346,103 +367,43 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 23.
+Package hyperref Info: Link coloring ON on input line 24.
  ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count125
+\c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 \@outlinefile=\write3
 \openout3 = `ADMT_group02_report.out'.
 
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:29: Extra alignment tab has been changed to \cr
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
-("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+\c@lstlisting=\count134
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
+ ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
 
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:67: Package array Error:  Illegal pream-token (L): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:67: Package array Error:  Illegal pream-token (3cm): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:67: Package array Error:  Illegal pream-token (L): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:67: Package array Error:  Illegal pream-token (4cm): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:67: Package array Error:  Illegal pream-token (L): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:67: Package array Error:  Illegal pream-token (3cm): `c' used.
-
-See the array package documentation for explanation.
-Type  H <return>  for immediate help
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:71: Undefined control sequence
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:72: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:73: Undefined control sequence
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:74: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:75: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:77: Undefined control sequence
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:76: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -463,28 +424,534 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:80: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (235.77557pt too wide) in alignment at lines 80--86
- [] [] [] [] [] [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+[]|\OT1/cmr/m/n/12 Duration (AVG),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\OT1/cmr/m/n/12 Amount of peo-ple
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 85--85
+[]|\OT1/cmr/m/n/12 Start Date, End date, Prod-
  []
 
 [1
 
 {C:/Users/laurin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \vbox (badness 10000) detected at line 87
+ []
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 1 on input line 86.
+<../images/DFM_Showroom_Simple.png, id=16, 407.5225pt x 282.05376pt>
+File: ../images/DFM_Showroom_Simple.png Graphic file (type png)
+<use ../images/DFM_Showroom_Simple.png>
+Package pdftex.def Info: ../images/DFM_Showroom_Simple.png  used on input line 91.
+(pdftex.def)             Requested size: 264.88647pt x 183.33276pt.
+<../images/DFM_Production_Simple.png, id=18, 437.635pt x 294.09875pt>
+File: ../images/DFM_Production_Simple.png Graphic file (type png)
+<use ../images/DFM_Production_Simple.png>
+Package pdftex.def Info: ../images/DFM_Production_Simple.png  used on input line 100.
+(pdftex.def)             Requested size: 284.45937pt x 191.16191pt.
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:113: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-No file ADMT_group02_report.bbl.
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:115: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:117: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:119: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:120: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:121: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:134: Use of \line doesn't match its definition
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:137: Misplaced \noalign
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:138: Misplaced \omit
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:138: Extra alignment tab has been changed to \cr
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.138 \end{longtable}
+                     pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.138 \end{longtable}
+                      <../images/DFM_Showroom_Simple.png> <../images/DFM_Production_Simple.png>]
+Underfull \vbox (badness 10000) detected at line 138
+ []
+
+<../images/DFM_Showroom.png, id=29, 809.0225pt x 447.6725pt>
+File: ../images/DFM_Showroom.png Graphic file (type png)
+<use ../images/DFM_Showroom.png>
+Package pdftex.def Info: ../images/DFM_Showroom.png  used on input line 142.
+(pdftex.def)             Requested size: 469.75502pt x 259.94395pt.
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:155: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:157: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:159: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:161: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:162: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:163: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:176: Use of \line doesn't match its definition
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+Underfull \vbox (badness 10000) detected at line 180
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.180 \end{longtable}
+                      <../images/DFM_Showroom.png>]
+<../images/DFM_Production.png, id=40, 747.79375pt x 413.545pt>
+File: ../images/DFM_Production.png Graphic file (type png)
+<use ../images/DFM_Production.png>
+Package pdftex.def Info: ../images/DFM_Production.png  used on input line 184.
+(pdftex.def)             Requested size: 469.75502pt x 259.7838pt.
+<../images/Starschema_Showroom_visit.png, id=41, 814.04124pt x 554.07pt>
+File: ../images/Starschema_Showroom_visit.png Graphic file (type png)
+<use ../images/Starschema_Showroom_visit.png>
+Package pdftex.def Info: ../images/Starschema_Showroom_visit.png  used on input line 197.
+(pdftex.def)             Requested size: 469.75502pt x 319.73758pt.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.203 
+       <../images/DFM_Production.png>]
+<../images/Starschema_Production.png, id=48, 763.85374pt x 442.65375pt>
+File: ../images/Starschema_Production.png Graphic file (type png)
+<use ../images/Starschema_Production.png>
+Package pdftex.def Info: ../images/Starschema_Production.png  used on input line 206.
+(pdftex.def)             Requested size: 469.75502pt x 272.22029pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.212 
+       <../images/Starschema_Showroom_visit.png>] ("C:\Users\laurin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 229.
+
+Overfull \hbox (48.94951pt too wide) in paragraph at lines 231--232
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.89919pt too wide) in paragraph at lines 232--233
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.71931pt too wide) in paragraph at lines 235--236
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:241: Misplaced \noalign
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:242: Misplaced \omit
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:242: Extra alignment tab has been changed to \cr
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:242: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (6.32675pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/12 Visitor[]id| 
+ []
+
+
+Overfull \hbox (8.87904pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/12 Sales[]rep[]id| 
+ []
+
+
+Overfull \hbox (6.26564pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/12 Showr.[]id| 
+ []
+
+
+Overfull \hbox (7.49792pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/12 Depart.[]id| 
+ []
+
+
+Overfull \hbox (6.31552pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/12 Type[]id| 
+ []
+
+
+Overfull \hbox (10.61554pt too wide) in paragraph at lines 243--243
+[]|\OT1/cmr/m/n/12 Duration| 
+ []
+
+
+Overfull \hbox (7.12576pt too wide) in paragraph at lines 243--244
+[]|\OT1/cmr/m/n/12 Nr.[]of[]visit.| 
+ []
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:244: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (22.35713pt too wide) in alignment at lines 239--245
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:246: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (6.32675pt too wide) in paragraph at lines 247--247
+[]|\OT1/cmr/m/n/12 Visitor[]id| 
+ []
+
+
+Overfull \hbox (8.87904pt too wide) in paragraph at lines 247--247
+[]|\OT1/cmr/m/n/12 Sales[]rep[]id| 
+ []
+
+
+Overfull \hbox (6.26564pt too wide) in paragraph at lines 247--247
+[]|\OT1/cmr/m/n/12 Showr.[]id| 
+ []
+
+
+Overfull \hbox (7.49792pt too wide) in paragraph at lines 247--247
+[]|\OT1/cmr/m/n/12 Depart.[]id| 
+ []
+
+
+Overfull \hbox (6.31552pt too wide) in paragraph at lines 247--247
+[]|\OT1/cmr/m/n/12 Type[]id| 
+ []
+
+
+Overfull \hbox (10.61554pt too wide) in paragraph at lines 247--247
+[]|\OT1/cmr/m/n/12 Duration| 
+ []
+
+
+Overfull \hbox (7.12576pt too wide) in paragraph at lines 247--248
+[]|\OT1/cmr/m/n/12 Nr.[]of[]visit.| 
+ []
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:248: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:249: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex:250: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (22.35713pt too wide) in alignment at lines 245--251
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 253--253
+[]|\OT1/cmr/m/n/12 1282369| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 253--253
+[]|\OT1/cmr/m/n/12 20180323| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 255--255
+[]|\OT1/cmr/m/n/12 1282370| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 255--255
+[]|\OT1/cmr/m/n/12 20160107| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 257--257
+[]|\OT1/cmr/m/n/12 1282371| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 257--257
+[]|\OT1/cmr/m/n/12 20130526| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 259--259
+[]|\OT1/cmr/m/n/12 1282372| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 259--259
+[]|\OT1/cmr/m/n/12 20150806| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 261--261
+[]|\OT1/cmr/m/n/12 1282373| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 261--261
+[]|\OT1/cmr/m/n/12 20121116| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 263--263
+[]|\OT1/cmr/m/n/12 1282374| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 263--263
+[]|\OT1/cmr/m/n/12 20171210| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 265--265
+[]|\OT1/cmr/m/n/12 1282375| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 265--265
+[]|\OT1/cmr/m/n/12 20110212| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 267--267
+[]|\OT1/cmr/m/n/12 1282376| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 267--267
+[]|\OT1/cmr/m/n/12 20130811| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 269--269
+[]|\OT1/cmr/m/n/12 1282377| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 269--269
+[]|\OT1/cmr/m/n/12 20170507| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 271--271
+[]|\OT1/cmr/m/n/12 1282378| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 271--271
+[]|\OT1/cmr/m/n/12 20111127| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 273--273
+[]|\OT1/cmr/m/n/12 1282379| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 273--273
+[]|\OT1/cmr/m/n/12 20150425| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 275--275
+[]|\OT1/cmr/m/n/12 1282380| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 275--275
+[]|\OT1/cmr/m/n/12 20130208| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 277--277
+[]|\OT1/cmr/m/n/12 1282381| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 277--277
+[]|\OT1/cmr/m/n/12 20111214| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 279--279
+[]|\OT1/cmr/m/n/12 1282382| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 279--279
+[]|\OT1/cmr/m/n/12 20170202| 
+ []
+
+
+Overfull \hbox (1.2909pt too wide) in paragraph at lines 281--281
+[]|\OT1/cmr/m/n/12 1282383| 
+ []
+
+
+Overfull \hbox (7.16583pt too wide) in paragraph at lines 281--281
+[]|\OT1/cmr/m/n/12 20121012| 
+ []
+
+
+Overfull \hbox (22.35713pt too wide) in alignment at lines 251--283
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 283
+ []
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.283 \end{longtable}
+                      <../images/Starschema_Production.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
  (ADMT_group02_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 
 
 Package rerunfilecheck Warning: File `ADMT_group02_report.out' has changed.
@@ -493,24 +960,24 @@ Package rerunfilecheck Warning: File `ADMT_group02_report.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `ADMT_group02_report.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  DE275D1CF084E8E1A45B4355387BF799;366.
+(rerunfilecheck)             After:  FE6FCDB687CDF940C2911D10D9C8C80F;786.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  ) 
 Here is how much of TeX's memory you used:
- 6504 strings out of 493305
- 96826 string characters out of 3129367
- 190226 words of memory out of 3000000
- 9990 multiletter control sequences out of 15000+200000
- 7078 words of font info for 26 fonts, out of 3000000 for 9000
+ 8031 strings out of 493305
+ 119311 string characters out of 3129367
+ 271533 words of memory out of 3000000
+ 11463 multiletter control sequences out of 15000+200000
+ 7548 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,6n,32p,423b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ADMT_group02_report.pdf (2 pages, 56116 bytes).
+ 28i,7n,42p,494b,1208s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on ADMT_group02_report.pdf (7 pages, 214466 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

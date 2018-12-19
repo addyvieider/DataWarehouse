@@ -10,6 +10,7 @@
 \usepackage[numbib,nottoc]{tocbibind}
 \usepackage{longtable}
 \usepackage{float}
+\usepackage{listings}
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
 	linkcolor=blue,        % color of internal links
@@ -22,8 +23,8 @@
 
 \begin{document}
 
-\title{ADMT 2018 - Project }
-\author{Group 02: Andreas Vieider (13177) & Laurin Stricker (13412)}
+\title{ADMT 2018 - Project report}
+\author{Group 02: Andreas Vieider (13177) \& Laurin Stricker (13412)}
 \date{\today}
 \maketitle
 
@@ -64,10 +65,10 @@ Business questions:
 
 \section{Conceptual Design}
 
-\begin{longtable}[c]{L{3cm}L{4cm}L{3cm}}
-        \caption{Fact table} 
+\begin{longtable}{p{3cm}p{6cm}p{4cm}}
+        \caption{Fact table}
         \label{tab:tabFactTable} \\
-        
+        \hline
         \toprule
         Fact & Dimensions & Measures \\
         \midrule
@@ -78,29 +79,209 @@ Business questions:
         \longtableheader
         \addlinespace
         \endhead
-      
-        Showroom visit & Date, Showroom, Visitor, Order, Detail, Department, Sales representative & Duration, Amount of people \\
         \hline
-        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration, Raw material cost \\
-      
+        Showroom visit & Date, Showroom, Visitor, Order, Detail, Department, Sales representative & Duration (AVG), Amount of people (SUM, AVG) \\
+        \hline
+        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (AVG), Raw material cost (AVG) \\
+        \hline
 \end{longtable}
 
-% The inputs (shown in Figure~\ref{fig:input}) are. 
+\begin{figure}[H] 
+        \centering
+        \includegraphics[scale=0.65]{../images/DFM_Showroom_Simple.png}
+        \caption{
+                \label{fig:showroom}  
+                DFM of the showroom visit
+        }
+\end{figure}
 
-% \begin{figure}[H] 
-%   \centering
-%       \includegraphics[width=\columnwidth]{figures/input.PNG}
-%         \caption{
-%                 \label{fig:input}  
-%                 Input
-%         }
-% \end{figure}
+\begin{figure}[H] 
+        \centering
+        \includegraphics[scale=0.65]{../images/DFM_Production_Simple.png}
+        \caption{
+                \label{fig:production}  
+                DFM of the production
+        }
+\end{figure}
 
-\section{Conclusions}
-In conclusion, the best solution was submitted using k=15 and without de-biasing with a score of about 0.079.
+\subsection{Showroom visit}
 
-\bibliography{references}{}
-\bibliographystyle{plain}
+\begin{longtable}{p{4cm}p{9cm}}
+        \caption{Fact table}
+        \label{tab:tabShowroom} \\
+        \hline
+        \toprule
+        Dimension & Attributes \\
+        \midrule
+        \endfirsthead
+        \toprule
+        Dimension & Attributes \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        Date & Day, Month, Year, Quartal, Week, Day of Week, Season, Holiday \\
+        \hline
+        Showroom & Name, City, District, Province, Region, Country, Manager, Address, Telephone, Size \\
+        \hline
+        Visitor & Name, City, District, Province, Region, Country, Language, Telephone, E-Mail, Type, Sector, Gender, Customer number \\
+        \hline
+        Order & Order Number, Total Price, Discount \\
+        \hline
+        Order Detail & Quantity, Quantity Type, Product, Unit price, Total price \\
+        \line
+        Department & Name \\
+        \hline
+        Sales representative & Name, City, District, Province, Region, Country, Language, Telephone, E-Mail, Gender
+        \hline
+\end{longtable}
 
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/DFM_Showroom.png}
+        \caption{
+                \label{fig:showroomAttributes}  
+                DFM of the showroom visit with attributes 
+        }
+\end{figure}
+
+\subsection{Production}
+
+\begin{longtable}{p{4cm}p{9cm}}
+        \caption{Fact table}
+        \label{tab:tabProduction} \\
+        \hline
+        \toprule
+        Dimension & Attributes \\
+        \midrule
+        \endfirsthead
+        \toprule
+        Dimension & Attributes \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        Start date & Day, Month, Year, Week \\
+        \hline
+        End date & Day, Month, Year, Week \\
+        \hline
+        Product & Product number, Name, Department, Category \\
+        \hline
+        Production stage & Name \\
+        \hline
+        Machine & Name, Purchasing year, Vendor \\
+        \line
+        Quality control & Grade \\
+        \hline
+        Operator & Name \\
+        \hline
+\end{longtable}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/DFM_Production.png}
+        \caption{
+                \label{fig:productionAttributes}  
+                DFM of the production with attributes 
+        }
+\end{figure}
+
+\section{Logical Design}
+
+\subsection{Star schemas}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/Starschema_Showroom_visit.png}
+        \caption{
+                \label{fig:starschemaShowroom}  
+                Star schema of the showroom visit
+        }
+\end{figure}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/Starschema_Production.png}
+        \caption{
+                \label{fig:starschemaProduction}  
+                Star schema of the production
+        }
+\end{figure}
+
+\subsection{Two business questions}
+
+\subsubsection{Fact: Showroom visit}
+
+In order to be able to make the right marketing decisions, it is very important for the management to know from which sector the various customers or interested parties of a particular showroom come from. So, for example the management wants to know, from which sectors the various customers of showroom "Showroom-Bozen" were coming in the last year.
+
+\bigskip
+\noindent SQL query:
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+SELECT v.visitor_sector, count(*)
+FROM warehouse.visitor v
+INNER JOIN warehouse.showroom_visit sv on v.visitor_id = sv.visitor_id
+INNER JOIN warehouse.showroom s on sv.showroom_id = s.showroom_id
+INNER JOIN warehouse.date d on sv.date_id = d.date_id
+WHERE s.showroom_name = 'Showroom-BOZEN' 
+AND d.date_actual >= '2018-01-01' AND d.date_actual <= '2018-12-31'
+GROUP by v.visitor_sector
+\end{lstlisting}
+
+\begin{longtable}{p{1.4cm}p{1.5cm}p{1.8cm}p{1.5cm}p{1.6cm}p{1.4cm}p{1.2cm}p{1.25cm}p{1.85cm}}
+        \caption{Showroom visit}
+        \hline
+        \toprule
+        ID & Visitor\_id & Sales\_rep\_id & Showr.\_id & Depart.\_id & Date\_id & Type\_id & Duration & Nr.\_of\_visit. \\
+        \midrule
+        \endfirsthead
+        \toprule
+        ID & Visitor\_id & Sales\_rep\_id & Showr.\_id & Depart.\_id & Date\_id & Type\_id & Duration & Nr.\_of\_visit. \\
+        \midrule
+        \longtableheader
+        \addlinespace
+        \endhead
+        \hline
+        1282369	& 570822 & 6 & 5 & 4 & 20180323 & 2 & 90 & 2 \\
+        \hline
+        1282370	& 570823 & 5 & 5 & 2 & 20160107 & 4 & 167 & 4 \\
+        \hline
+        1282371	& 570823 & 7 & 5 & 1 & 20130526 & 3 & 173 & 6 \\
+        \hline
+        1282372	& 570823 & 11 & 5 & 6 & 20150806  & 3 & 100 & 10 \\
+        \hline
+        1282373	& 570823 & 7 & 5 & 1 & 20121116 & 4 & 169 & 5 \\
+        \hline
+        1282374	& 570824 & 7 & 5 & 1 & 20171210 & 3 & 57 & 3 \\
+        \hline
+        1282375	& 570824 & 18 & 5 & 2 & 20110212 & 3 & 166 & 7 \\
+        \hline
+        1282376	& 570824 & 9 & 5 & 4 & 20130811  & 3 & 84 & 5 \\
+        \hline
+        1282377	& 570825 & 11 & 5 & 6 & 20170507 & 3 & 184 & 10 \\
+        \hline
+        1282378	& 570825 & 12 & 5 & 2 & 20111127 & 2 & 26 & 2 \\
+        \hline
+        1282379	& 570825 & 7 & 5 & 1 & 20150425 & 3 & 141 & 10 \\
+        \hline
+        1282380	& 570826 & 11 & 5 & 6 & 20130208 & 2 & 8 & 2 \\
+        \hline
+        1282381	& 570826 & 12 & 5 & 1 & 20111214 & 3 & 61 & 8 \\
+        \hline
+        1282382	& 570827 & 12 & 5 & 1 & 20170202 & 3 & 139 & 9 \\
+        \hline
+        1282383 & 570827 & 12 & 5 & 2 & 20121012 & 3 & 71 & 7 \\
+        \hline
+\end{longtable}
+
+\subsubsection{Fact: Production}
 
 \end{document}
