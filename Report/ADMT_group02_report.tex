@@ -226,14 +226,14 @@ In order to be able to make the right marketing decisions, it is very important 
         numberstyle=\tiny,
         commentstyle=\color{gray}
      ]
-SELECT v.visitor_sector, count(*)
-FROM warehouse.visitor v
-INNER JOIN warehouse.showroom_visit sv on v.visitor_id = sv.visitor_id
-INNER JOIN warehouse.showroom s on sv.showroom_id = s.showroom_id
-INNER JOIN warehouse.date d on sv.date_id = d.date_id
-WHERE s.showroom_name = 'Showroom-BOZEN' 
-AND d.date_actual >= '2018-01-01' AND d.date_actual <= '2018-12-31'
-GROUP by v.visitor_sector
+        SELECT v.visitor_sector, count(*)
+        FROM warehouse.visitor v
+        INNER JOIN warehouse.showroom_visit sv on v.visitor_id = sv.visitor_id
+        INNER JOIN warehouse.showroom s on sv.showroom_id = s.showroom_id
+        INNER JOIN warehouse.date d on sv.date_id = d.date_id
+        WHERE s.showroom_name = 'Showroom-BOZEN' 
+        AND d.date_actual >= '2018-01-01' AND d.date_actual <= '2018-12-31'
+        GROUP by v.visitor_sector
 \end{lstlisting}
 
 \begin{longtable}{p{1.4cm}p{1.5cm}p{1.8cm}p{1.5cm}p{1.6cm}p{1.4cm}p{1.2cm}p{1.25cm}p{1.85cm}}
@@ -378,5 +378,25 @@ GROUP by v.visitor_sector
 \end{longtable} 
 
 \subsubsection{Fact: Production}
+
+The company's quality control is always interested in optimizing processes. It is therefore interesting for employees to know whether a machine has significant time differences in production in relation to a particular product in comparison to the other machines.
+
+\bigskip
+\noindent SQL query:
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+     SELECT m.machine_name, avg(p.duration) as avg_production_duration
+     FROM warehouse.machine m
+     INNER JOIN warehouse.production p on m.machine_id = p.machine_id
+     INNER JOIN warehouse.product o on p.product_id = o.product_id
+     WHERE o.product_name = 'Table X'
+     GROUP BY m.machine_id
+\end{lstlisting}
 
 \end{document}
