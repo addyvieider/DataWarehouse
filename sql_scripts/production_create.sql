@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS warehouse.product(
   	product_name VARCHAR(100) NOT NULL,
   	product_number int NOT NULL,
   	product_department VARCHAR(100) NOT NULL,
-  	product_category VARCHAR(100) NOT NULL,
+  	product_category VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS warehouse.production(
