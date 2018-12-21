@@ -1,25 +1,11 @@
-%++++++++++++++++++++++++++++++++++++++++
-% Don't modify this section unless you know what you're doing!
-\documentclass[letterpaper,12pt]{article}
-\usepackage{tabularx} % extra features for tabular environment
-\usepackage{amsmath}  % improve math presentation
-\usepackage{graphicx} % takes care of graphic including machinery
-\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
-\usepackage{cite} % takes care of citations
-\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
-\usepackage[numbib,nottoc]{tocbibind}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{listings}
-\hypersetup{
-	colorlinks=true,       % false: boxed links; true: colored links
-	linkcolor=blue,        % color of internal links
-	citecolor=blue,        % color of links to bibliography
-	filecolor=magenta,     % color of file links
-	urlcolor=blue         
+% spell-checker:disable
+\documentclass[11pt,a4paper,twoside]{article}
+\input{preamble}
+\usepackage{epigraph}
+\usepackage{multirow}
+\lstset{
+  basicstyle=\ttfamily
 }
-%++++++++++++++++++++++++++++++++++++++++
-
 
 \begin{document}
 
@@ -67,7 +53,6 @@ Business questions:
 \begin{longtable}{p{3cm}p{6cm}p{4cm}}
         \caption{Fact table}
         \label{tab:tabFactTable} \\
-        \hline
         \toprule
         Fact & Dimensions & Measures \\
         \midrule
@@ -108,7 +93,6 @@ Business questions:
 \begin{longtable}{p{4cm}p{9cm}}
         \caption{Fact table}
         \label{tab:tabShowroom} \\
-        \hline
         \toprule
         Dimension & Attributes \\
         \midrule
@@ -141,7 +125,7 @@ Business questions:
         \includegraphics[width=\columnwidth]{../images/DFM_Showroom.png}
         \caption{
                 \label{fig:showroomAttributes}  
-                DFM of the showroom visit with attributes 
+                Dimension fact model (DFM) of the showroom visit with attributes 
         }
 \end{figure}
 
@@ -150,7 +134,6 @@ Business questions:
 \begin{longtable}{p{4cm}p{9cm}}
         \caption{Fact table}
         \label{tab:tabProduction} \\
-        \hline
         \toprule
         Dimension & Attributes \\
         \midrule
@@ -183,7 +166,7 @@ Business questions:
         \includegraphics[width=\columnwidth]{../images/DFM_Production.png}
         \caption{
                 \label{fig:productionAttributes}  
-                DFM of the production with attributes 
+                Dimension fact model (DFM) of the production with attributes 
         }
 \end{figure}
 
@@ -237,7 +220,6 @@ In order to be able to make the right marketing decisions, it is very important 
 
 \begin{longtable}{p{1.4cm}p{1.5cm}p{1.8cm}p{1.5cm}p{1.6cm}p{1.4cm}p{1.2cm}p{1.25cm}p{1.85cm}}
         \caption{Showroom visit}
-        \hline
         \toprule
         ID & Visitor\_id & Sales\_rep\_id & Showr.\_id & Depart.\_id & Date\_id & Type\_id & Duration & Nr.\_of\_visit. \\
         \midrule
@@ -283,7 +265,6 @@ In order to be able to make the right marketing decisions, it is very important 
 
 \begin{longtable}{p{1.3cm}p{1.6cm}p{1.8cm}p{3.6cm}p{2cm}p{.7cm}p{1.2cm}p{1.5cm}}
         \caption{Visitor}
-        \hline
         \toprule
         ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
         \midrule
@@ -309,7 +290,6 @@ In order to be able to make the right marketing decisions, it is very important 
 
 \begin{longtable}{p{0.25cm}p{3.9cm}p{2.2cm}p{2.9cm}p{.7cm}p{3.1cm}p{1.1cm}}
         \caption{Showroom}
-        \hline
         \toprule
         ID & Name & Telephone & Address & Size & Manager & Loc.\_id \\
         \midrule
@@ -335,7 +315,6 @@ In order to be able to make the right marketing decisions, it is very important 
 
 \begin{longtable}{p{1.6cm}p{2.1cm}p{1.4cm}p{1.5cm}p{1.6cm}p{1cm}p{1cm}p{1.1cm}p{1.2cm}}
         \caption{Date}
-        \hline
         \toprule
         ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
         \midrule
@@ -357,7 +336,6 @@ In order to be able to make the right marketing decisions, it is very important 
 
 \begin{longtable}{p{3cm}p{4cm}}
         \caption{Result of the query}
-        \hline
         \toprule
         Sector & Number of visitors \\
         \midrule

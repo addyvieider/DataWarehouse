@@ -1,0 +1,27 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+   "editor.wordWrapColumn": 80,
+   "editor.wordWrap": "off",
+   "editor.wrappingIndent": "same",
+   "editor.formatOnType": true,
+   "editor.rulers": [80],
+   "files.exclude": {
+     "**/.git": true,
+     "**/.svn": true,
+     "**/.hg": true,
+     "**/CVS": true,
+     "**/.DS_Store": true,
+     "**/*.aux": true,
+     "**/*.bbl": true,
+     "**/*.blg": true,
+     "**/*.fls": true,
+     "**/*.lof": true,
+     "**/*.lol": true,
+     "**/*.lot": true,
+     "**/*.fdb_latexmk": true,
+     "**/*.synctex(busy)": true,
+     "**/*.synctex.gz": true,
+     "**/*.toc": true,
+     "**/*.out": true
+   }
+}
