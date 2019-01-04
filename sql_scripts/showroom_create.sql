@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS warehouse.visitor(
 	visitor_sector VARCHAR(50),
 	visitor_gender VARCHAR(10),
 	visitor_language VARCHAR(50),
-	location_id int REFERENCES warehouse.location(location_id)
+	visitor_location_id int REFERENCES warehouse.location(location_id)
 );
 
 
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS warehouse.sales_representative(
 	sales_rep_email VARCHAR(100) NOT NULL,
 	sales_rep_gender VARCHAR(10) NOT NULL,
 	sales_rep_language VARCHAR(50) NOT NULL,
-	location_id int REFERENCES warehouse.location(location_id) NOT NULL
+	sales_rep_location_id int REFERENCES warehouse.location(location_id) NOT NULL
 );
 
 
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS warehouse.showroom(
 	showroom_address VARCHAR(100) NOT NULL,
 	showroom_size int NOT NULL,
 	showroom_manager VARCHAR(100) NOT NULL,
-	location_id int REFERENCES warehouse.location(location_id) NOT NULL
+	showroom_location_id int REFERENCES warehouse.location(location_id) NOT NULL
 );
 
 

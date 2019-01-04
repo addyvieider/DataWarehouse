@@ -16,6 +16,9 @@ CREATE TABLE IF NOT EXISTS warehouse.quality_control(
   	quality_control_grade int NOT NULL
 );
 
+INSERT INTO warehouse.quality_control(quality_control_grade)
+	VALUES (0), (1), (2), (3), (4), (5);
+
 CREATE TABLE IF NOT EXISTS warehouse.machine(
   	machine_id SERIAL PRIMARY KEY NOT NULL,
   	machine_name VARCHAR(100) NOT NULL,
@@ -28,10 +31,13 @@ CREATE TABLE IF NOT EXISTS warehouse.production_stage(
   	production_stage_name VARCHAR(100) NOT NULL
 );
 
+INSERT INTO  warehouse.production_stage(production_stage_name)
+VALUES ('Vorbereitung'), ('Ausführung'), ('Feinschliff');
+
 CREATE TABLE IF NOT EXISTS warehouse.product(
   	product_id SERIAL PRIMARY KEY NOT NULL,
   	product_name VARCHAR(100) NOT NULL,
-  	product_number int NOT NULL,
+  	product_number VARCHAR(100) NOT NULL,
   	product_department VARCHAR(100) NOT NULL,
   	product_category VARCHAR(100) NOT NULL
 );
