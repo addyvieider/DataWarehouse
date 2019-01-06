@@ -4,37 +4,23 @@ INPUT c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management T
 OUTPUT ADMT_group02_report.log
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size11.clo
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size11.clo
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
-INPUT preamble.tex
-INPUT preamble.tex
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/inputenc.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/inputenc.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/utf8.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/utf8.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ot1enc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ot1enc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omsenc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omsenc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/babel.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/babel.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/switch.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/arabi/bblopts.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/arabi/bblopts.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-german/ngerman.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-german/ngerman.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-german/ngermanb.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/babel.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/txtbabel.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-italian/italian.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-italian/italian.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-english/english.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-english/english.ldf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/tabularx.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/tabularx.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/keyval.sty
@@ -47,39 +33,18 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/g
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fourier.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fourier.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1095.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/textcomp.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/textcomp.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1enc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1enc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fourier-orns.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fourier-orns.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyphenat/hyphenat.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyphenat/hyphenat.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/booktabs/booktabs.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/booktabs/booktabs.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/cite/cite.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/cite/cite.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -87,8 +52,6 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/hob
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
@@ -97,127 +60,63 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/pd1en
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/hpdftex.def
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/hpdftex.def
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/pdflscape.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/pdflscape.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/lscape.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/lscape.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption3.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption3.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/ltcaption.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/ltcaption.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/textpos/textpos.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/textpos/textpos.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/ms/everyshi.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/ms/everyshi.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/pifont.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/pifont.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/upzd.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/upzd.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/adobe/zapfding/pzdr.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/upsy.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/upsy.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tocbibind/tocbibind.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tocbibind/tocbibind.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/listings.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/listings.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/listings.cfg
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/listings.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/bera/beramono.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/bera/beramono.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/epigraph/epigraph.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/epigraph/epigraph.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/multirow/multirow.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/multirow/multirow.sty
 INPUT ADMT_group02_report.aux
 INPUT ADMT_group02_report.aux
 OUTPUT ADMT_group02_report.aux
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmlfutm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmlfutm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmsfutm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmsfutm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmxfutm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmxfutm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1cmr.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1cmr.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/t1futs.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/t1futs.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/color.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/color.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
 OUTPUT ADMT_group02_report.pdf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmlfutmi.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/fmlfutmi.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmii.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmii.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmii.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futsy.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futsy.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futsy.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mex.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mex.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mex.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmi.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmi.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmi.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-bb.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-bb.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-bb.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/ts1futs.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fourier/ts1futs.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8c.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futr8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT ./ADMT_group02_report.out
+INPUT ./ADMT_group02_report.out
+OUTPUT ADMT_group02_report.out
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omscmr.fd
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omscmr.fd
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
 INPUT C:/Users/laurin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futr8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futb8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt-bold.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futr8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futb8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt-bold.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futb8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt-bold.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futr8c.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-orns.tfm
 INPUT ../images/DFM_Showroom_Simple.png
 INPUT ../images/DFM_Showroom_Simple.png
 INPUT ../images/DFM_Showroom_Simple.png
@@ -248,31 +147,24 @@ INPUT ../images/Starschema_Production.png
 INPUT ../images/Starschema_Production.png
 INPUT ../images/Starschema_Production.png
 INPUT ../images/Starschema_Production.png
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/bera/t1fvm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/bera/t1fvm.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/bera/fvmr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/bera/fvmr8t.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmii.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futsy.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mex.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmi.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-bb.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futr8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/bera/fvmr8t.vf
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/bera/fvmr8r.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmtt12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
+INPUT ADMT_group02_report.bbl
+INPUT ADMT_group02_report.bbl
 INPUT ADMT_group02_report.aux
 INPUT ./ADMT_group02_report.out
 INPUT ./ADMT_group02_report.out
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb

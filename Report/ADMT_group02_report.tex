@@ -1,11 +1,26 @@
-% spell-checker:disable
-\documentclass[11pt,a4paper,twoside]{article}
-\input{preamble}
-\usepackage{epigraph}
-\usepackage{multirow}
-\lstset{
-  basicstyle=\ttfamily
+%++++++++++++++++++++++++++++++++++++++++
+% Don't modify this section unless you know what you're doing!
+\documentclass[letterpaper,12pt]{article}
+\usepackage{tabularx} % extra features for tabular environment
+\usepackage{amsmath}  % improve math presentation
+\usepackage{graphicx} % takes care of graphic including machinery
+\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+\usepackage{cite} % takes care of citations
+\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\usepackage[numbib,nottoc]{tocbibind}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{listings}
+%\usepackage{booktabs}
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor=blue         
 }
+%++++++++++++++++++++++++++++++++++++++++
+
 
 \begin{document}
 
@@ -51,23 +66,18 @@ Business questions:
 \section{Conceptual Design}
 
 \begin{longtable}{p{3cm}p{6cm}p{4cm}}
-        \caption{Fact table}
-        \label{tab:tabFactTable} \\
-        \toprule
+        \caption{Fact table} \\
+        \hline \\
         Fact & Dimensions & Measures \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \hline \\
+        \endfirsthead \\
         Fact & Dimensions & Measures \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         Showroom visit & Date, Showroom, Visitor, Order, Detail, Department, Sales representative & Duration (AVG), Amount of people (SUM, AVG) \\
-        \hline
+        \hline \\
         Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (AVG), Raw material cost (AVG) \\
-        \hline
+        \hline \\
 \end{longtable}
 
 \begin{figure}[H] 
@@ -91,33 +101,26 @@ Business questions:
 \subsection{Showroom visit}
 
 \begin{longtable}{p{4cm}p{9cm}}
-        \caption{Fact table}
-        \label{tab:tabShowroom} \\
-        \toprule
+        \caption{Fact table} \\
         Dimension & Attributes \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         Dimension & Attributes \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         Date & Day, Month, Year, Quartal, Week, Day of Week, Season, Holiday \\
-        \hline
+        \hline \\
         Showroom & Name, City, District, Province, Region, Country, Manager, Address, Telephone, Size \\
-        \hline
+        \hline \\
         Visitor & Name, City, District, Province, Region, Country, Language, Telephone, E-Mail, Type, Sector, Gender, Customer number \\
-        \hline
+        \hline \\
         Order & Order Number, Total Price, Discount \\
-        \hline
+        \hline \\
         Order Detail & Quantity, Quantity Type, Product, Unit price, Total price \\
-        \hline
+        \hline \\
         Department & Name \\
-        \hline
+        \hline \\
         Sales representative & Name, City, District, Province, Region, Country, Language, Telephone, E-Mail, Gender \\
-        \hline
+        \hline \\
 \end{longtable}
 
 \begin{figure}[H] 
@@ -132,33 +135,26 @@ Business questions:
 \subsection{Production}
 
 \begin{longtable}{p{4cm}p{9cm}}
-        \caption{Fact table}
-        \label{tab:tabProduction} \\
-        \toprule
+        \caption{Fact table} \\
         Dimension & Attributes \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         Dimension & Attributes \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         Start date & Day, Month, Year, Week \\
-        \hline
+        \hline \\
         End date & Day, Month, Year, Week \\
-        \hline
+        \hline \\
         Product & Product number, Name, Department, Category \\
-        \hline
+        \hline \\
         Production stage & Name \\
-        \hline
+        \hline \\
         Machine & Name, Purchasing year, Vendor \\
-        \hline
+        \hline \\
         Quality control & Grade \\
-        \hline
+        \hline \\
         Operator & Name \\
-        \hline
+        \hline \\
 \end{longtable}
 
 \begin{figure}[h] 
@@ -219,139 +215,116 @@ In order to be able to make the right marketing decisions, it is very important 
 \end{lstlisting}
 
 \begin{longtable}{p{1.4cm}p{1.5cm}p{1.8cm}p{1.5cm}p{1.6cm}p{1.4cm}p{1.2cm}p{1.25cm}p{1.85cm}}
-        \caption{Showroom visit}
-        \toprule
+        \caption{Showroom visit} \\
         ID & Visitor\_id & Sales\_rep\_id & Showr.\_id & Depart.\_id & Date\_id & Type\_id & Duration & Nr.\_of\_visit. \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         ID & Visitor\_id & Sales\_rep\_id & Showr.\_id & Depart.\_id & Date\_id & Type\_id & Duration & Nr.\_of\_visit. \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         1282369	& \color{red} 570822 & 6 & \color{red} 5 & 4 & \color{red}20180323 & 2 & 90 & 2 \\
-        \hline
+        \hline \\
         1282370	& 570823 & 5 & 5 & 2 & 20160107 & 4 & 167 & 4 \\
-        \hline
+        \hline \\
         1282371	& 570823 & 7 & 5 & 1 & 20130526 & 3 & 173 & 6 \\
-        \hline
+        \hline \\
         1282372	& 570823 & 11 & 5 & 6 & 20150806  & 3 & 100 & 10 \\
-        \hline
+        \hline \\
         1282373	& 570823 & 7 & 5 & 1 & 20121116 & 4 & 169 & 5 \\
-        \hline
+        \hline \\
         1282374	& 570824 & 7 & 5 & 1 & 20171210 & 3 & 57 & 3 \\
-        \hline
+        \hline \\
         1282375	& 570824 & 18 & 5 & 2 & 20110212 & 3 & 166 & 7 \\
-        \hline
+        \hline \\
         1282376	& 570824 & 9 & 5 & 4 & 20130811  & 3 & 84 & 5 \\
-        \hline
+        \hline \\
         1282377	& 570825 & 11 & 5 & 6 & 20170507 & 3 & 184 & 10 \\
-        \hline
+        \hline \\
         1282378	& 570825 & 12 & 5 & 2 & 20111127 & 2 & 26 & 2 \\
-        \hline
+        \hline \\
         1282379	& 570825 & 7 & 5 & 1 & 20150425 & 3 & 141 & 10 \\
-        \hline
+        \hline \\
         1282380	& 570826 & 11 & 5 & 6 & 20130208 & 2 & 8 & 2 \\
-        \hline
+        \hline \\
         1282381	& 570826 & 12 & 5 & 1 & 20111214 & 3 & 61 & 8 \\
-        \hline
+        \hline \\
         1282382	& 570827 & 12 & 5 & 1 & 20170202 & 3 & 139 & 9 \\
-        \hline
+        \hline \\
         1282383 & 570827 & 12 & 5 & 2 & 20121012 & 3 & 71 & 7 \\
-        \hline
+        \hline \\
 \end{longtable}
 
 \begin{longtable}{p{1.3cm}p{1.6cm}p{1.8cm}p{3.6cm}p{2cm}p{.7cm}p{1.2cm}p{1.5cm}}
-        \caption{Visitor}
-        \toprule
+        \caption{Visitor} \\
         ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         \color{red} 570822 & Melanie Eder &  &  & \color{red} Gastronomy & F & german & 9 \\
-        \hline
+        \hline \\
         570823 & Julian Schmidt &  & j.schmidt@email.com & \color{red} Private & M & german & 9 \\
-        \hline
+        \hline \\
         570824 & Marcel Schwarz & 306 9579783 & m.schwarz@email.com & \color{red} Hotel & M & german & 9 \\
-        \hline
+        \hline \\
         570825 & Denise Fuchs & 396 5305260 & d.fuchs@email.com & \color{red} Public & F & german & 9 \\
-        \hline
+        \hline \\
         570826 & Sophie Wimmer & 322 7641804 & s.wimmer@email.com & \color{red} Private & F & german & 9 \\
-        \hline
+        \hline \\
 \end{longtable} 
 
 \begin{longtable}{p{0.25cm}p{3.9cm}p{2.2cm}p{2.9cm}p{.7cm}p{3.1cm}p{1.1cm}}
-        \caption{Showroom}
-        \toprule
+        \caption{Showroom} \\
         ID & Name & Telephone & Address & Size & Manager & Loc.\_id \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         ID & Name & Telephone & Address & Size & Manager & Loc.\_id \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         1 & Showroom-LATSCH & 0477 069655 & Herrengasse 8 & 581 & Paul Wolf & 42 \\
-        \hline
+        \hline \\
         2 & Showroom-M{\"U}HLBACH & 0474 039227 & Platzerstr. 58 & 349 & Christoph Steiner & 54 \\
-        \hline
+        \hline \\
         3 & Showroom-M{\"O}LTEN & 0470 429676 & Vernag 97 & 857 & Christoph Steiner & 51 \\
-        \hline
+        \hline \\
         4 & Showroom-SALURN & 0475 248487 & Gewerbezone 44 & 198 & Johannes Egger & 77 \\
-        \hline
+        \hline \\
         \color{red} 5 & \color{red} Showroom-BOZEN & 0473 723301 & St. Urban 73 & 447 & Sabine Schneider & 9 \\
-        \hline
+        \hline \\
 \end{longtable} 
 
 \begin{longtable}{p{1.6cm}p{2.1cm}p{1.4cm}p{1.5cm}p{1.6cm}p{1cm}p{1cm}p{1.1cm}p{1.2cm}}
-        \caption{Date}
-        \toprule
+        \caption{Date} \\
         ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         20160102 & 2010-01-02 & 6 & Saturday & January & First & 2016 & false & Winter \\
+        \hline \\
         20170103 & 2010-01-03 & 7 & Sunday & January & First & 2017 & false & Winter \\
+        \hline \\
         20180108 & \color{red} 2018-01-08 & 5 & Friday & January & First & 2018 & false & Winter \\
+        \hline \\
         20190109 & 2010-01-09 & 6 & Saturday & January & First & 2019 & false & Winter \\
+        \hline \\
         20200110 & 2010-01-10 & 7 & Sunday & January & First & 2020 & false & Winter \\
-\hline
+        \hline \\
 \end{longtable} 
 
 \begin{longtable}{p{3cm}p{4cm}}
-        \caption{Result of the query}
-        \toprule
+        \caption{Result of the query} \\
         Sector & Number of visitors \\
-        \midrule
-        \endfirsthead
-        \toprule
+        \endfirsthead \\
         Sector & Number of visitors \\
-        \midrule
-        \longtableheader
-        \addlinespace
-        \endhead
-        \hline
+        \endhead \\
+        \hline \\
         Gastronomy & 2985 \\
+        \hline \\
         Hotel & 4223 \\
+        \hline \\
         Private & 5629 \\
+        \hline \\
         Public & 1371 \\
-\hline
+        \hline \\
 \end{longtable} 
 
 \subsubsection{Fact: Production}
@@ -368,12 +341,79 @@ The company's quality control is always interested in optimizing processes. It i
         numberstyle=\tiny,
         commentstyle=\color{gray}
      ]
-     SELECT m.machine_name, avg(p.duration) as avg_production_duration
+     SELECT m.machine_name, avg(p.duration) AS avg_production_duration
      FROM warehouse.machine m
-     INNER JOIN warehouse.production p on m.machine_id = p.machine_id
-     INNER JOIN warehouse.product o on p.product_id = o.product_id
-     WHERE o.product_name = 'Table X'
+     INNER JOIN warehouse.production p ON m.machine_id = p.machine_id
+     INNER JOIN warehouse.product o ON p.product_id = o.product_id
+     WHERE o.product_number = 'Warteraum-Couch - 10'
      GROUP BY m.machine_id
+     ORDER BY avg_production_duration DESC LIMIT 10
 \end{lstlisting}
+
+\begin{longtable}{p{1cm}p{1.5cm}p{1.5cm}p{1cm}p{1.5cm}p{1.8cm}p{1.6cm}p{1.3cm}p{2.2cm}}
+        \caption{Production} \\
+        ID & Operator* & Machine* & Stage* & Product* & Start\_date* & End\_date* & Duration & Raw\_mat.\_cost \\
+        \endfirsthead \\
+        ID & Operator* & Machine* & Stage* & Product* & Start\_date* & End\_date* & Duration & Raw\_mat.\_cost \\
+        \endhead \\
+        \hline \\
+        591814 & 779 & 1144 & 1 & \color{red} 361016 & 20101105 & 20101202 & 152 & 76 \\
+        \hline \\
+        591815 & 780 & 1174 & 2 & \color{red} 361016 & 20101202 & 20101203 & 1 & 395 \\
+        \hline \\
+        591816 & 775 & 1213 & 3 & \color{red} 361016 & 20101203 & 20101207 & 2 & 277 \\
+        \hline \\
+        591817 & 770 & 1055 & 1 & \color{red} 361016 & 20101122 & 20101214 & 30 & 66 \\
+        \hline \\
+        591818 & 722 & \color{red} 1176 & 2 & \color{red} 361016 & 20101214 & 20110111 & 133 & 391 \\
+        \hline \\
+        591819 & 755 & 1079 & 3 & \color{red} 361016 & 20110111 & 20110204 & 36 & 275 \\
+        \hline \\
+        591820 & 740 & 1069 & 1 & \color{red} 361016 & 20150511 & 20150520 & 49 & 73 \\
+        \hline \\
+        591821 & 756 & 1025 & 2 & \color{red} 361016 & 20150520 & 20150603 & 54 & 398 \\
+        \hline \\
+        591822 & 758 & 1130 & 3 & \color{red} 361016 & 20150603 & 20150625 & 96 & 278 \\
+        \hline \\
+        27064 & 754 & 1164 & 1 & \color{red} 361016 & 20101022 & 20101026 & 8 & 66 \\
+        \hline \\
+        27065 & 739 & 1028 & 2 & \color{red} 361016 & 20101026 & 20101104 & 6 & 407 \\
+        \hline \\
+        27066 & 798 & 1098 & 3 & \color{red} 361016 & 20101104 & 20101105 & 6 & 280 \\
+        \hline \\
+        27067 & 780 & 1013 & 1 & \color{red} 361016 & 20130327 & 20130411 & 70 & 74 \\
+        \hline \\
+        27068 & 737 & 1145 & 2 & \color{red} 361016 & 20130411 & 20130509 & 18 & 404 \\
+        \hline \\
+        27069 & 772 & 1032 & 3 & \color{red} 361016 & 20130509 & 20130520 & 14 & 281 \\
+        \hline \\
+\end{longtable} 
+
+Note: all columns with the * are foreign key columns and are carrying only the id
+
+\begin{longtable}{p{1cm}p{3cm}p{3.2cm}p{3.1cm}}
+        \caption{Machine} \\
+        ID & Machine\_name & Machine\_vendor & Purchasing\_year \\
+        \endfirsthead \\
+        ID & Machine\_name & Machine\_vendor & Purchasing\_year \\
+        \endhead \\
+        \hline \\
+        1172 & Melichár & Durán & 1998 \\
+        \hline \\
+        1173 & Horn & Λόντος & 2009 \\
+        \hline \\
+        1174 & Chihaia & Murtazaev & 2002 \\
+        \hline \\
+        1175 & Korčák & Durán & 2006 \\
+        \hline \\
+        \color{red} 1176 & \color{red} Ramóna & Barbora & 1996 \\
+        \hline \\
+\end{longtable} 
+
+\section{Conclusions}
+
+
+\bibliography{references}{}
+\bibliographystyle{plain}
 
 \end{document}
