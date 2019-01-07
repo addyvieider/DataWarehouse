@@ -61,17 +61,16 @@ Business questions:
 \begin{itemize}
         \item What is the average time to produce a particular product
         \item Which is the product with the highest/lowest quality
-        \item How much effort/time is spent per production stage, product category
-				\item What is the production cost of a product
+        \item How much effort/time is spent per order
 \end{itemize}
 
 \section{Conceptual Design}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{3cm}p{6cm}p{4cm}}
         \caption{Fact table} \\
-        \hline \\
         Fact & Dimensions & Measures \\
-        \hline \\
         \endfirsthead \\
         Fact & Dimensions & Measures \\
         \endhead \\
@@ -81,6 +80,7 @@ Business questions:
         Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (AVG), Raw material cost (AVG) \\
         \hline \\
 \end{longtable}
+\endgroup
 
 \begin{figure}[H] 
         \centering
@@ -104,7 +104,7 @@ Business questions:
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{9cm}}
+\begin{longtable}{p{3.7cm}p{10cm}}
         \caption{Fact table} \\
         Dimension & Attributes \\
         \endfirsthead \\
@@ -178,6 +178,8 @@ Business questions:
 
 \subsection{Star schemas}
 
+The following star schema fig. \ref{fig:starschemaShowroom} represent the first business process, namely the showroom visit.
+
 \begin{figure}[h] 
         \centering
         \includegraphics[width=\columnwidth]{../images/Starschema_Showroom_visit.png}
@@ -186,6 +188,8 @@ Business questions:
                 Star schema of the showroom visit
         }
 \end{figure}
+
+Instead, the star schema fig. \ref{fig:starschemaProduction} represents the production business process.
 
 \begin{figure}[h] 
         \centering
@@ -266,7 +270,7 @@ GROUP by v.visitor_sector
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{1.3cm}p{1.6cm}p{1.8cm}p{3.6cm}p{2cm}p{.7cm}p{1.2cm}p{1.5cm}}
+\begin{longtable}{p{1.3cm}p{1.6cm}p{1.8cm}p{3.6cm}p{2cm}p{.7cm}p{1.2cm}p{1.4cm}}
         \caption{Visitor} \\
         ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
         \endfirsthead \\
@@ -310,7 +314,7 @@ GROUP by v.visitor_sector
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{1.6cm}p{2.1cm}p{1.4cm}p{1.5cm}p{1.6cm}p{1cm}p{1cm}p{1.1cm}p{1.2cm}}
+\begin{longtable}{p{1.5cm}p{2cm}p{1.5cm}p{1.5cm}p{1.3cm}p{1.1cm}p{0.7cm}p{1.1cm}p{1.2cm}}
         \caption{Date} \\
         ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
         \endfirsthead \\
@@ -382,35 +386,35 @@ ORDER BY avg_production_duration DESC LIMIT 10
         ID & Operator* & Machine* & Stage* & Product* & Start\_date* & End\_date* & Duration & Raw\_mat.\_cost \\
         \endhead \\
         \hline \\
-        591814 & 779 & 1144 & 1 & \color{red} 361016 & 20101105 & 20101202 & 152 & 76 \\
+        591814 & 779 & 1144 & 1 & \color{red} 361016 & 20101105 & 20101202 & \color{red} 152 & 76 \\
         \hline \\
-        591815 & 780 & 1174 & 2 & \color{red} 361016 & 20101202 & 20101203 & 1 & 395 \\
+        591815 & 780 & 1174 & 2 & \color{red} 361016 & 20101202 & 20101203 & \color{red} 1 & 395 \\
         \hline \\
-        591816 & 775 & 1213 & 3 & \color{red} 361016 & 20101203 & 20101207 & 2 & 277 \\
+        591816 & 775 & 1213 & 3 & \color{red} 361016 & 20101203 & 20101207 & \color{red} 2 & 277 \\
         \hline \\
-        591817 & 770 & 1055 & 1 & \color{red} 361016 & 20101122 & 20101214 & 30 & 66 \\
+        591817 & 770 & 1055 & 1 & \color{red} 361016 & 20101122 & 20101214 & \color{red} 30 & 66 \\
         \hline \\
-        591818 & 722 & \color{red} 1176 & 2 & \color{red} 361016 & 20101214 & 20110111 & 133 & 391 \\
+        591818 & 722 & \color{red} 1176 & 2 & \color{red} 361016 & 20101214 & 20110111 & \color{red} 133 & 391 \\
         \hline \\
-        591819 & 755 & 1079 & 3 & \color{red} 361016 & 20110111 & 20110204 & 36 & 275 \\
+        591819 & 755 & 1079 & 3 & \color{red} 361016 & 20110111 & 20110204 & \color{red} 36 & 275 \\
         \hline \\
-        591820 & 740 & 1069 & 1 & \color{red} 361016 & 20150511 & 20150520 & 49 & 73 \\
+        591820 & 740 & 1069 & 1 & \color{red} 361016 & 20150511 & 20150520 & \color{red} 49 & 73 \\
         \hline \\
-        591821 & 756 & 1025 & 2 & \color{red} 361016 & 20150520 & 20150603 & 54 & 398 \\
+        591821 & 756 & 1025 & 2 & \color{red} 361016 & 20150520 & 20150603 & \color{red} 54 & 398 \\
         \hline \\
-        591822 & 758 & 1130 & 3 & \color{red} 361016 & 20150603 & 20150625 & 96 & 278 \\
+        591822 & 758 & 1130 & 3 & \color{red} 361016 & 20150603 & 20150625 & \color{red} 96 & 278 \\
         \hline \\
-        27064 & 754 & 1164 & 1 & \color{red} 361016 & 20101022 & 20101026 & 8 & 66 \\
+        27064 & 754 & 1164 & 1 & \color{red} 361016 & 20101022 & 20101026 & \color{red} 8 & 66 \\
         \hline \\
-        27065 & 739 & 1028 & 2 & \color{red} 361016 & 20101026 & 20101104 & 6 & 407 \\
+        27065 & 739 & 1028 & 2 & \color{red} 361016 & 20101026 & 20101104 & \color{red} 6 & 407 \\
         \hline \\
-        27066 & 798 & 1098 & 3 & \color{red} 361016 & 20101104 & 20101105 & 6 & 280 \\
+        27066 & 798 & 1098 & 3 & \color{red} 361016 & 20101104 & 20101105 & \color{red} 6 & 280 \\
         \hline \\
-        27067 & 780 & 1013 & 1 & \color{red} 361016 & 20130327 & 20130411 & 70 & 74 \\
+        27067 & 780 & 1013 & 1 & \color{red} 361016 & 20130327 & 20130411 & \color{red} 70 & 74 \\
         \hline \\
-        27068 & 737 & 1145 & 2 & \color{red} 361016 & 20130411 & 20130509 & 18 & 404 \\
+        27068 & 737 & 1145 & 2 & \color{red} 361016 & 20130411 & 20130509 & \color{red} 18 & 404 \\
         \hline \\
-        27069 & 772 & 1032 & 3 & \color{red} 361016 & 20130509 & 20130520 & 14 & 281 \\
+        27069 & 772 & 1032 & 3 & \color{red} 361016 & 20130509 & 20130520 & \color{red} 14 & 281 \\
         \hline \\
 \end{longtable} 
 \endgroup
@@ -435,6 +439,28 @@ Note: all columns with the * are foreign key columns and are carrying only the i
         1175 & Korčák & Durán & 2006 \\
         \hline \\
         \color{red} 1176 & \color{red} Ramóna & Barbora & 1996 \\
+        \hline \\
+\end{longtable} 
+\endgroup
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{1.4cm}p{2.7cm}p{3.7cm}p{3.4cm}p{3cm}}
+        \caption{Product} \\
+        ID & Product\_name & Product\_number & Product\_department & Product\_category \\
+        \endfirsthead \\
+        ID & Product\_name & Product\_number & Product\_department & Product\_category \\
+        \endhead \\
+        \hline \\
+        361013 & Warteraum-Couch & Warteraum-Couch - 7 & Büro & Arztpraxis-Set \\
+        \hline \\
+        361014 & Warteraum-Couch & Warteraum-Couch - 8 & Büro & Arztpraxis-Set \\
+        \hline \\
+        361015 & Warteraum-Couch & Warteraum-Couch - 9 & Büro & Arztpraxis-Set \\
+        \hline \\
+        \color{red} 361016 & Warteraum-Couch & \color{red} Warteraum-Couch - 10 & Büro & Arztpraxis-Set \\
+        \hline \\
+        361017 & Warteraum-Couch & Warteraum-Couch - 11 & Büro & Arztpraxis-Set \\
         \hline \\
 \end{longtable} 
 \endgroup
@@ -471,10 +497,319 @@ Note: all columns with the * are foreign key columns and are carrying only the i
 \end{longtable} 
 \endgroup
 
-\section{Conclusions}
+\section{Implementation}
+\subsection{ROLLUP}
+\subsubsection{SQL query using ROLLUP for business process 1 (showroom visit)}
+
+The following sql query shows the number of visitors per showroom, in the different areas and in the different seasons. In addition there are the different partial sums. For example, for the showroom in Bolzano, first the number of visitors for the 'bBedroom' area in autumn is shown, then the total number of visitors for the 'bedroom' area, regardless of the season, and finally the total number of visitors for the showroom in Bolzano, regardless of the area and the season.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+SELECT showroom_name, department_name, season, count(visitor_id)
+FROM warehouse.showroom_visit
+JOIN warehouse.showroom using (showroom_id)
+JOIN warehouse.department using (department_id)
+JOIN warehouse.date using (date_id)
+GROUP BY ROLLUP(showroom_name, department_name, season);
+\end{lstlisting}
+
+\subsubsection{SQL query with ROLLUP for business process 2 (production)}
+
+The following sql query shows the average machining time for a particular production stage of a particular product of a particular product category. The query also returns the average machining times of the higher levels, in other words, a granularity is removed step by step. For example, the average machining time of 'table XY' is shown first for the 'fine grinding' process. Then you get the average machining time of all processes on 'table XY' and finally the average machining time of all processes on all table models, thus of the whole product category 'table'.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+SELECT product_category, product_name, 
+        production_stage_name, ROUND(avg(duration)::numeric,2)
+FROM warehouse.production
+JOIN warehouse.product using (product_id)
+JOIN warehouse.production_stage using (production_stage_id)
+GROUP BY ROLLUP(product_category, product_name, production_stage_name);
+\end{lstlisting}    
+
+\subsection{CUBE}
+
+\subsubsection{SQL query using CUBE for business process 1 (showroom visit)}
+
+The following query shows the number of visitors from the province of Bolzano and its commercial sector in the different districts of the showrooms. In addition, the query shows all possible sub-totals, removing step by step different granularities. In other words, for each combination of values, the sum is shown, finally the total sum of all visits from visitors from the province of Bolzano.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT visitor_sector, vl.district, sl.district, 
+        sum(number_of_visitors)
+FROM warehouse.showroom_visit
+JOIN warehouse.visitor using (visitor_id)
+JOIN warehouse.location as vl 
+        on warehouse.visitor.location_id = vl.location_id 
+JOIN warehouse.showroom using (showroom_id)
+JOIN warehouse.location as sl 
+        on warehouse.showroom.location_id = sl.location_id
+WHERE vl.province = 'Bozen'
+GROUP BY CUBE(vl.district, visitor_sector, sl.district)
+ORDER BY visitor_sector, vl.district, sl.district;
+\end{lstlisting}    
+
+\subsubsection{SQL query using CUBE for business process 2 (production)}
+
+The following query shows the average grade of the quality control for a machine and for the product category. Also all partial average values of all different combinations and groupings can be read off.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+SELECT product_department, machine_name, 
+        ROUND(avg(quality_control_grade)::numeric,2)
+FROM warehouse.production
+JOIN warehouse.product using (product_id)
+JOIN warehouse.machine using (machine_id)
+JOIN warehouse.quality_control using (quality_control_id)
+WHERE quality_control_grade is not NULL
+GROUP BY CUBE(product_department, machine_name)
+ORDER BY avg(quality_control_grade) desc;	
+\end{lstlisting}
+
+\subsection{GROUPING SETS}
+
+\subsubsection{SQL query using GROUPING SETS for business process 1 (showroom visit)}
+
+The following query shows the number of visitors per language served by a sales representative in a showroom. Also the total number of visitors can be taken from a language in that showroom as well as the total number of visitors served by that sales representative.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT showroom_name, sales_rep_name, 
+        visitor_language, sum(order_total_price)
+FROM warehouse.showroom_visit
+JOIN warehouse.visitor using (visitor_id)
+JOIN warehouse.sales_representative using (sales_rep_id)
+JOIN warehouse.order using (order_id)
+JOIN warehouse.showroom using (showroom_id)
+GROUP BY GROUPING SETS(
+        (showroom_name, sales_rep_name, visitor_language),
+        (showroom_name, visitor_language),
+        (showroom_name, sales_rep_name));
+\end{lstlisting}          
+
+\subsubsection{SQL query using GROUPING SETS for business process 2 (production)}
+
+The following query shows the number of a certain grade for a product category in a specific year. The query also shows the number of a certain rating in a certain year.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT product_category, year_actual, 
+        quality_control_grade, count(product_id)
+FROM warehouse.production
+JOIN warehouse.product using (product_id)
+JOIN warehouse.date ON date.date_id = production.end_date_id
+JOIN warehouse.quality_control using (quality_control_id)
+GROUP BY GROUPING SETS(
+        (product_category, year_actual, quality_control_grade),
+        (year_actual, quality_control_grade));
+\end{lstlisting}
+
+\section{Querying}
+
+\subsection{NTILE}
+
+\subsubsection{SQL query using NTILE for business process 1 (showroom visit)}
+
+The following sql statement calculates the number of visitors coming from a particular location of the province of Bolzano and assigns each row to a group from 1-4, depending on the size of the number of visitors.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]	 
+SELECT vl.city, count(visitor_id), 
+        NTILE(4) OVER (ORDER BY count(visitor_id)) AS TILE4
+FROM warehouse.showroom_visit
+JOIN warehouse.visitor using (visitor_id)
+JOIN warehouse.location as vl 
+        on warehouse.visitor.location_id = vl.location_id 
+WHERE vl.province = 'Bozen'
+GROUP BY vl.city;
+\end{lstlisting}
+      
+\subsubsection{SQL query using NTILE for business process 2 (production)}
+
+The next sql query sums all processing times of an operator and groups them to 4 groups, were each operators gets assigned to a specific group relatively to the sum of duration of all production steps.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT operator_name, ROUND(sum(duration)::numeric,2), 
+        NTILE(4) OVER (ORDER BY sum(duration)) AS TILE4
+FROM warehouse.production
+JOIN warehouse.operator using (operator_id)
+GROUP BY operator_name;
+\end{lstlisting}
+
+\subsection{RANK}
+
+\subsubsection{SQL query using RANK for business process 1 (showroom visit)}
+
+The following query identifies the overall total number of visitors per showroom and ranks them according to their number of visitors.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT showroom_name, count(distinct visitor_id), 
+        RANK() OVER (ORDER BY count(distinct visitor_id) DESC)
+FROM warehouse.showroom_visit
+JOIN warehouse.showroom using (showroom_id)
+GROUP BY showroom_name;
+\end{lstlisting}
+
+\subsubsection{SQL query using RANK for business process 2 (production)}
+
+The following sql query ranks the different products with respect to their average raw material costs.
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT product_category, ROUND(avg(raw_material_cost)::numeric,2),
+        RANK() OVER (ORDER BY (avg(raw_material_cost)) DESC)
+FROM warehouse.production
+JOIN warehouse.product using (product_id)
+GROUP BY product_category;
+\end{lstlisting}
+                
+\subsection{??????}
+
+\subsubsection{SQL query ??????}
+
+(text missing)
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]																			   
+SELECT date_actual, sum(order_total_price), 
+        ROUND(AVG(SUM(order_total_price))
+                OVER ( ORDER BY date_actual
+                ROWS BETWEEN 7 PRECEDING
+                AND CURRENT ROW)::numeric,2)
+FROM warehouse.showroom_visit
+JOIN warehouse.date using (date_id)
+JOIN warehouse.order using (order_id)
+WHERE year_actual > 2017
+GROUP BY date_actual
+ORDER BY date_actual;
+\end{lstlisting}				  
+                
+\subsubsection{SQL query ??????}
+
+(text missing)
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]			  
+SELECT year_actual, month_actual, sum(raw_material_cost), 
+        ROUND(AVG(SUM(raw_material_cost))
+                OVER ( ORDER BY year_actual, month_actual
+                ROWS BETWEEN 6 PRECEDING
+                AND CURRENT ROW)::numeric,2)
+FROM warehouse.production
+JOIN warehouse.date ON date.date_id = production.end_date_id
+GROUP BY year_actual, month_actual
+ORDER BY year_actual, month_actual;	
+\end{lstlisting}				  
+        
+\subsection{??????}
+
+\subsubsection{SQL query ??????}
+
+(text missing)
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+        ]
+SELECT year_actual, quarter_actual, 
+visitors_this_year, visitors_last_year,
+visitors_this_year - visitors_last_year as difference
+FROM (
+        SELECT year_actual, quarter_actual,
+                count(visitor_id) as visitors_this_year,
+                LAG(count(visitor_id), 4) 
+                OVER (ORDER BY year_actual, quarter_actual) 
+                as visitors_last_year 
+        FROM warehouse.showroom_visit
+                JOIN warehouse.date using (date_id)
+                JOIN warehouse.order using (order_id)
+                GROUP BY year_actual, quarter_actual
+                ORDER BY year_actual, quarter_actual) as last_year
+        WHERE year_actual > 2010;
+\end{lstlisting}
+
+\section{Data Analysis Tool}
 
 
-\bibliography{references}{}
-\bibliographystyle{plain}
+% \bibliography{references}{}
+% \bibliographystyle{plain}
 
 \end{document}
