@@ -11,7 +11,8 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{listings}
-%\usepackage{booktabs}
+\usepackage{textgreek}
+\usepackage[utf8]{inputenc}
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
 	linkcolor=blue,        % color of internal links
@@ -100,6 +101,8 @@ Business questions:
 
 \subsection{Showroom visit}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{9cm}}
         \caption{Fact table} \\
         Dimension & Attributes \\
@@ -122,6 +125,7 @@ Business questions:
         Sales representative & Name, City, District, Province, Region, Country, Language, Telephone, E-Mail, Gender \\
         \hline \\
 \end{longtable}
+\endgroup
 
 \begin{figure}[H] 
         \centering
@@ -134,6 +138,8 @@ Business questions:
 
 \subsection{Production}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{9cm}}
         \caption{Fact table} \\
         Dimension & Attributes \\
@@ -156,6 +162,7 @@ Business questions:
         Operator & Name \\
         \hline \\
 \end{longtable}
+\endgroup
 
 \begin{figure}[h] 
         \centering
@@ -204,16 +211,18 @@ In order to be able to make the right marketing decisions, it is very important 
         numberstyle=\tiny,
         commentstyle=\color{gray}
      ]
-        SELECT v.visitor_sector, count(*)
-        FROM warehouse.visitor v
-        INNER JOIN warehouse.showroom_visit sv on v.visitor_id = sv.visitor_id
-        INNER JOIN warehouse.showroom s on sv.showroom_id = s.showroom_id
-        INNER JOIN warehouse.date d on sv.date_id = d.date_id
-        WHERE s.showroom_name = 'Showroom-BOZEN' 
-        AND d.date_actual >= '2018-01-01' AND d.date_actual <= '2018-12-31'
-        GROUP by v.visitor_sector
+SELECT v.visitor_sector, count(*)
+FROM warehouse.visitor v
+INNER JOIN warehouse.showroom_visit sv on v.visitor_id = sv.visitor_id
+INNER JOIN warehouse.showroom s on sv.showroom_id = s.showroom_id
+INNER JOIN warehouse.date d on sv.date_id = d.date_id
+WHERE s.showroom_name = 'Showroom-BOZEN' 
+AND d.date_actual >= '2018-01-01' AND d.date_actual <= '2018-12-31'
+GROUP by v.visitor_sector
 \end{lstlisting}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{1.4cm}p{1.5cm}p{1.8cm}p{1.5cm}p{1.6cm}p{1.4cm}p{1.2cm}p{1.25cm}p{1.85cm}}
         \caption{Showroom visit} \\
         ID & Visitor\_id & Sales\_rep\_id & Showr.\_id & Depart.\_id & Date\_id & Type\_id & Duration & Nr.\_of\_visit. \\
@@ -252,7 +261,10 @@ In order to be able to make the right marketing decisions, it is very important 
         1282383 & 570827 & 12 & 5 & 2 & 20121012 & 3 & 71 & 7 \\
         \hline \\
 \end{longtable}
+\endgroup
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{1.3cm}p{1.6cm}p{1.8cm}p{3.6cm}p{2cm}p{.7cm}p{1.2cm}p{1.5cm}}
         \caption{Visitor} \\
         ID & Name & Telephone & E-Mail & Sector & Sex & Lang. & Loc.\_id \\
@@ -271,7 +283,10 @@ In order to be able to make the right marketing decisions, it is very important 
         570826 & Sophie Wimmer & 322 7641804 & s.wimmer@email.com & \color{red} Private & F & german & 9 \\
         \hline \\
 \end{longtable} 
+\endgroup
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{0.25cm}p{3.9cm}p{2.2cm}p{2.9cm}p{.7cm}p{3.1cm}p{1.1cm}}
         \caption{Showroom} \\
         ID & Name & Telephone & Address & Size & Manager & Loc.\_id \\
@@ -290,7 +305,10 @@ In order to be able to make the right marketing decisions, it is very important 
         \color{red} 5 & \color{red} Showroom-BOZEN & 0473 723301 & St. Urban 73 & 447 & Sabine Schneider & 9 \\
         \hline \\
 \end{longtable} 
+\endgroup
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{1.6cm}p{2.1cm}p{1.4cm}p{1.5cm}p{1.6cm}p{1cm}p{1cm}p{1.1cm}p{1.2cm}}
         \caption{Date} \\
         ID & Date & Day\_week & Day & Month & Quartal & Year & Holiday & Season \\
@@ -309,7 +327,10 @@ In order to be able to make the right marketing decisions, it is very important 
         20200110 & 2010-01-10 & 7 & Sunday & January & First & 2020 & false & Winter \\
         \hline \\
 \end{longtable} 
+\endgroup
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{3cm}p{4cm}}
         \caption{Result of the query} \\
         Sector & Number of visitors \\
@@ -326,6 +347,7 @@ In order to be able to make the right marketing decisions, it is very important 
         Public & 1371 \\
         \hline \\
 \end{longtable} 
+\endgroup
 
 \subsubsection{Fact: Production}
 
@@ -341,15 +363,17 @@ The company's quality control is always interested in optimizing processes. It i
         numberstyle=\tiny,
         commentstyle=\color{gray}
      ]
-     SELECT m.machine_name, avg(p.duration) AS avg_production_duration
-     FROM warehouse.machine m
-     INNER JOIN warehouse.production p ON m.machine_id = p.machine_id
-     INNER JOIN warehouse.product o ON p.product_id = o.product_id
-     WHERE o.product_number = 'Warteraum-Couch - 10'
-     GROUP BY m.machine_id
-     ORDER BY avg_production_duration DESC LIMIT 10
+SELECT m.machine_name, avg(p.duration) AS avg_production_duration
+FROM warehouse.machine m
+INNER JOIN warehouse.production p ON m.machine_id = p.machine_id
+INNER JOIN warehouse.product o ON p.product_id = o.product_id
+WHERE o.product_number = 'Warteraum-Couch - 10'
+GROUP BY m.machine_id
+ORDER BY avg_production_duration DESC LIMIT 10
 \end{lstlisting}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{1cm}p{1.5cm}p{1.5cm}p{1cm}p{1.5cm}p{1.8cm}p{1.6cm}p{1.3cm}p{2.2cm}}
         \caption{Production} \\
         ID & Operator* & Machine* & Stage* & Product* & Start\_date* & End\_date* & Duration & Raw\_mat.\_cost \\
@@ -388,9 +412,12 @@ The company's quality control is always interested in optimizing processes. It i
         27069 & 772 & 1032 & 3 & \color{red} 361016 & 20130509 & 20130520 & 14 & 281 \\
         \hline \\
 \end{longtable} 
+\endgroup
 
 Note: all columns with the * are foreign key columns and are carrying only the id
 
+\begingroup
+\renewcommand\arraystretch{0.5}
 \begin{longtable}{p{1cm}p{3cm}p{3.2cm}p{3.1cm}}
         \caption{Machine} \\
         ID & Machine\_name & Machine\_vendor & Purchasing\_year \\
@@ -409,6 +436,39 @@ Note: all columns with the * are foreign key columns and are carrying only the i
         \color{red} 1176 & \color{red} Ramóna & Barbora & 1996 \\
         \hline \\
 \end{longtable} 
+\endgroup
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{3cm}p{4cm}}
+        \caption{Result of the query} \\
+        Machine\_name & AVG\_Production\_duration \\
+        \endfirsthead \\
+        Machine\_name & AVG\_Production\_duration \\
+        \endhead \\
+        \hline \\
+        Vajda & 152.00 \\
+        \hline \\
+        \color{red} Ramóna & 133.00 \\
+        \hline \\
+        Παπανδρέου & 96.00 \\
+        \hline \\
+        Κοντολέων & 70.00 \\
+        \hline \\
+        Mitu & 54.00 \\
+        \hline \\
+        Bercu & 49.00 \\
+        \hline \\
+        Heinrich & 36.00 \\
+        \hline \\
+        Martinez & 30.00 \\
+        \hline \\
+        Pál & 18.00 \\
+        \hline \\
+        Aguilar & 14.00 \\
+        \hline \\
+\end{longtable} 
+\endgroup
 
 \section{Conclusions}
 
