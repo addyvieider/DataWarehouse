@@ -11,7 +11,7 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{listings}
-\usepackage{textgreek}
+\usepackage{makeidx}
 \usepackage[utf8]{inputenc}
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
@@ -22,6 +22,7 @@
 }
 %++++++++++++++++++++++++++++++++++++++++
 
+\makeindex
 
 \begin{document}
 
@@ -29,6 +30,11 @@
 \author{Group 02: Andreas Vieider (13177) \& Laurin Stricker (13412)}
 \date{\today}
 \maketitle
+
+\tableofcontents
+\listoffigures
+\listoftables
+\cleardoublepage
 
 % \begin{abstract}
 
@@ -61,7 +67,7 @@ Business questions:
 \begin{itemize}
         \item What is the average time to produce a particular product
         \item Which is the product with the highest/lowest quality
-        \item How much effort/time is spent per order
+        \item How much does a product cost in terms of raw material cost
 \end{itemize}
 
 \section{Conceptual Design}
@@ -432,7 +438,7 @@ Note: all columns with the * are foreign key columns and are carrying only the i
         \hline \\
         1172 & Melichár & Durán & 1998 \\
         \hline \\
-        1173 & Horn & Λόντος & 2009 \\
+        1173 & Horn & Lóntos & 2009 \\
         \hline \\
         1174 & Chihaia & Murtazaev & 2002 \\
         \hline \\
@@ -478,9 +484,9 @@ Note: all columns with the * are foreign key columns and are carrying only the i
         \hline \\
         \color{red} Ramóna & 133.00 \\
         \hline \\
-        Παπανδρέου & 96.00 \\
+        Papandreou & 96.00 \\
         \hline \\
-        Κοντολέων & 70.00 \\
+        Kontoléon & 70.00 \\
         \hline \\
         Mitu & 54.00 \\
         \hline \\
