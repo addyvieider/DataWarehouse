@@ -76,30 +76,34 @@ SELECT product_category, ROUND(avg(raw_material_cost)::numeric,2),
 	JOIN warehouse.product using (product_id)
 	GROUP BY product_category;																				   
 																				   
-																				   
-SELECT date_actual, sum(order_total_price), 
+
+
+SELECT date_actual, this_day, average_last_week	
+FROM (																		   
+SELECT date_actual, year_actual, sum(order_total_price) as this_day, 
 		ROUND(AVG(SUM(order_total_price))
 			OVER ( ORDER BY date_actual
 			ROWS BETWEEN 7 PRECEDING
-			AND CURRENT ROW)::numeric,2)
+			AND CURRENT ROW)::numeric,2) as average_last_week
 	FROM warehouse.showroom_visit
 	JOIN warehouse.date using (date_id)
 	JOIN warehouse.order using (order_id)
-	WHERE year_actual > 2017
-	GROUP BY date_actual
-	ORDER BY date_actual;
+	GROUP BY date_actual, year_actual
+	ORDER BY date_actual) as res where year_actual > 2017;
 				  
 				  
 				  
-SELECT year_actual, month_actual, sum(raw_material_cost), 
+SELECT year_actual, month_actual, this_month, average_last_months
+FROM (
+SELECT year_actual, month_actual, sum(raw_material_cost) as this_month, 
 		ROUND(AVG(SUM(raw_material_cost))
 			OVER ( ORDER BY year_actual, month_actual
 			ROWS BETWEEN 6 PRECEDING
-			AND CURRENT ROW)::numeric,2)
+			AND CURRENT ROW)::numeric,2) as average_last_months
 	FROM warehouse.production
 	JOIN warehouse.date ON date.date_id = production.end_date_id
 	GROUP BY year_actual, month_actual
-	ORDER BY year_actual, month_actual;	
+	ORDER BY year_actual, month_actual) as res where year_actual = 2018;	
 				  
 				  
 SELECT year_actual, quarter_actual, 
