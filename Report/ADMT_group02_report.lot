@@ -14,7 +14,12 @@
 \contentsline {table}{\numberline {14}{Production ROLLUP Result}}{14}{table.14}
 \contentsline {table}{\numberline {15}{Showroom CUBE Result}}{15}{table.15}
 \contentsline {table}{\numberline {16}{Production CUBE Result}}{16}{table.16}
-\contentsline {table}{\numberline {17}{Showroom GROUPING SETS Result}}{17}{table.17}
+\contentsline {table}{\numberline {17}{Showroom CUBE Result}}{17}{table.17}
 \contentsline {table}{\numberline {18}{Production GROUPING SETS Result}}{18}{table.18}
 \contentsline {table}{\numberline {19}{Showroom NTILE Result}}{19}{table.19}
 \contentsline {table}{\numberline {20}{Production NTILE Result}}{20}{table.20}
+\contentsline {table}{\numberline {21}{Showroom RANK Result}}{20}{table.21}
+\contentsline {table}{\numberline {22}{Showroom RANK Result}}{21}{table.22}
+\contentsline {table}{\numberline {23}{Showroom WINDOWING Result}}{22}{table.23}
+\contentsline {table}{\numberline {24}{Production WINDOWING Result}}{23}{table.24}
+\contentsline {table}{\numberline {25}{Production period-to-period comparison result}}{24}{table.25}

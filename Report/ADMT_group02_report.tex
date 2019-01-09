@@ -535,45 +535,45 @@ GROUP BY ROLLUP(showroom_name, department_name, season);
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{4cm}p{3cm}p{2cm}}
         \caption{Showroom ROLLUP Result} \\
-				showroom\_name & department\_name & season & count \\
+	showroom\_name & department\_name & season & count \\
         \endfirsthead \\
         showroom\_name & department\_name & season & count \\
         \endhead \\
         \hline \\
-				Showroom-BOZEN & Badezimmer & Frühling & 2579 \\
-\hline \\
-Showroom-BOZEN & Badezimmer & Herbst & 3285 \\
-\hline \\
-Showroom-BOZEN & Badezimmer & Sommer & 1311 \\
-\hline \\
-Showroom-BOZEN & Badezimmer & Winter & 4708 \\
-\hline \\
-Showroom-BOZEN & Badezimmer & * & 11883 \\
-\hline \\
-Showroom-BOZEN & Büro & Frühling & 298 \\
-\hline \\
-Showroom-BOZEN & Büro & Herbst & 281 \\
-\hline \\
-Showroom-BOZEN & Büro & Sommer & 156 \\
-\hline \\
-Showroom-BOZEN & Büro & Winter & 480 \\
-\hline \\
-Showroom-BOZEN & Büro & * & 1215 \\
-\hline \\
-Showroom-BOZEN & Hotel & Frühling & 4032 \\
-\hline \\
-Showroom-BOZEN & Hotel & Herbst & 4472 \\
-\hline \\
-Showroom-BOZEN & Hotel & Sommer & 2022 \\
-\hline \\
-Showroom-BOZEN & Hotel & Winter & 6808 \\
-\hline \\
-Showroom-BOZEN & Hotel & * & 17334 \\
-\hline \\
-... & & & \\
-\hline \\
+	Showroom-BOZEN & Badezimmer & Frühling & 2579 \\
+        \hline \\
+        Showroom-BOZEN & Badezimmer & Herbst & 3285 \\
+        \hline \\
+        Showroom-BOZEN & Badezimmer & Sommer & 1311 \\
+        \hline \\
+        Showroom-BOZEN & Badezimmer & Winter & 4708 \\
+        \hline \\
+        Showroom-BOZEN & Badezimmer & * & 11883 \\
+        \hline \\
+        Showroom-BOZEN & Büro & Frühling & 298 \\
+        \hline \\
+        Showroom-BOZEN & Büro & Herbst & 281 \\
+        \hline \\
+        Showroom-BOZEN & Büro & Sommer & 156 \\
+        \hline \\
+        Showroom-BOZEN & Büro & Winter & 480 \\
+        \hline \\
+        Showroom-BOZEN & Büro & * & 1215 \\
+        \hline \\
+        Showroom-BOZEN & Hotel & Frühling & 4032 \\
+        \hline \\
+        Showroom-BOZEN & Hotel & Herbst & 4472 \\
+        \hline \\
+        Showroom-BOZEN & Hotel & Sommer & 2022 \\
+        \hline \\
+        Showroom-BOZEN & Hotel & Winter & 6808 \\
+        \hline \\
+        Showroom-BOZEN & Hotel & * & 17334 \\
+        \hline \\
+        ... \\
+        \hline \\
 \end{longtable} 
 \endgroup
 
@@ -600,37 +600,37 @@ GROUP BY ROLLUP(product_category, product_name, production_stage_name);
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{2cm}}
         \caption{Production ROLLUP Result} \\
-				product\_category & product\_name & production\_stage\_name & avg \\
+	product\_category & product\_name & production\_stage\_name & avg \\
         \endfirsthead \\
         product\_category & product\_name & production\_stage\_name & avg \\
         \endhead \\
-				\hline \\
-AdsH-Set & AdsH-Fähnchen & Ausführung & 44.28 \\
-\hline \\
-AdsH-Set & AdsH-Fähnchen & Feinschliff & 44.18 \\
-\hline \\
-AdsH-Set & AdsH-Fähnchen & Vorbereitung & 43.35 \\
-\hline \\
-AdsH-Set & AdsH-Fähnchen & * & 43.94 \\
-\hline \\
-AdsH-Set & AdsH-Goldabzeichen & Ausführung & 45.11 \\
-\hline \\
-AdsH-Set & AdsH-Goldabzeichen & Feinschliff & 44.15 \\
-\hline \\
-AdsH-Set & AdsH-Goldabzeichen & Vorbereitung & 43.71 \\
-\hline \\
-AdsH-Set & AdsH-Goldabzeichen & * & 44.32 \\
-\hline \\
-AdsH-Set & AdsH-Goldpokal & Ausführung & 46.37 \\
-\hline \\
-AdsH-Set & AdsH-Goldpokal & Feinschliff & 43.60 \\
-\hline \\
-AdsH-Set & AdsH-Goldpokal & Vorbereitung & 47.80 \\
-\hline \\
-... & & & \\
-\hline \\
+        \hline \\
+        AdsH-Set & AdsH-Fähnchen & Ausführung & 44.28 \\
+        \hline \\
+        AdsH-Set & AdsH-Fähnchen & Feinschliff & 44.18 \\
+        \hline \\
+        AdsH-Set & AdsH-Fähnchen & Vorbereitung & 43.35 \\
+        \hline \\
+        AdsH-Set & AdsH-Fähnchen & * & 43.94 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldabzeichen & Ausführung & 45.11 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldabzeichen & Feinschliff & 44.15 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldabzeichen & Vorbereitung & 43.71 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldabzeichen & * & 44.32 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldpokal & Ausführung & 46.37 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldpokal & Feinschliff & 43.60 \\
+        \hline \\
+        AdsH-Set & AdsH-Goldpokal & Vorbereitung & 47.80 \\
+        \hline \\
+        ... \\
+        \hline \\
 \end{longtable} 
 \endgroup
 
@@ -648,8 +648,8 @@ The following query shows the number of visitors from the province of Bolzano an
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]
-SELECT visitor_sector, vl.district as visitor_district, sl.district as showroom_district, 
-        sum(number_of_visitors)
+SELECT visitor_sector, vl.district as visitor_district, 
+        sl.district as showroom_district, sum(number_of_visitors)
 FROM warehouse.showroom_visit
 JOIN warehouse.visitor using (visitor_id)
 JOIN warehouse.location as vl 
@@ -664,35 +664,35 @@ ORDER BY visitor_sector, vl.district, sl.district;
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{3cm}p{4cm}p{2cm}}
         \caption{Showroom CUBE Result} \\
-				visitor\_sector & visitor\_district & showroom\_district & sum \\
+	visitor\_sector & visitor\_district & showroom\_district & sum \\
         \endfirsthead \\
         visitor\_sector & visitor\_district & showroom\_district & sum \\
         \endhead \\
-				\hline \\
-Gastronomy & Bozen & Bozen & 55749 \\
-\hline \\
-Gastronomy & Bozen & Burggrafenamt  & 2574 \\
-\hline \\
-Gastronomy & Bozen & Eisacktal & 1554 \\
-\hline \\
-Gastronomy & Bozen & Pustertal & 2887 \\
-\hline \\
-Gastronomy & Bozen & Salten Schlern & 3501 \\
-\hline \\
-Gastronomy & Bozen & Überetsch-Südtiroler Unterland & 1842 \\
-\hline \\
-Gastronomy & Bozen & Vinschgau & 2278 \\
-\hline \\
-Gastronomy & Bozen & Wipptal & 3031 \\
-\hline \\
-Gastronomy & Bozen & * & 73416 \\
-\hline \\
-... & & & \\
-\hline \\
+        \hline \\
+        Gastronomy & Bozen & Bozen & 55749 \\
+        \hline \\
+        Gastronomy & Bozen & Burggrafenamt  & 2574 \\
+        \hline \\
+        Gastronomy & Bozen & Eisacktal & 1554 \\
+        \hline \\
+        Gastronomy & Bozen & Pustertal & 2887 \\
+        \hline \\
+        Gastronomy & Bozen & Salten Schlern & 3501 \\
+        \hline \\
+        Gastronomy & Bozen & Überetsch-Südtiroler Unterland & 1842 \\
+        \hline \\
+        Gastronomy & Bozen & Vinschgau & 2278 \\
+        \hline \\
+        Gastronomy & Bozen & Wipptal & 3031 \\
+        \hline \\
+        Gastronomy & Bozen & * & 73416 \\
+        \hline \\
+        ... \\
+        \hline \\
 \end{longtable} 
-\endgroup    
+\endgroup
 
 \subsubsection{SQL query using CUBE for business process 2 (production)}
 
@@ -719,45 +719,45 @@ ORDER BY product_department;
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{4.3cm}p{2cm}}
         \caption{Production CUBE Result} \\
-				product\_department & machine\_name & avg \\
+	product\_department & machine\_name & avg \\
         \endfirsthead \\
         product\_department & machine\_name & avg \\
         \endhead \\
-				\hline \\
-Badezimmer & José Alberto Córdova & 5.00 \\
-\hline \\
-Badezimmer & Herrera & 4.59 \\
-\hline \\
-Badezimmer & Dzurjanin & 4.46 \\
-\hline \\
-Badezimmer & Șchiopu & 4.44 \\
-\hline \\
-Badezimmer & Groșescu & 4.53 \\
-\hline \\
-Badezimmer & Văcăroiu & 4.46 \\
-\hline \\
-Badezimmer & Germanós & 4.47 \\
-\hline \\
-Badezimmer & Holuby & 4.42 \\
-\hline \\
-Badezimmer & Bogza & 4.31 \\
-\hline \\
-Badezimmer & Păcurariu & 4.34 \\
-\hline \\
-Badezimmer & Giurescu & 4.42 \\
-\hline \\
-Badezimmer & Raudsepp & 4.63 \\
-\hline \\
-Badezimmer & Argeșanu & 4.67 \\
-\hline \\
-Badezimmer & Ciupe & 4.14 \\
-\hline \\
-Badezimmer & Linda & 4.53 \\
-\hline \\
-... & & \\
-\hline \\
+        \hline \\
+        Badezimmer & José Alberto Córdova & 5.00 \\
+        \hline \\
+        Badezimmer & Herrera & 4.59 \\
+        \hline \\
+        Badezimmer & Dzurjanin & 4.46 \\
+        \hline \\
+        Badezimmer & Șchiopu & 4.44 \\
+        \hline \\
+        Badezimmer & Groșescu & 4.53 \\
+        \hline \\
+        Badezimmer & Văcăroiu & 4.46 \\
+        \hline \\
+        Badezimmer & Germanós & 4.47 \\
+        \hline \\
+        Badezimmer & Holuby & 4.42 \\
+        \hline \\
+        Badezimmer & Bogza & 4.31 \\
+        \hline \\
+        Badezimmer & Păcurariu & 4.34 \\
+        \hline \\
+        Badezimmer & Giurescu & 4.42 \\
+        \hline \\
+        Badezimmer & Raudsepp & 4.63 \\
+        \hline \\
+        Badezimmer & Argeșanu & 4.67 \\
+        \hline \\
+        Badezimmer & Ciupe & 4.14 \\
+        \hline \\
+        Badezimmer & Linda & 4.53 \\
+        \hline \\
+        ... \\
+        \hline \\
 \end{longtable} 
 \endgroup  
 
@@ -790,44 +790,43 @@ GROUP BY GROUPING SETS(
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
-        \caption{Showroom GROUPING SETS Result} \\
-				showroom\_name & sales\_rep\_name & visitor\_language & sum \\
+\begin{longtable}{p{4cm}p{4cm}p{3cm}p{3cm}}
+        \caption{Showroom CUBE Result} \\
+	showroom\_name & sales\_rep\_name & visitor\_language & sum \\
         \endfirsthead \\
         showroom\_name & sales\_rep\_name & visitor\_language & sum \\
         \endhead \\
-				\hline \\
-Showroom-BOZEN & Caroline Eder & english & 277049.23 \\
-\hline \\
-Showroom-BOZEN & Elisabeth Schwarz & english & 240820.64 \\
-\hline \\
-Showroom-BOZEN & Noemi Bruno & english & 8688.9 \\
-\hline \\
-Showroom-BOZEN & Simone Serra & english & 265751.20 \\
-\hline \\
-Showroom-BOZEN & Valerio Adami & english & 184714.18 \\
-\hline \\
-Showroom-BOZEN & * & english & 977024.15 \\
-\hline \\
-Showroom-BOZEN & Caroline Eder & german & 5384090.56 \\
-\hline \\
-Showroom-BOZEN & Elisabeth Schwarz & german & 8917292.85 \\
-\hline \\
-Showroom-BOZEN & Mario Lang & german & 2448919.46 \\
-\hline \\
-Showroom-BOZEN & Martina Lehner & german & 3255981.32 \\
-\hline \\
-Showroom-BOZEN & Noemi Bruno & german & 6188561.63 \\
-\hline \\
-Showroom-BOZEN & Simone Serra & german & 4546093.16 \\
-\hline \\
-Showroom-BOZEN & Valerio Adami & german & 5940355.45 \\
-\hline \\
-Showroom-BOZEN & * & german & 36681294.43 \\
-\hline \\
-
-... & & & \\
-\hline \\
+        \hline \\
+        Showroom-BOZEN & Caroline Eder & english & 277049.23 \\
+        \hline \\
+        Showroom-BOZEN & Elisabeth Schwarz & english & 240820.64 \\
+        \hline \\
+        Showroom-BOZEN & Noemi Bruno & english & 8688.9 \\
+        \hline \\
+        Showroom-BOZEN & Simone Serra & english & 265751.20 \\
+        \hline \\
+        Showroom-BOZEN & Valerio Adami & english & 184714.18 \\
+        \hline \\
+        Showroom-BOZEN & * & english & 977024.15 \\
+        \hline \\
+        Showroom-BOZEN & Caroline Eder & german & 5384090.56 \\
+        \hline \\
+        Showroom-BOZEN & Elisabeth Schwarz & german & 8917292.85 \\
+        \hline \\
+        Showroom-BOZEN & Mario Lang & german & 2448919.46 \\
+        \hline \\
+        Showroom-BOZEN & Martina Lehner & german & 3255981.32 \\
+        \hline \\
+        Showroom-BOZEN & Noemi Bruno & german & 6188561.63 \\
+        \hline \\
+        Showroom-BOZEN & Simone Serra & german & 4546093.16 \\
+        \hline \\
+        Showroom-BOZEN & Valerio Adami & german & 5940355.45 \\
+        \hline \\
+        Showroom-BOZEN & * & german & 36681294.43 \\
+        \hline \\
+        ... \\
+        \hline \\
 \end{longtable} 
 \endgroup           
 
@@ -856,41 +855,41 @@ GROUP BY GROUPING SETS(
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{3cm}p{4cm}p{2cm}}
         \caption{Production GROUPING SETS Result} \\
-				product\_category & year\_actual & quality\_control\_grade & count
+	product\_category & year\_actual & quality\_control\_grade & count
         \endfirsthead \\
         product\_category & year\_actual & quality\_control\_grade & count
         \endhead \\
-				\hline \\
-AdsH-Set & 2010 & 0 & 2 \\
-\hline \\
-Arztpraxis-Set & 2010 & 0 & 32 \\
-\hline \\
-Bonsai-Set & 2010 & 0 & 8 \\
-\hline \\
-Bühnen-Set & 2010 & 0 & 11 \\
-\hline \\
-Café-Set & 2010 & 0 & 9 \\
-\hline \\
-Computer-Set & 2010 & 0 & 2 \\
-\hline \\
-Einsame-Insel-Set & 2010 & 0 & 8 \\
-\hline \\
-Forschung-Set & 2010 & 0 & 3 \\
-\hline \\
-Haushaltsgeräte-Set & 2010 & 0 & 4 \\
-\hline \\
-Heizgeräte-Set & 2010 & 0 & 9 \\
-\hline \\
-Küchen-Set & 2010 & 0 & 16 \\
-\hline \\
-Lampen-Set & 2010 & 0 & 7 \\
-\hline \\
-Masken-Set & 2010 & 0 & 2 \\
-\hline \\				
-... & & & \\
-\hline \\
+	\hline \\
+        AdsH-Set & 2010 & 0 & 2 \\
+        \hline \\
+        Arztpraxis-Set & 2010 & 0 & 32 \\
+        \hline \\
+        Bonsai-Set & 2010 & 0 & 8 \\
+        \hline \\
+        Bühnen-Set & 2010 & 0 & 11 \\
+        \hline \\
+        Café-Set & 2010 & 0 & 9 \\
+        \hline \\
+        Computer-Set & 2010 & 0 & 2 \\
+        \hline \\
+        Einsame-Insel-Set & 2010 & 0 & 8 \\
+        \hline \\
+        Forschung-Set & 2010 & 0 & 3 \\
+        \hline \\
+        Haushaltsgeräte-Set & 2010 & 0 & 4 \\
+        \hline \\
+        Heizgeräte-Set & 2010 & 0 & 9 \\
+        \hline \\
+        Küchen-Set & 2010 & 0 & 16 \\
+        \hline \\
+        Lampen-Set & 2010 & 0 & 7 \\
+        \hline \\
+        Masken-Set & 2010 & 0 & 2 \\
+        \hline \\				
+        ... & & & \\
+        \hline \\
 \end{longtable} 
 \endgroup  
 
@@ -924,39 +923,39 @@ GROUP BY vl.city;
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{4cm}p{4cm}}
         \caption{Showroom NTILE Result} \\
-				city & count & tile4 \\
+	city & count & tile4 \\
         \endfirsthead \\
         city & count & tile4 \\
         \endhead \\
-				\hline \\
-VINTL & 1116 & 1 \\
-\hline \\
-TOBLACH & 1149 & 1 \\
-\hline \\
-TERENTEN & 1161 & 1 \\
-\hline \\
-PRETTAU & 1166 & 1 \\
-\hline \\
-ENNEBERG & 1172 & 1 \\
-\hline \\
-GSIES & 1177 & 1 \\
-\hline \\
-ABTEI & 1195 & 1 \\
-\hline \\
-BRUNECK & 1221 & 1 \\
-\hline \\
-SEXTEN & 1235 & 1 \\
-\hline \\
-MÜHLWALD & 1235 & 1 \\
-\hline \\
-OLANG & 1241 & 1 \\
-\hline \\
-GAIS & 1250 & 1 \\
-\hline \\
-CORVARA & 1254 & 1 \\
-\hline \\
-... & & \\
-\hline \\
+	\hline \\
+        VINTL & 1116 & 1 \\
+        \hline \\
+        TOBLACH & 1149 & 1 \\
+        \hline \\
+        TERENTEN & 1161 & 1 \\
+        \hline \\
+        PRETTAU & 1166 & 1 \\
+        \hline \\
+        ENNEBERG & 1172 & 1 \\
+        \hline \\
+        GSIES & 1177 & 1 \\
+        \hline \\
+        ABTEI & 1195 & 1 \\
+        \hline \\
+        BRUNECK & 1221 & 1 \\
+        \hline \\
+        SEXTEN & 1235 & 1 \\
+        \hline \\
+        MÜHLWALD & 1235 & 1 \\
+        \hline \\
+        OLANG & 1241 & 1 \\
+        \hline \\
+        GAIS & 1250 & 1 \\
+        \hline \\
+        CORVARA & 1254 & 1 \\
+        \hline \\
+        ... & & \\
+        \hline \\
 \end{longtable} 
 \endgroup
       
@@ -983,35 +982,35 @@ SELECT operator_name, ROUND(avg(duration)::numeric,2) as avg,
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{4cm}p{4cm}}
         \caption{Production NTILE Result} \\
-				operator\_name & avg & tile4 \\
+	operator\_name & avg & tile4 \\
         \endfirsthead \\
         operator\_name & avg & tile4 \\
         \endhead \\
-				\hline \\
-Machaela Moser & 43.51 & 1 \\
-\hline \\
-Clemens Bauer & 44.01 & 1 \\
-\hline \\
-Patrick Haas & 44.19 & 1 \\
-\hline \\
-Machaela Schmid & 44.20 & 1 \\
-\hline \\
-Alexander Wallner & 44.25 & 1 \\
-\hline \\
-Martina Wagner & 44.33 & 1 \\
-\hline \\
-Georg Steiner & 44.40 & 1 \\
-\hline \\
-Tanja Lehner & 44.43 & 1 \\
-\hline \\
-Johanna Maier & 44.51 & 1 \\
-\hline \\
-Viktoria Schmidt & 44.52 & 1 \\
-\hline \\
-Maximilian Schmid & 44.56 & 1 \\
-\hline \\
-... & & \\
-\hline \\
+	\hline \\
+        Machaela Moser & 43.51 & 1 \\
+        \hline \\
+        Clemens Bauer & 44.01 & 1 \\
+        \hline \\
+        Patrick Haas & 44.19 & 1 \\
+        \hline \\
+        Machaela Schmid & 44.20 & 1 \\
+        \hline \\
+        Alexander Wallner & 44.25 & 1 \\
+        \hline \\
+        Martina Wagner & 44.33 & 1 \\
+        \hline \\
+        Georg Steiner & 44.40 & 1 \\
+        \hline \\
+        Tanja Lehner & 44.43 & 1 \\
+        \hline \\
+        Johanna Maier & 44.51 & 1 \\
+        \hline \\
+        Viktoria Schmidt & 44.52 & 1 \\
+        \hline \\
+        Maximilian Schmid & 44.56 & 1 \\
+        \hline \\
+        ... & & \\
+        \hline \\
 \end{longtable} 
 \endgroup
 
@@ -1037,6 +1036,36 @@ JOIN warehouse.showroom using (showroom_id)
 GROUP BY showroom_name;
 \end{lstlisting}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{3cm}}
+        \caption{Showroom RANK Result} \\
+	Showroom & Count & Rank \\
+        \endfirsthead \\
+        Showroom & Count & Rank \\
+        \endhead \\
+	\hline \\
+        Showroom-BOZEN & 43863 & 1 \\
+        \hline \\
+        Showroom-ULTEN & 20032 & 2 \\
+        \hline \\
+        Showroom-SEXTEN & 18765 & 3 \\ 
+        \hline \\
+        Showroom-MÖLTEN & 18711 & 4 \\
+        \hline \\
+        Showroom-LATSCH & 18078 & 5 \\
+        \hline \\
+        Showroom-MÜHLBACH & 15183 & 6 \\ 
+        \hline \\
+        Showroom-SALURN & 14788 & 7 \\
+        \hline \\
+        Showroom-RATSCHINGS & 13442 & 8 \\ 
+        \hline \\
+        ... & & \\
+        \hline \\
+\end{longtable} 
+\endgroup
+
 \subsubsection{SQL query using RANK for business process 2 (production)}
 
 The following sql query ranks the different products with respect to their average raw material costs.
@@ -1055,12 +1084,46 @@ FROM warehouse.production
 JOIN warehouse.product using (product_id)
 GROUP BY product_category;
 \end{lstlisting}
-                
-\subsection{Windowing Clause}
 
-\subsubsection{SQL query using a windowing clause for business process 1 (showroom visit)}
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{5cm}p{5cm}p{2cm}}
+        \caption{Showroom RANK Result} \\
+	Product\_category & AVG\_raw\_material\_cost & Rank \\
+        \endfirsthead \\
+        Product\_category & AVG\_raw\_material\_cost & Rank \\
+        \endhead \\
+        \hline \\
+        Himmelsphänomene-Set & 373.96 & 1 \\
+        \hline \\
+        Sekretär-Set & 357.47 & 2 \\
+        \hline \\
+        Pflanzendeko-Set & 345.56 & 3 \\
+        \hline \\
+        Urkunden-Set & 324.72 & 4 \\
+        \hline \\
+        Melonen-Set & 319.97 & 5 \\
+        \hline \\
+        Regal-Set & 317.39 & 6 \\
+        \hline \\
+        Zitrus-Set & 315.05 & 7 \\
+        \hline \\
+        Kisten-Set & 314.72 & 8 \\
+        \hline \\
+        Frosch-Set & 312.50 & 9 \\
+        \hline \\
+        Birnen-Set & 312.47 & 10 \\
+        \hline \\
+        ... & & \\
+        \hline \\
+\end{longtable} 
+\endgroup
 
-(text missing)
+\subsection{WINDOWING Clause}
+
+\subsubsection{SQL query using a WINDOWING clause for business process 1 (showroom visit)}
+
+The following windows clause query shows the total sum of orders of a particular day. In addition, using the functionality of a window function, the average of the last 7 days is shown.
 
 \begin{lstlisting}[
         language=SQL,
@@ -1070,22 +1133,60 @@ GROUP BY product_category;
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]																			   
-SELECT date_actual, this_day, average_last_week	
-FROM (																		   
-SELECT date_actual, year_actual, sum(order_total_price) as this_day, 
+SELECT date_actual, this_day, average_last_7_days	
+FROM (
+        SELECT date_actual, year_actual, sum(order_total_price) 
+                as this_day, 
 		ROUND(AVG(SUM(order_total_price))
 			OVER ( ORDER BY date_actual
 			ROWS BETWEEN 7 PRECEDING
-			AND CURRENT ROW)::numeric,2) as average_last_week
+                        AND CURRENT ROW)::numeric,2) 
+                                as average_last_7_days
 	FROM warehouse.showroom_visit
 	JOIN warehouse.date using (date_id)
 	JOIN warehouse.order using (order_id)
 	GROUP BY date_actual, year_actual
-	ORDER BY date_actual) as res where year_actual > 2017;
+        ORDER BY date_actual) 
+AS res where year_actual > 2017;
 \end{lstlisting}				  
-                
-\subsubsection{SQL query using a windowing clause for business process 2 (production)}
-(text missing)
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}}
+        \caption{Showroom WINDOWING Result} \\
+	Date\_actual & this\_day & average\_last\_7\_days \\
+        \endfirsthead \\
+        Date\_actual & this\_day & average\_last\_7\_days \\
+        \endhead \\
+        \hline \\
+        2018-01-01 & 679797.25 & 255967.71 \\
+        \hline \\
+        2018-01-02 & 68135.18 & 229689.79 \\
+        \hline \\
+        2018-01-03 & 187257.15 & 243683.57 \\
+        \hline \\
+        2018-01-04 & 180453.50 & 248296.45 \\
+        \hline \\
+        2018-01-05 & 402369.89 & 282831.82 \\
+        \hline \\
+        2018-01-06 & 463596.47 & 301014.82 \\
+        \hline \\
+        2018-01-07 & 427284.56 & 321012.68 \\
+        \hline \\
+        2018-01-08 & 24863.57 & 304219.70 \\
+        \hline \\
+        2018-01-09 & 97464.25 & 231428.07 \\
+        \hline \\
+        2018-01-10 & 5871.16" & 223645.07 \\
+        \hline \\
+        ... & & \\
+        \hline \\
+\end{longtable}
+\endgroup
+
+\subsubsection{SQL query using a WINDOWING clause for business process 2 (production)}
+
+The following query sums the raw material costs of each month in the production. In addition, the average costs of raw material per month are calculated for the preceding six months.
 
 \begin{lstlisting}[
         language=SQL,
@@ -1101,18 +1202,54 @@ SELECT year_actual, month_actual, sum(raw_material_cost) as this_month,
 		ROUND(AVG(SUM(raw_material_cost))
 			OVER ( ORDER BY year_actual, month_actual
 			ROWS BETWEEN 6 PRECEDING
-			AND CURRENT ROW)::numeric,2) as average_last_months
+                        AND CURRENT ROW)::numeric,2) 
+                        AS average_last_months
 	FROM warehouse.production
 	JOIN warehouse.date ON date.date_id = production.end_date_id
 	GROUP BY year_actual, month_actual
-	ORDER BY year_actual, month_actual) as res where year_actual = 2018;
+        ORDER BY year_actual, month_actual) 
+AS res where year_actual = 2018;
 \end{lstlisting}				  
-        
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{2.5cm}p{3cm}p{4cm}p{4cm}}
+        \caption{Production WINDOWING Result} \\
+	Year\_actual & Month\_actual & this\_month & average\_last\_7\_days \\
+        \endfirsthead \\
+        Year\_actual & Month\_actual & this\_month & average\_last\_7\_days \\
+        \endhead \\
+        \hline \\
+        2018 & 1 & 2243166 & 2089025.86 \\
+        \hline \\
+        2018 & 2 & 2009709 & 2070697.43 \\
+        \hline \\
+        2018 & 3 & 2140313 & 2072766.71 \\
+        \hline \\
+        2018 & 4 & 1898116 & 2048190.43 \\
+        \hline \\
+        2018 & 5 & 2186836 & 2051346.43 \\
+        \hline \\
+        2018 & 6 & 2066625 & 2052404.57 \\
+        \hline \\
+        2018 & 7 & 2163526 & 2101184.43 \\
+        \hline \\
+        2018 & 8 & 2175590 & 2091530.71 \\
+        \hline \\
+        2018 & 9 & 1935040 & 2080863.71 \\
+        \hline \\
+        2018 & 10 & 1879026 & 2043537.00 \\
+        \hline \\
+        ... & & & \\
+        \hline \\
+\end{longtable}
+\endgroup
+
 \subsection{Period-to-period Comparison}
 
 \subsubsection{SQL query using period-to-period comparison for business process 1 (showroom visit)}
 
-(text missing)
+The following query shows the total number of visitors per quartal per year. In addition, it shows the same information for the year before and difference between those two years.
 
 \begin{lstlisting}[
         language=SQL,
@@ -1128,19 +1265,53 @@ SELECT year_actual, quarter_actual,
 	FROM (
 		SELECT year_actual, quarter_actual,
 			count(visitor_id) as visitors_this_year,
-			LAG(count(visitor_id), 4) OVER (ORDER BY year_actual, quarter_actual) as visitors_last_year 
+                        LAG(count(visitor_id), 4) OVER 
+                        (ORDER BY year_actual, quarter_actual) 
+                        AS visitors_last_year 
 		FROM warehouse.showroom_visit
 			JOIN warehouse.date using (date_id)
 			JOIN warehouse.order using (order_id)
 			GROUP BY year_actual, quarter_actual
-			ORDER BY year_actual, quarter_actual) as last_year
-		WHERE year_actual > 2010;
+                        ORDER BY year_actual, quarter_actual) 
+AS last_year WHERE year_actual > 2010;
 \end{lstlisting}
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{2cm}}
+        \caption{Production period-to-period comparison result} \\
+	Year\_actual & Quarter\_actual & Visitor\_this\_year & Visitor\_last\_year & Difference \\
+        \endfirsthead \\
+        Year\_actual & Quarter\_actual & Visitor\_this\_year & Visitor\_last\_year & Difference \\
+        \endhead \\
+        \hline \\
+        2011 & 1 & 294 & 274 & 20 \\
+        \hline \\
+        2011 & 2 & 145 & 188 & -43 \\
+        \hline \\
+        2011 & 3 & 84 & 97 & -13 \\
+        \hline \\
+        2011 & 4 & 263 & 297 & -34 \\
+        \hline \\
+        2012 & 1 & 331 & 294 & 37 \\
+        \hline \\
+        2012 & 2 & 209 & 145 & 64 \\
+        \hline \\
+        2012 & 3 & 133 & 84 & 49 \\
+        \hline \\
+        2012 & 4 & 327 & 263 & 64 \\
+        \hline \\
+        2013 & 1 & 341 & 331 & 10 \\
+        \hline \\
+        2013 & 2 & 183 & 209 & -26 \\
+        \hline \\
+        ... & & & \\
+        \hline \\
+\end{longtable}
+\endgroup
 
 \section{Data Analysis Tool}
 
 
-% \bibliography{references}{}
-% \bibliographystyle{plain}
 
 \end{document}
