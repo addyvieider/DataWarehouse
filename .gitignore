@@ -9,17 +9,17 @@
 /.doit.db.dir
 
 
-/latex/*.toc
-/latex/*.aux
-/latex/*.bbl
-/latex/*.blg
-/latex/*.fdb_latexmk
-/latex/*.fls
-/latex/*.lof
-/latex/*.log
-/latex/*.lol
-/latex/*.lot
-/latex/*.out
-/latex/*.synctex.gz
-/latex/*.synctex(busy)
-/latex/*.toc
+/Report/*.toc
+/Report/*.aux
+/Report/*.bbl
+/Report/*.blg
+/Report/*.fdb_latexmk
+/Report/*.fls
+/Report/*.lof
+/Report/*.log
+/Report/*.lol
+/Report/*.lot
+/Report/*.out
+/Report/*.synctex.gz
+/Report/*.synctex(busy)
+/Report/*.toc
