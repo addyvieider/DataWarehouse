@@ -1,6 +1,7 @@
 %++++++++++++++++++++++++++++++++++++++++
 % Don't modify this section unless you know what you're doing!
 \documentclass[letterpaper,12pt]{article}
+\usepackage{csvsimple}
 \usepackage{tabularx} % extra features for tabular environment
 \usepackage{amsmath}  % improve math presentation
 \usepackage{graphicx} % takes care of graphic including machinery
@@ -56,7 +57,7 @@ Business questions:
         \item Which is the best running showroom (most visitors, most orders, etc.)
         \item Where are the customers from (with different granularity)
         \item Which department are the customers the most interested in
-        \item Compare the number of visitors to the number of customers for a time period and/or showroom
+        \item Compare the number of visitors for a time period and/or showroom
 \end{itemize}
 
 \subsubsection{Production}
@@ -68,6 +69,8 @@ Business questions:
         \item What is the average time to produce a particular product
         \item Which is the product with the highest/lowest quality
         \item How much does a product cost in terms of raw material cost
+				\item Compare the machines inn terms of quality and/or production time
+				\item How many products have been produced in a certain time period
 \end{itemize}
 
 \section{Conceptual Design}
@@ -507,7 +510,7 @@ Note: all columns with the * are foreign key columns and are carrying only the i
 \subsection{ROLLUP}
 \subsubsection{SQL query using ROLLUP for business process 1 (showroom visit)}
 
-The following sql query shows the number of visitors per showroom, in the different areas and in the different seasons. In addition there are the different partial sums. For example, for the showroom in Bolzano, first the number of visitors for the 'bBedroom' area in autumn is shown, then the total number of visitors for the 'bedroom' area, regardless of the season, and finally the total number of visitors for the showroom in Bolzano, regardless of the area and the season.
+The following sql query shows the number of visitors per showroom, in the different areas and in the different seasons. In addition there are the different partial sums. For example, for the showroom in Bolzano, first the number of visitors for the 'bedroom' area in autumn is shown, then the total number of visitors for the 'bedroom' area, regardless of the season, and finally the total number of visitors for the showroom in Bolzano, regardless of the area and the season.
 
 \begin{lstlisting}[
         language=SQL,
@@ -525,6 +528,51 @@ JOIN warehouse.date using (date_id)
 GROUP BY ROLLUP(showroom_name, department_name, season);
 \end{lstlisting}
 
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+        \caption{Showroom ROLLUP Result} \\
+				showroom\_name & department\_name & season & count \\
+        \endfirsthead \\
+        showroom\_name & department\_name & season & count \\
+        \endhead \\
+        \hline \\
+				Showroom-BOZEN & Badezimmer & Frühling & 2579 \\
+\hline \\
+Showroom-BOZEN & Badezimmer & Herbst & 3285 \\
+\hline \\
+Showroom-BOZEN & Badezimmer & Sommer & 1311 \\
+\hline \\
+Showroom-BOZEN & Badezimmer & Winter & 4708 \\
+\hline \\
+Showroom-BOZEN & Badezimmer & * & 11883 \\
+\hline \\
+Showroom-BOZEN & Büro & Frühling & 298 \\
+\hline \\
+Showroom-BOZEN & Büro & Herbst & 281 \\
+\hline \\
+Showroom-BOZEN & Büro & Sommer & 156 \\
+\hline \\
+Showroom-BOZEN & Büro & Winter & 480 \\
+\hline \\
+Showroom-BOZEN & Büro & * & 1215 \\
+\hline \\
+Showroom-BOZEN & Hotel & Frühling & 4032 \\
+\hline \\
+Showroom-BOZEN & Hotel & Herbst & 4472 \\
+\hline \\
+Showroom-BOZEN & Hotel & Sommer & 2022 \\
+\hline \\
+Showroom-BOZEN & Hotel & Winter & 6808 \\
+\hline \\
+Showroom-BOZEN & Hotel & * & 17334 \\
+\hline \\
+... \\
+\hline \\
+\end{longtable} 
+\endgroup
+
 \subsubsection{SQL query with ROLLUP for business process 2 (production)}
 
 The following sql query shows the average machining time for a particular production stage of a particular product of a particular product category. The query also returns the average machining times of the higher levels, in other words, a granularity is removed step by step. For example, the average machining time of 'table XY' is shown first for the 'fine grinding' process. Then you get the average machining time of all processes on 'table XY' and finally the average machining time of all processes on all table models, thus of the whole product category 'table'.
@@ -538,12 +586,48 @@ The following sql query shows the average machining time for a particular produc
         commentstyle=\color{gray}
      ]
 SELECT product_category, product_name, 
-        production_stage_name, ROUND(avg(duration)::numeric,2)
+        production_stage_name, ROUND(avg(duration)::numeric,2) as avg
 FROM warehouse.production
 JOIN warehouse.product using (product_id)
 JOIN warehouse.production_stage using (production_stage_id)
 GROUP BY ROLLUP(product_category, product_name, production_stage_name);
 \end{lstlisting}    
+
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+        \caption{Production ROLLUP Result} \\
+				product\_category & product\_name & production\_stage\_name & avg \\
+        \endfirsthead \\
+        product\_category & product\_name & production\_stage\_name & avg \\
+        \endhead \\
+AdsH-Set & AdsH-Fähnchen & Ausführung & 44.28 \\
+\hline \\
+AdsH-Set & AdsH-Fähnchen & Feinschliff & 44.18 \\
+\hline \\
+AdsH-Set & AdsH-Fähnchen & Vorbereitung & 43.35 \\
+\hline \\
+AdsH-Set & AdsH-Fähnchen & * & 43.94 \\
+\hline \\
+AdsH-Set & AdsH-Goldabzeichen & Ausführung & 45.11 \\
+\hline \\
+AdsH-Set & AdsH-Goldabzeichen & Feinschliff & 44.15 \\
+\hline \\
+AdsH-Set & AdsH-Goldabzeichen & Vorbereitung & 43.71 \\
+\hline \\
+AdsH-Set & AdsH-Goldabzeichen & * & 44.32 \\
+\hline \\
+AdsH-Set & AdsH-Goldpokal & Ausführung & 46.37 \\
+\hline \\
+AdsH-Set & AdsH-Goldpokal & Feinschliff & 43.60 \\
+\hline \\
+AdsH-Set & AdsH-Goldpokal & Vorbereitung & 47.80 \\
+\hline \\
+... \\
+\hline \\
+\end{longtable} 
+\endgroup
 
 \subsection{CUBE}
 
@@ -559,7 +643,7 @@ The following query shows the number of visitors from the province of Bolzano an
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]
-SELECT visitor_sector, vl.district, sl.district, 
+SELECT visitor_sector, vl.district as visitor_district, sl.district as showroom_district, 
         sum(number_of_visitors)
 FROM warehouse.showroom_visit
 JOIN warehouse.visitor using (visitor_id)
@@ -571,7 +655,38 @@ JOIN warehouse.location as sl
 WHERE vl.province = 'Bozen'
 GROUP BY CUBE(vl.district, visitor_sector, sl.district)
 ORDER BY visitor_sector, vl.district, sl.district;
-\end{lstlisting}    
+\end{lstlisting}
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+        \caption{Showroom CUBE Result} \\
+				visitor\_sector & visitor\_district & showroom\_district & sum \\
+        \endfirsthead \\
+        visitor\_sector & visitor\_district & showroom\_district & sum \\
+        \endhead \\
+Gastronomy & Bozen & Bozen & 55749 \\
+\hline \\
+Gastronomy & Bozen & Burggrafenamt  & 2574 \\
+\hline \\
+Gastronomy & Bozen & Eisacktal & 1554 \\
+\hline \\
+Gastronomy & Bozen & Pustertal & 2887 \\
+\hline \\
+Gastronomy & Bozen & Salten Schlern & 3501 \\
+\hline \\
+Gastronomy & Bozen & Überetsch-Südtiroler Unterland & 1842 \\
+\hline \\
+Gastronomy & Bozen & Vinschgau & 2278 \\
+\hline \\
+Gastronomy & Bozen & Wipptal & 3031 \\
+\hline \\
+Gastronomy & Bozen & * & 73416 \\
+\hline \\
+... \\
+\hline \\
+\end{longtable} 
+\endgroup    
 
 \subsubsection{SQL query using CUBE for business process 2 (production)}
 
@@ -586,15 +701,58 @@ The following query shows the average grade of the quality control for a machine
         commentstyle=\color{gray}
      ]
 SELECT product_department, machine_name, 
-        ROUND(avg(quality_control_grade)::numeric,2)
+        ROUND(avg(quality_control_grade)::numeric,2) as avg
 FROM warehouse.production
 JOIN warehouse.product using (product_id)
 JOIN warehouse.machine using (machine_id)
 JOIN warehouse.quality_control using (quality_control_id)
 WHERE quality_control_grade is not NULL
 GROUP BY CUBE(product_department, machine_name)
-ORDER BY avg(quality_control_grade) desc;	
+ORDER BY product_department;	
 \end{lstlisting}
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}}
+        \caption{Production CUBE Result} \\
+				product\_department & machine\_name & avg \\
+        \endfirsthead \\
+        product\_department & machine\_name & avg \\
+        \endhead \\
+Badezimmer & José Alberto Córdova & 5.00 \\
+\hline \\
+Badezimmer & Herrera & 4.59 \\
+\hline \\
+Badezimmer & Dzurjanin & 4.46 \\
+\hline \\
+Badezimmer & Șchiopu & 4.44 \\
+\hline \\
+Badezimmer & Groșescu & 4.53 \\
+\hline \\
+Badezimmer & Văcăroiu & 4.46 \\
+\hline \\
+Badezimmer & Germanós & 4.47 \\
+\hline \\
+Badezimmer & Holuby & 4.42 \\
+\hline \\
+Badezimmer & Bogza & 4.31 \\
+\hline \\
+Badezimmer & Păcurariu & 4.34 \\
+\hline \\
+Badezimmer & Giurescu & 4.42 \\
+\hline \\
+Badezimmer & Raudsepp & 4.63 \\
+\hline \\
+Badezimmer & Argeșanu & 4.67 \\
+\hline \\
+Badezimmer & Ciupe & 4.14 \\
+\hline \\
+Badezimmer & Linda & 4.53 \\
+\hline \\
+... \\
+\hline \\
+\end{longtable} 
+\endgroup  
 
 \subsection{GROUPING SETS}
 
@@ -621,7 +779,49 @@ GROUP BY GROUPING SETS(
         (showroom_name, sales_rep_name, visitor_language),
         (showroom_name, visitor_language),
         (showroom_name, sales_rep_name));
-\end{lstlisting}          
+\end{lstlisting} 
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+        \caption{Showroom CUBE Result} \\
+				showroom\_name & sales\_rep\_name & visitor\_language & sum \\
+        \endfirsthead \\
+        showroom\_name & sales\_rep\_name & visitor\_language & sum \\
+        \endhead \\
+Showroom-BOZEN & Caroline Eder & english & 277049.23 \\
+\hline \\
+Showroom-BOZEN & Elisabeth Schwarz & english & 240820.64 \\
+\hline \\
+Showroom-BOZEN & Noemi Bruno & english & 8688.9 \\
+\hline \\
+Showroom-BOZEN & Simone Serra & english & 265751.20 \\
+\hline \\
+Showroom-BOZEN & Valerio Adami & english & 184714.18 \\
+\hline \\
+Showroom-BOZEN & * & english & 977024.15 \\
+\hline \\
+Showroom-BOZEN & Caroline Eder & german & 5384090.56 \\
+\hline \\
+Showroom-BOZEN & Elisabeth Schwarz & german & 8917292.85 \\
+\hline \\
+Showroom-BOZEN & Mario Lang & german & 2448919.46 \\
+\hline \\
+Showroom-BOZEN & Martina Lehner & german & 3255981.32 \\
+\hline \\
+Showroom-BOZEN & Noemi Bruno & german & 6188561.63 \\
+\hline \\
+Showroom-BOZEN & Simone Serra & german & 4546093.16 \\
+\hline \\
+Showroom-BOZEN & Valerio Adami & german & 5940355.45 \\
+\hline \\
+Showroom-BOZEN & * & german & 36681294.43 \\
+\hline \\
+
+... \\
+\hline \\
+\end{longtable} 
+\endgroup           
 
 \subsubsection{SQL query using GROUPING SETS for business process 2 (production)}
 
@@ -674,7 +874,7 @@ GROUP BY vl.city;
       
 \subsubsection{SQL query using NTILE for business process 2 (production)}
 
-The next sql query sums all processing times of an operator and groups them to 4 groups, were each operators gets assigned to a specific group relatively to the sum of duration of all production steps.
+The next sql query averages all processing times of an operator and groups them to 4 groups, were each operators gets assigned to a specific group relatively to the average of duration of all production steps.
 
 \begin{lstlisting}[
         language=SQL,
@@ -684,11 +884,10 @@ The next sql query sums all processing times of an operator and groups them to 4
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]
-SELECT operator_name, ROUND(sum(duration)::numeric,2), 
-        NTILE(4) OVER (ORDER BY sum(duration)) AS TILE4
-FROM warehouse.production
-JOIN warehouse.operator using (operator_id)
-GROUP BY operator_name;
+SELECT operator_name, ROUND(avg(duration)::numeric,2), NTILE(4) OVER (ORDER BY avg(duration)) AS TILE4
+	FROM warehouse.production
+	JOIN warehouse.operator using (operator_id)
+	GROUP BY operator_name;
 \end{lstlisting}
 
 \subsection{RANK}
@@ -731,9 +930,9 @@ JOIN warehouse.product using (product_id)
 GROUP BY product_category;
 \end{lstlisting}
                 
-\subsection{??????}
+\subsection{Windowing Clause}
 
-\subsubsection{SQL query ??????}
+\subsubsection{SQL query using a windowing clause for business process 1 (showroom visit)}
 
 (text missing)
 
@@ -745,21 +944,21 @@ GROUP BY product_category;
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]																			   
-SELECT date_actual, sum(order_total_price), 
-        ROUND(AVG(SUM(order_total_price))
-                OVER ( ORDER BY date_actual
-                ROWS BETWEEN 7 PRECEDING
-                AND CURRENT ROW)::numeric,2)
-FROM warehouse.showroom_visit
-JOIN warehouse.date using (date_id)
-JOIN warehouse.order using (order_id)
-WHERE year_actual > 2017
-GROUP BY date_actual
-ORDER BY date_actual;
+SELECT date_actual, this_day, average_last_week	
+FROM (																		   
+SELECT date_actual, year_actual, sum(order_total_price) as this_day, 
+		ROUND(AVG(SUM(order_total_price))
+			OVER ( ORDER BY date_actual
+			ROWS BETWEEN 7 PRECEDING
+			AND CURRENT ROW)::numeric,2) as average_last_week
+	FROM warehouse.showroom_visit
+	JOIN warehouse.date using (date_id)
+	JOIN warehouse.order using (order_id)
+	GROUP BY date_actual, year_actual
+	ORDER BY date_actual) as res where year_actual > 2017;
 \end{lstlisting}				  
                 
-\subsubsection{SQL query ??????}
-
+\subsubsection{SQL query using a windowing clause for business process 2 (production)}
 (text missing)
 
 \begin{lstlisting}[
@@ -770,20 +969,22 @@ ORDER BY date_actual;
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]			  
-SELECT year_actual, month_actual, sum(raw_material_cost), 
-        ROUND(AVG(SUM(raw_material_cost))
-                OVER ( ORDER BY year_actual, month_actual
-                ROWS BETWEEN 6 PRECEDING
-                AND CURRENT ROW)::numeric,2)
-FROM warehouse.production
-JOIN warehouse.date ON date.date_id = production.end_date_id
-GROUP BY year_actual, month_actual
-ORDER BY year_actual, month_actual;	
+SELECT year_actual, month_actual, this_month, average_last_months
+FROM (
+SELECT year_actual, month_actual, sum(raw_material_cost) as this_month, 
+		ROUND(AVG(SUM(raw_material_cost))
+			OVER ( ORDER BY year_actual, month_actual
+			ROWS BETWEEN 6 PRECEDING
+			AND CURRENT ROW)::numeric,2) as average_last_months
+	FROM warehouse.production
+	JOIN warehouse.date ON date.date_id = production.end_date_id
+	GROUP BY year_actual, month_actual
+	ORDER BY year_actual, month_actual) as res where year_actual = 2018;
 \end{lstlisting}				  
         
-\subsection{??????}
+\subsection{Period-to-period Comparison}
 
-\subsubsection{SQL query ??????}
+\subsubsection{SQL query using period-to-period comparison for business process 1 (showroom visit)}
 
 (text missing)
 
@@ -796,20 +997,18 @@ ORDER BY year_actual, month_actual;
         commentstyle=\color{gray}
         ]
 SELECT year_actual, quarter_actual, 
-visitors_this_year, visitors_last_year,
-visitors_this_year - visitors_last_year as difference
-FROM (
-        SELECT year_actual, quarter_actual,
-                count(visitor_id) as visitors_this_year,
-                LAG(count(visitor_id), 4) 
-                OVER (ORDER BY year_actual, quarter_actual) 
-                as visitors_last_year 
-        FROM warehouse.showroom_visit
-                JOIN warehouse.date using (date_id)
-                JOIN warehouse.order using (order_id)
-                GROUP BY year_actual, quarter_actual
-                ORDER BY year_actual, quarter_actual) as last_year
-        WHERE year_actual > 2010;
+	visitors_this_year, visitors_last_year,
+	visitors_this_year - visitors_last_year as difference
+	FROM (
+		SELECT year_actual, quarter_actual,
+			count(visitor_id) as visitors_this_year,
+			LAG(count(visitor_id), 4) OVER (ORDER BY year_actual, quarter_actual) as visitors_last_year 
+		FROM warehouse.showroom_visit
+			JOIN warehouse.date using (date_id)
+			JOIN warehouse.order using (order_id)
+			GROUP BY year_actual, quarter_actual
+			ORDER BY year_actual, quarter_actual) as last_year
+		WHERE year_actual > 2010;
 \end{lstlisting}
 
 \section{Data Analysis Tool}

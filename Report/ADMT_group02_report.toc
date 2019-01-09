@@ -16,22 +16,22 @@
 \contentsline {subsection}{\numberline {4.1}ROLLUP}{11}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}SQL query using ROLLUP for business process 1 (showroom visit)}{11}{subsubsection.4.1.1}
 \contentsline {subsubsection}{\numberline {4.1.2}SQL query with ROLLUP for business process 2 (production)}{12}{subsubsection.4.1.2}
-\contentsline {subsection}{\numberline {4.2}CUBE}{12}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}SQL query using CUBE for business process 1 (showroom visit)}{12}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}SQL query using CUBE for business process 2 (production)}{12}{subsubsection.4.2.2}
-\contentsline {subsection}{\numberline {4.3}GROUPING SETS}{13}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}SQL query using GROUPING SETS for business process 1 (showroom visit)}{13}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}SQL query using GROUPING SETS for business process 2 (production)}{13}{subsubsection.4.3.2}
-\contentsline {section}{\numberline {5}Querying}{14}{section.5}
-\contentsline {subsection}{\numberline {5.1}NTILE}{14}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}SQL query using NTILE for business process 1 (showroom visit)}{14}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}SQL query using NTILE for business process 2 (production)}{14}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {5.2}RANK}{14}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}SQL query using RANK for business process 1 (showroom visit)}{14}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}SQL query using RANK for business process 2 (production)}{14}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {5.3}??????}{15}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}SQL query ??????}{15}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}SQL query ??????}{15}{subsubsection.5.3.2}
-\contentsline {subsection}{\numberline {5.4}??????}{15}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}SQL query ??????}{15}{subsubsection.5.4.1}
-\contentsline {section}{\numberline {6}Data Analysis Tool}{16}{section.6}
+\contentsline {subsection}{\numberline {4.2}CUBE}{13}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}SQL query using CUBE for business process 1 (showroom visit)}{13}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}SQL query using CUBE for business process 2 (production)}{14}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}GROUPING SETS}{15}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}SQL query using GROUPING SETS for business process 1 (showroom visit)}{15}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}SQL query using GROUPING SETS for business process 2 (production)}{16}{subsubsection.4.3.2}
+\contentsline {section}{\numberline {5}Querying}{16}{section.5}
+\contentsline {subsection}{\numberline {5.1}NTILE}{16}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}SQL query using NTILE for business process 1 (showroom visit)}{16}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}SQL query using NTILE for business process 2 (production)}{17}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}RANK}{17}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}SQL query using RANK for business process 1 (showroom visit)}{17}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}SQL query using RANK for business process 2 (production)}{17}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Windowing Clause}{17}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}SQL query using a windowing clause for business process 1 (showroom visit)}{17}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}SQL query using a windowing clause for business process 2 (production)}{18}{subsubsection.5.3.2}
+\contentsline {subsection}{\numberline {5.4}Period-to-period Comparison}{18}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}SQL query using period-to-period comparison for business process 1 (showroom visit)}{18}{subsubsection.5.4.1}
+\contentsline {section}{\numberline {6}Data Analysis Tool}{18}{section.6}
