@@ -78,12 +78,8 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstmi
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/listings.cfg
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/listings.cfg
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/textgreek/textgreek.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/textgreek/textgreek.sty
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/greek-fontenc/lgrenc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/greek-fontenc/lgrenc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/greek-fontenc/greek-fontenc.def
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/greek-fontenc/greek-fontenc.def
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/makeidx.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/makeidx.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/inputenc.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/inputenc.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/utf8.def
@@ -94,13 +90,23 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ot1enc.df
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ot1enc.dfu
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omsenc.dfu
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omsenc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/greek-inputenc/lgrenc.dfu
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/greek-inputenc/lgrenc.dfu
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/csvsimple/csvsimple.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/csvsimple/csvsimple.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/shellesc.sty
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/shellesc.sty
+OUTPUT ADMT_group02_report.idx
 INPUT ADMT_group02_report.aux
 INPUT ADMT_group02_report.aux
 OUTPUT ADMT_group02_report.aux
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/cbfonts-fd/lgrcmr.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/cbfonts-fd/lgrcmr.fd
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -115,8 +121,14 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/namer
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
+INPUT ADMT_group02_report.out
 OUTPUT ADMT_group02_report.pdf
+INPUT ./ADMT_group02_report.out
+INPUT ./ADMT_group02_report.out
+OUTPUT ADMT_group02_report.out
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm
@@ -125,12 +137,31 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmex
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr17.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ADMT_group02_report.toc
+INPUT ADMT_group02_report.toc
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omscmr.fd
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omscmr.fd
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr8.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi8.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmmi6.tfm
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy8.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmsy6.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Users/laurin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+OUTPUT ADMT_group02_report.toc
+INPUT ADMT_group02_report.lof
+INPUT ADMT_group02_report.lof
+OUTPUT ADMT_group02_report.lof
+INPUT ADMT_group02_report.lot
+INPUT ADMT_group02_report.lot
+OUTPUT ADMT_group02_report.lot
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omscmr.fd
+INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/omscmr.fd
 INPUT ../images/DFM_Showroom_Simple.png
 INPUT ../images/DFM_Showroom_Simple.png
 INPUT ../images/DFM_Showroom_Simple.png
@@ -164,8 +195,6 @@ INPUT ../images/Starschema_Production.png
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmtt12.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cbgreek/grmn1200.tfm
 INPUT ADMT_group02_report.aux
 INPUT ./ADMT_group02_report.out
 INPUT ./ADMT_group02_report.out
@@ -181,5 +210,3 @@ INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cbgreek/grmn1200.pfb
-INPUT C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cbgreek/grmn1200.pfb

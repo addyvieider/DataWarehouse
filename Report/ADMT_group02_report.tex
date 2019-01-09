@@ -13,6 +13,7 @@
 \usepackage{listings}
 \usepackage{makeidx}
 \usepackage[utf8]{inputenc}
+\usepackage{csvsimple}
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
 	linkcolor=blue,        % color of internal links
@@ -72,6 +73,10 @@ Business questions:
 
 \section{Conceptual Design}
 
+The first fact of our Data Warehouse represents a showroom visit. The company is registering each visit in a particular showroom and is interested in some very specific details about a the visit. Namely, for each visit they store the date, the visitor and visitor type, the showroom, the department in which the visitor was particularly interested, the order if the visitor placed one, the sales representative who took care about the visitor and the duration and the number of people with respect to the visit.
+
+The second fact collects some relevant information of a production stage. For each production stage of a particular product, in addition to those two information, also start- and end-date, the machine, the result of the quality control, the operator, the costs of the raw material and the duration of the process are stored.
+
 \begingroup
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{3cm}p{6cm}p{4cm}}
@@ -81,9 +86,9 @@ Business questions:
         Fact & Dimensions & Measures \\
         \endhead \\
         \hline \\
-        Showroom visit & Date, Showroom, Visitor, Order, Detail, Department, Sales representative & Duration (AVG), Amount of people (SUM, AVG) \\
+        Showroom visit & Date, Showroom, Visitor, Visitor type, Order, Department, Sales representative & Duration (AVG - additive), Amount of people (SUM - additive, AVG - additive) \\
         \hline \\
-        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (AVG), Raw material cost (AVG) \\
+        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (AVG), Raw material cost (SUM - semi-additive; AVG - semi-additive) \\
         \hline \\
 \end{longtable}
 \endgroup
