@@ -664,7 +664,7 @@ ORDER BY visitor_sector, vl.district, sl.district;
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{3cm}p{2cm}}
+\begin{longtable}{p{4cm}p{3cm}p{4cm}p{2cm}}
         \caption{Showroom CUBE Result} \\
 	visitor\_sector & visitor\_district & showroom\_district & sum \\
         \endfirsthead \\
@@ -692,7 +692,7 @@ ORDER BY visitor_sector, vl.district, sl.district;
         ... \\
         \hline \\
 \end{longtable} 
-\endgroup    
+\endgroup
 
 \subsubsection{SQL query using CUBE for business process 2 (production)}
 
@@ -719,7 +719,7 @@ ORDER BY product_department;
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{2cm}}
+\begin{longtable}{p{4cm}p{4.3cm}p{2cm}}
         \caption{Production CUBE Result} \\
 	product\_department & machine\_name & avg \\
         \endfirsthead \\
@@ -790,12 +790,13 @@ GROUP BY GROUPING SETS(
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{4cm}p{3cm}p{3cm}}
         \caption{Showroom CUBE Result} \\
 	showroom\_name & sales\_rep\_name & visitor\_language & sum \\
         \endfirsthead \\
         showroom\_name & sales\_rep\_name & visitor\_language & sum \\
         \endhead \\
+        \hline \\
         Showroom-BOZEN & Caroline Eder & english & 277049.23 \\
         \hline \\
         Showroom-BOZEN & Elisabeth Schwarz & english & 240820.64 \\
@@ -854,41 +855,41 @@ GROUP BY GROUPING SETS(
 
 \begingroup
 \renewcommand\arraystretch{0.5}
-\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\begin{longtable}{p{4cm}p{3cm}p{4cm}p{2cm}}
         \caption{Production GROUPING SETS Result} \\
-				product\_category & year\_actual & quality\_control\_grade & count
+	product\_category & year\_actual & quality\_control\_grade & count
         \endfirsthead \\
         product\_category & year\_actual & quality\_control\_grade & count
         \endhead \\
-				\hline \\
-AdsH-Set & 2010 & 0 & 2 \\
-\hline \\
-Arztpraxis-Set & 2010 & 0 & 32 \\
-\hline \\
-Bonsai-Set & 2010 & 0 & 8 \\
-\hline \\
-Bühnen-Set & 2010 & 0 & 11 \\
-\hline \\
-Café-Set & 2010 & 0 & 9 \\
-\hline \\
-Computer-Set & 2010 & 0 & 2 \\
-\hline \\
-Einsame-Insel-Set & 2010 & 0 & 8 \\
-\hline \\
-Forschung-Set & 2010 & 0 & 3 \\
-\hline \\
-Haushaltsgeräte-Set & 2010 & 0 & 4 \\
-\hline \\
-Heizgeräte-Set & 2010 & 0 & 9 \\
-\hline \\
-Küchen-Set & 2010 & 0 & 16 \\
-\hline \\
-Lampen-Set & 2010 & 0 & 7 \\
-\hline \\
-Masken-Set & 2010 & 0 & 2 \\
-\hline \\				
-... & & & \\
-\hline \\
+	\hline \\
+        AdsH-Set & 2010 & 0 & 2 \\
+        \hline \\
+        Arztpraxis-Set & 2010 & 0 & 32 \\
+        \hline \\
+        Bonsai-Set & 2010 & 0 & 8 \\
+        \hline \\
+        Bühnen-Set & 2010 & 0 & 11 \\
+        \hline \\
+        Café-Set & 2010 & 0 & 9 \\
+        \hline \\
+        Computer-Set & 2010 & 0 & 2 \\
+        \hline \\
+        Einsame-Insel-Set & 2010 & 0 & 8 \\
+        \hline \\
+        Forschung-Set & 2010 & 0 & 3 \\
+        \hline \\
+        Haushaltsgeräte-Set & 2010 & 0 & 4 \\
+        \hline \\
+        Heizgeräte-Set & 2010 & 0 & 9 \\
+        \hline \\
+        Küchen-Set & 2010 & 0 & 16 \\
+        \hline \\
+        Lampen-Set & 2010 & 0 & 7 \\
+        \hline \\
+        Masken-Set & 2010 & 0 & 2 \\
+        \hline \\				
+        ... & & & \\
+        \hline \\
 \end{longtable} 
 \endgroup  
 
@@ -922,39 +923,39 @@ GROUP BY vl.city;
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{4cm}p{4cm}}
         \caption{Showroom NTILE Result} \\
-				city & count & tile4 \\
+	city & count & tile4 \\
         \endfirsthead \\
         city & count & tile4 \\
         \endhead \\
-				\hline \\
-VINTL & 1116 & 1 \\
-\hline \\
-TOBLACH & 1149 & 1 \\
-\hline \\
-TERENTEN & 1161 & 1 \\
-\hline \\
-PRETTAU & 1166 & 1 \\
-\hline \\
-ENNEBERG & 1172 & 1 \\
-\hline \\
-GSIES & 1177 & 1 \\
-\hline \\
-ABTEI & 1195 & 1 \\
-\hline \\
-BRUNECK & 1221 & 1 \\
-\hline \\
-SEXTEN & 1235 & 1 \\
-\hline \\
-MÜHLWALD & 1235 & 1 \\
-\hline \\
-OLANG & 1241 & 1 \\
-\hline \\
-GAIS & 1250 & 1 \\
-\hline \\
-CORVARA & 1254 & 1 \\
-\hline \\
-... & & \\
-\hline \\
+	\hline \\
+        VINTL & 1116 & 1 \\
+        \hline \\
+        TOBLACH & 1149 & 1 \\
+        \hline \\
+        TERENTEN & 1161 & 1 \\
+        \hline \\
+        PRETTAU & 1166 & 1 \\
+        \hline \\
+        ENNEBERG & 1172 & 1 \\
+        \hline \\
+        GSIES & 1177 & 1 \\
+        \hline \\
+        ABTEI & 1195 & 1 \\
+        \hline \\
+        BRUNECK & 1221 & 1 \\
+        \hline \\
+        SEXTEN & 1235 & 1 \\
+        \hline \\
+        MÜHLWALD & 1235 & 1 \\
+        \hline \\
+        OLANG & 1241 & 1 \\
+        \hline \\
+        GAIS & 1250 & 1 \\
+        \hline \\
+        CORVARA & 1254 & 1 \\
+        \hline \\
+        ... & & \\
+        \hline \\
 \end{longtable} 
 \endgroup
       
@@ -981,35 +982,35 @@ SELECT operator_name, ROUND(avg(duration)::numeric,2) as avg,
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{4cm}p{4cm}}
         \caption{Production NTILE Result} \\
-				operator\_name & avg & tile4 \\
+	operator\_name & avg & tile4 \\
         \endfirsthead \\
         operator\_name & avg & tile4 \\
         \endhead \\
-				\hline \\
-Machaela Moser & 43.51 & 1 \\
-\hline \\
-Clemens Bauer & 44.01 & 1 \\
-\hline \\
-Patrick Haas & 44.19 & 1 \\
-\hline \\
-Machaela Schmid & 44.20 & 1 \\
-\hline \\
-Alexander Wallner & 44.25 & 1 \\
-\hline \\
-Martina Wagner & 44.33 & 1 \\
-\hline \\
-Georg Steiner & 44.40 & 1 \\
-\hline \\
-Tanja Lehner & 44.43 & 1 \\
-\hline \\
-Johanna Maier & 44.51 & 1 \\
-\hline \\
-Viktoria Schmidt & 44.52 & 1 \\
-\hline \\
-Maximilian Schmid & 44.56 & 1 \\
-\hline \\
-... & & \\
-\hline \\
+	\hline \\
+        Machaela Moser & 43.51 & 1 \\
+        \hline \\
+        Clemens Bauer & 44.01 & 1 \\
+        \hline \\
+        Patrick Haas & 44.19 & 1 \\
+        \hline \\
+        Machaela Schmid & 44.20 & 1 \\
+        \hline \\
+        Alexander Wallner & 44.25 & 1 \\
+        \hline \\
+        Martina Wagner & 44.33 & 1 \\
+        \hline \\
+        Georg Steiner & 44.40 & 1 \\
+        \hline \\
+        Tanja Lehner & 44.43 & 1 \\
+        \hline \\
+        Johanna Maier & 44.51 & 1 \\
+        \hline \\
+        Viktoria Schmidt & 44.52 & 1 \\
+        \hline \\
+        Maximilian Schmid & 44.56 & 1 \\
+        \hline \\
+        ... & & \\
+        \hline \\
 \end{longtable} 
 \endgroup
 
@@ -1035,6 +1036,36 @@ JOIN warehouse.showroom using (showroom_id)
 GROUP BY showroom_name;
 \end{lstlisting}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{3cm}}
+        \caption{Showroom RANK Result} \\
+	Showroom & Count & Rank \\
+        \endfirsthead \\
+        Showroom & Count & Rank \\
+        \endhead \\
+	\hline \\
+        Showroom-BOZEN & 43863 & 1 \\
+        \hline \\
+        Showroom-ULTEN & 20032 & 2 \\
+        \hline \\
+        Showroom-SEXTEN & 18765 & 3 \\ 
+        \hline \\
+        Showroom-MÖLTEN & 18711 & 4 \\
+        \hline \\
+        Showroom-LATSCH & 18078 & 5 \\
+        \hline \\
+        Showroom-MÜHLBACH & 15183 & 6 \\ 
+        \hline \\
+        Showroom-SALURN & 14788 & 7 \\
+        \hline \\
+        Showroom-RATSCHINGS & 13442 & 8 \\ 
+        \hline \\
+        ... & & \\
+        \hline \\
+\end{longtable} 
+\endgroup
+
 \subsubsection{SQL query using RANK for business process 2 (production)}
 
 The following sql query ranks the different products with respect to their average raw material costs.
@@ -1053,7 +1084,41 @@ FROM warehouse.production
 JOIN warehouse.product using (product_id)
 GROUP BY product_category;
 \end{lstlisting}
-                
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{5cm}p{5cm}p{2cm}}
+        \caption{Showroom RANK Result} \\
+	Product\_category & AVG\_raw\_material\_cost & Rank \\
+        \endfirsthead \\
+        Product\_category & AVG\_raw\_material\_cost & Rank \\
+        \endhead \\
+        \hline \\
+        Himmelsphänomene-Set & 373.96 & 1 \\
+        \hline \\
+        Sekretär-Set & 357.47 & 2 \\
+        \hline \\
+        Pflanzendeko-Set & 345.56 & 3 \\
+        \hline \\
+        Urkunden-Set & 324.72 & 4 \\
+        \hline \\
+        Melonen-Set & 319.97 & 5 \\
+        \hline \\
+        Regal-Set & 317.39 & 6 \\
+        \hline \\
+        Zitrus-Set & 315.05 & 7 \\
+        \hline \\
+        Kisten-Set & 314.72 & 8 \\
+        \hline \\
+        Frosch-Set & 312.50 & 9 \\
+        \hline \\
+        Birnen-Set & 312.47 & 10 \\
+        \hline \\
+        ... & & \\
+        \hline \\
+\end{longtable} 
+\endgroup
+
 \subsection{WINDOWING Clause}
 
 \subsubsection{SQL query using a WINDOWING clause for business process 1 (showroom visit)}

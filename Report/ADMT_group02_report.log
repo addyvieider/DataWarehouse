@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.15)  9 JAN 2019 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.15)  9 JAN 2019 15:47
 entering extended mode
 **"c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex"
 ("c:/Users/laurin/OneDrive/Dokumente/uniBZ/Master/Advanced Data Management Technologies/Project/DataWarehouse/Report/ADMT_group02_report.tex"
@@ -759,12 +759,12 @@ Underfull \hbox (badness 2368) in paragraph at lines 93--93
 []|\OT1/cmr/m/n/12 Start Date, End date, Prod-
  []
 
-<../images/DFM_Showroom_Simple.png, id=272, 407.5225pt x 282.05376pt>
+<../images/DFM_Showroom_Simple.png, id=276, 407.5225pt x 282.05376pt>
 File: ../images/DFM_Showroom_Simple.png Graphic file (type png)
 <use ../images/DFM_Showroom_Simple.png>
 Package pdftex.def Info: ../images/DFM_Showroom_Simple.png  used on input line 100.
 (pdftex.def)             Requested size: 264.88647pt x 183.33276pt.
-<../images/DFM_Production_Simple.png, id=274, 437.635pt x 294.09875pt>
+<../images/DFM_Production_Simple.png, id=278, 437.635pt x 294.09875pt>
 File: ../images/DFM_Production_Simple.png Graphic file (type png)
 <use ../images/DFM_Production_Simple.png>
 Package pdftex.def Info: ../images/DFM_Production_Simple.png  used on input line 109.
@@ -775,7 +775,7 @@ Package pdftex.def Info: ../images/DFM_Production_Simple.png  used on input line
                                                   \fi \fi 
 l.115 
        <../images/DFM_Showroom_Simple.png>]
-<../images/DFM_Showroom.png, id=280, 809.0225pt x 447.6725pt>
+<../images/DFM_Showroom.png, id=284, 809.0225pt x 447.6725pt>
 File: ../images/DFM_Showroom.png Graphic file (type png)
 <use ../images/DFM_Showroom.png>
 Package pdftex.def Info: ../images/DFM_Showroom.png  used on input line 146.
@@ -786,7 +786,7 @@ Package pdftex.def Info: ../images/DFM_Showroom.png  used on input line 146.
                                                   \fi \fi 
 l.152 
        <../images/DFM_Production_Simple.png>]
-<../images/DFM_Production.png, id=286, 747.79375pt x 413.545pt>
+<../images/DFM_Production.png, id=290, 747.79375pt x 413.545pt>
 File: ../images/DFM_Production.png Graphic file (type png)
 <use ../images/DFM_Production.png>
 Package pdftex.def Info: ../images/DFM_Production.png  used on input line 183.
@@ -795,7 +795,7 @@ Package pdftex.def Info: ../images/DFM_Production.png  used on input line 183.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images/Starschema_Showroom_visit.png, id=288, 814.04124pt x 554.07pt>
+<../images/Starschema_Showroom_visit.png, id=292, 814.04124pt x 554.07pt>
 File: ../images/Starschema_Showroom_visit.png Graphic file (type png)
 <use ../images/Starschema_Showroom_visit.png>
 Package pdftex.def Info: ../images/Starschema_Showroom_visit.png  used on input line 198.
@@ -819,7 +819,7 @@ l.204
                                                   \fi \fi 
 l.204 
        <../images/DFM_Production.png> <../images/Starschema_Showroom_visit.png>]
-<../images/Starschema_Production.png, id=302, 763.85374pt x 442.65375pt>
+<../images/Starschema_Production.png, id=306, 763.85374pt x 442.65375pt>
 File: ../images/Starschema_Production.png Graphic file (type png)
 <use ../images/Starschema_Production.png>
 Package pdftex.def Info: ../images/Starschema_Production.png  used on input line 209.
@@ -1755,124 +1755,79 @@ Overfull \hbox (11.89919pt too wide) in paragraph at lines 652--653
  []
 
 
-Overfull \hbox (7.12633pt too wide) in paragraph at lines 669--669
-[]|\OT1/cmr/m/n/12 showroom[]district| 
- []
-
-
-Overfull \hbox (7.12633pt too wide) in paragraph at lines 671--671
-[]|\OT1/cmr/m/n/12 showroom[]district| 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 684--684
-[]|[]\OT1/cmr/m/n/12 Uberetsch-
+[]|[]\OT1/cmr/m/n/12 Uberetsch-Sudtiroler
+ []
+
+[15] [16] [17]
+Overfull \vbox (3.91072pt too high) has occurred while \output is active []
+
+ [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1058
+[]|\OT1/cmr/m/n/12 Showroom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 684--684
-\OT1/cmr/m/n/12 Sudtiroler
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1062
+[]|\OT1/cmr/m/n/12 Showroom-
  []
 
-[15] [16]
-Overfull \hbox (33.48906pt too wide) in alignment at lines 793--796
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.48906pt too wide) in alignment at lines 796--798
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.48906pt too wide) in alignment at lines 798--818
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.48906pt too wide) in alignment at lines 818--829
- [] [] [] [] 
- []
-
-[17]
-Overfull \hbox (33.48906pt too wide) in alignment at lines 857--860
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.48906pt too wide) in alignment at lines 860--862
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.48906pt too wide) in alignment at lines 862--882
- [] [] [] [] 
- []
-
-
-Overfull \hbox (33.48906pt too wide) in alignment at lines 882--892
- [] [] [] [] 
- []
-
-[18] [19] [20]
-Overfull \hbox (19.30925pt too wide) in paragraph at lines 1050--1051
+[20]
+Overfull \hbox (19.30925pt too wide) in paragraph at lines 1081--1082
 [][][][][][][][][][][][][][][][][] 
  []
 
-[21]
-Overfull \hbox (11.89919pt too wide) in paragraph at lines 1134--1135
+[21] [22]
+Overfull \hbox (11.89919pt too wide) in paragraph at lines 1199--1200
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (56.35957pt too wide) in paragraph at lines 1136--1137
+Overfull \hbox (56.35957pt too wide) in paragraph at lines 1201--1202
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.89919pt too wide) in paragraph at lines 1138--1139
+Overfull \hbox (11.89919pt too wide) in paragraph at lines 1203--1204
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (34.12938pt too wide) in paragraph at lines 1143--1144
+Overfull \hbox (34.12938pt too wide) in paragraph at lines 1208--1209
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \vbox (8.73625pt too high) has occurred while \output is active []
-
- [22]
-Overfull \hbox (5.41304pt too wide) in paragraph at lines 1185--1185
+Overfull \hbox (5.41304pt too wide) in paragraph at lines 1250--1250
 []\OT1/cmr/bx/n/12 SQL query us-ing period-to-period com-par-i-son for busi-ness pro-cess 1 (show-
  []
 
-
-Overfull \hbox (4.48912pt too wide) in paragraph at lines 1202--1203
+[23]
+Overfull \hbox (4.48912pt too wide) in paragraph at lines 1267--1268
 [][][][][][][][][][][][][][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1252.
-[23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1252.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1317.
+[24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1317.
  (ADMT_group02_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1252.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1252.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1317.
 Package rerunfilecheck Info: File `ADMT_group02_report.out' has not changed.
 (rerunfilecheck)             Checksum: A564FCFB587490962C90664BE5C99D0C;3123.
  ) 
 Here is how much of TeX's memory you used:
- 10347 strings out of 493305
- 159477 string characters out of 3129367
- 311574 words of memory out of 3000000
- 13515 multiletter control sequences out of 15000+200000
+ 10352 strings out of 493305
+ 159513 string characters out of 3129367
+ 311672 words of memory out of 3000000
+ 13517 multiletter control sequences out of 15000+200000
  10102 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,46p,964b,1326s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,46p,964b,1821s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/laurin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ADMT_group02_report.pdf (23 pages, 308402 bytes).
+Output written on ADMT_group02_report.pdf (24 pages, 310977 bytes).
 PDF statistics:
- 589 PDF objects out of 1000 (max. 8388607)
- 240 named destinations out of 1000 (max. 500000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 243 named destinations out of 1000 (max. 500000)
  327 words of extra memory for PDF output out of 10000 (max. 10000000)
 
