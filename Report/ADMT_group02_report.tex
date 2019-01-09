@@ -193,7 +193,7 @@ The second fact collects some relevant information of a production stage. For ea
 
 The following star schema fig. \ref{fig:starschemaShowroom} represent the first business process, namely the showroom visit.
 
-\begin{figure}[h] 
+\begin{figure}[H] 
         \centering
         \includegraphics[width=\columnwidth]{../images/Starschema_Showroom_visit.png}
         \caption{
@@ -204,7 +204,7 @@ The following star schema fig. \ref{fig:starschemaShowroom} represent the first 
 
 Instead, the star schema fig. \ref{fig:starschemaProduction} represents the production business process.
 
-\begin{figure}[h] 
+\begin{figure}[H] 
         \centering
         \includegraphics[width=\columnwidth]{../images/Starschema_Production.png}
         \caption{
@@ -572,7 +572,7 @@ Showroom-BOZEN & Hotel & Winter & 6808 \\
 \hline \\
 Showroom-BOZEN & Hotel & * & 17334 \\
 \hline \\
-... \\
+... & & & \\
 \hline \\
 \end{longtable} 
 \endgroup
@@ -606,6 +606,7 @@ GROUP BY ROLLUP(product_category, product_name, production_stage_name);
         \endfirsthead \\
         product\_category & product\_name & production\_stage\_name & avg \\
         \endhead \\
+				\hline \\
 AdsH-Set & AdsH-Fähnchen & Ausführung & 44.28 \\
 \hline \\
 AdsH-Set & AdsH-Fähnchen & Feinschliff & 44.18 \\
@@ -628,7 +629,7 @@ AdsH-Set & AdsH-Goldpokal & Feinschliff & 43.60 \\
 \hline \\
 AdsH-Set & AdsH-Goldpokal & Vorbereitung & 47.80 \\
 \hline \\
-... \\
+... & & & \\
 \hline \\
 \end{longtable} 
 \endgroup
@@ -669,6 +670,7 @@ ORDER BY visitor_sector, vl.district, sl.district;
         \endfirsthead \\
         visitor\_sector & visitor\_district & showroom\_district & sum \\
         \endhead \\
+				\hline \\
 Gastronomy & Bozen & Bozen & 55749 \\
 \hline \\
 Gastronomy & Bozen & Burggrafenamt  & 2574 \\
@@ -687,7 +689,7 @@ Gastronomy & Bozen & Wipptal & 3031 \\
 \hline \\
 Gastronomy & Bozen & * & 73416 \\
 \hline \\
-... \\
+... & & & \\
 \hline \\
 \end{longtable} 
 \endgroup    
@@ -723,6 +725,7 @@ ORDER BY product_department;
         \endfirsthead \\
         product\_department & machine\_name & avg \\
         \endhead \\
+				\hline \\
 Badezimmer & José Alberto Córdova & 5.00 \\
 \hline \\
 Badezimmer & Herrera & 4.59 \\
@@ -753,7 +756,7 @@ Badezimmer & Ciupe & 4.14 \\
 \hline \\
 Badezimmer & Linda & 4.53 \\
 \hline \\
-... \\
+... & & \\
 \hline \\
 \end{longtable} 
 \endgroup  
@@ -788,11 +791,12 @@ GROUP BY GROUPING SETS(
 \begingroup
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
-        \caption{Showroom CUBE Result} \\
+        \caption{Showroom GROUPING SETS Result} \\
 				showroom\_name & sales\_rep\_name & visitor\_language & sum \\
         \endfirsthead \\
         showroom\_name & sales\_rep\_name & visitor\_language & sum \\
         \endhead \\
+				\hline \\
 Showroom-BOZEN & Caroline Eder & english & 277049.23 \\
 \hline \\
 Showroom-BOZEN & Elisabeth Schwarz & english & 240820.64 \\
@@ -822,7 +826,7 @@ Showroom-BOZEN & Valerio Adami & german & 5940355.45 \\
 Showroom-BOZEN & * & german & 36681294.43 \\
 \hline \\
 
-... \\
+... & & & \\
 \hline \\
 \end{longtable} 
 \endgroup           
@@ -850,6 +854,46 @@ GROUP BY GROUPING SETS(
         (year_actual, quality_control_grade));
 \end{lstlisting}
 
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+        \caption{Production GROUPING SETS Result} \\
+				product\_category & year\_actual & quality\_control\_grade & count
+        \endfirsthead \\
+        product\_category & year\_actual & quality\_control\_grade & count
+        \endhead \\
+				\hline \\
+AdsH-Set & 2010 & 0 & 2 \\
+\hline \\
+Arztpraxis-Set & 2010 & 0 & 32 \\
+\hline \\
+Bonsai-Set & 2010 & 0 & 8 \\
+\hline \\
+Bühnen-Set & 2010 & 0 & 11 \\
+\hline \\
+Café-Set & 2010 & 0 & 9 \\
+\hline \\
+Computer-Set & 2010 & 0 & 2 \\
+\hline \\
+Einsame-Insel-Set & 2010 & 0 & 8 \\
+\hline \\
+Forschung-Set & 2010 & 0 & 3 \\
+\hline \\
+Haushaltsgeräte-Set & 2010 & 0 & 4 \\
+\hline \\
+Heizgeräte-Set & 2010 & 0 & 9 \\
+\hline \\
+Küchen-Set & 2010 & 0 & 16 \\
+\hline \\
+Lampen-Set & 2010 & 0 & 7 \\
+\hline \\
+Masken-Set & 2010 & 0 & 2 \\
+\hline \\				
+... & & & \\
+\hline \\
+\end{longtable} 
+\endgroup  
+
 \section{Querying}
 
 \subsection{NTILE}
@@ -875,6 +919,46 @@ JOIN warehouse.location as vl
 WHERE vl.province = 'Bozen'
 GROUP BY vl.city;
 \end{lstlisting}
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}}
+        \caption{Showroom NTILE Result} \\
+				city & count & tile4 \\
+        \endfirsthead \\
+        city & count & tile4 \\
+        \endhead \\
+				\hline \\
+VINTL & 1116 & 1 \\
+\hline \\
+TOBLACH & 1149 & 1 \\
+\hline \\
+TERENTEN & 1161 & 1 \\
+\hline \\
+PRETTAU & 1166 & 1 \\
+\hline \\
+ENNEBERG & 1172 & 1 \\
+\hline \\
+GSIES & 1177 & 1 \\
+\hline \\
+ABTEI & 1195 & 1 \\
+\hline \\
+BRUNECK & 1221 & 1 \\
+\hline \\
+SEXTEN & 1235 & 1 \\
+\hline \\
+MÜHLWALD & 1235 & 1 \\
+\hline \\
+OLANG & 1241 & 1 \\
+\hline \\
+GAIS & 1250 & 1 \\
+\hline \\
+CORVARA & 1254 & 1 \\
+\hline \\
+... & & \\
+\hline \\
+\end{longtable} 
+\endgroup
       
 \subsubsection{SQL query using NTILE for business process 2 (production)}
 
@@ -888,11 +972,49 @@ The next sql query averages all processing times of an operator and groups them 
         numberstyle=\tiny,
         commentstyle=\color{gray}
         ]
-SELECT operator_name, ROUND(avg(duration)::numeric,2), NTILE(4) OVER (ORDER BY avg(duration)) AS TILE4
+SELECT operator_name, ROUND(avg(duration)::numeric,2) as avg, 
+	NTILE(4) OVER (ORDER BY avg(duration)) AS TILE4
 	FROM warehouse.production
 	JOIN warehouse.operator using (operator_id)
 	GROUP BY operator_name;
 \end{lstlisting}
+
+\begingroup
+\renewcommand\arraystretch{0.5}
+\begin{longtable}{p{4cm}p{4cm}p{4cm}}
+        \caption{Production NTILE Result} \\
+				operator\_name & avg & tile4 \\
+        \endfirsthead \\
+        operator\_name & avg & tile4 \\
+        \endhead \\
+				\hline \\
+Machaela Moser & 43.51 & 1 \\
+\hline \\
+Clemens Bauer & 44.01 & 1 \\
+\hline \\
+Patrick Haas & 44.19 & 1 \\
+\hline \\
+Machaela Schmid & 44.20 & 1 \\
+\hline \\
+Alexander Wallner & 44.25 & 1 \\
+\hline \\
+Martina Wagner & 44.33 & 1 \\
+\hline \\
+Georg Steiner & 44.40 & 1 \\
+\hline \\
+Tanja Lehner & 44.43 & 1 \\
+\hline \\
+Johanna Maier & 44.51 & 1 \\
+\hline \\
+Viktoria Schmidt & 44.52 & 1 \\
+\hline \\
+Maximilian Schmid & 44.56 & 1 \\
+\hline \\
+... & & \\
+\hline \\
+\end{longtable} 
+\endgroup
+
 
 \subsection{RANK}
 

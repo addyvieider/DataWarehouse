@@ -1,17 +1,20 @@
-\contentsline {table}{\numberline {1}{Fact table}}{3}{table.1}
-\contentsline {table}{\numberline {2}{Fact table}}{4}{table.2}
-\contentsline {table}{\numberline {3}{Fact table}}{6}{table.3}
-\contentsline {table}{\numberline {4}{Showroom visit}}{8}{table.4}
-\contentsline {table}{\numberline {5}{Visitor}}{8}{table.5}
-\contentsline {table}{\numberline {6}{Showroom}}{8}{table.6}
-\contentsline {table}{\numberline {7}{Date}}{9}{table.7}
-\contentsline {table}{\numberline {8}{Result of the query}}{9}{table.8}
-\contentsline {table}{\numberline {9}{Production}}{10}{table.9}
-\contentsline {table}{\numberline {10}{Machine}}{10}{table.10}
-\contentsline {table}{\numberline {11}{Product}}{10}{table.11}
-\contentsline {table}{\numberline {12}{Result of the query}}{11}{table.12}
-\contentsline {table}{\numberline {13}{Showroom ROLLUP Result}}{12}{table.13}
-\contentsline {table}{\numberline {14}{Production ROLLUP Result}}{12}{table.14}
-\contentsline {table}{\numberline {15}{Showroom CUBE Result}}{13}{table.15}
-\contentsline {table}{\numberline {16}{Production CUBE Result}}{14}{table.16}
-\contentsline {table}{\numberline {17}{Showroom CUBE Result}}{15}{table.17}
+\contentsline {table}{\numberline {1}{Fact table}}{5}{table.1}
+\contentsline {table}{\numberline {2}{Fact table}}{6}{table.2}
+\contentsline {table}{\numberline {3}{Fact table}}{7}{table.3}
+\contentsline {table}{\numberline {4}{Showroom visit}}{10}{table.4}
+\contentsline {table}{\numberline {5}{Visitor}}{10}{table.5}
+\contentsline {table}{\numberline {6}{Showroom}}{10}{table.6}
+\contentsline {table}{\numberline {7}{Date}}{11}{table.7}
+\contentsline {table}{\numberline {8}{Result of the query}}{11}{table.8}
+\contentsline {table}{\numberline {9}{Production}}{12}{table.9}
+\contentsline {table}{\numberline {10}{Machine}}{12}{table.10}
+\contentsline {table}{\numberline {11}{Product}}{12}{table.11}
+\contentsline {table}{\numberline {12}{Result of the query}}{13}{table.12}
+\contentsline {table}{\numberline {13}{Showroom ROLLUP Result}}{14}{table.13}
+\contentsline {table}{\numberline {14}{Production ROLLUP Result}}{14}{table.14}
+\contentsline {table}{\numberline {15}{Showroom CUBE Result}}{15}{table.15}
+\contentsline {table}{\numberline {16}{Production CUBE Result}}{16}{table.16}
+\contentsline {table}{\numberline {17}{Showroom GROUPING SETS Result}}{17}{table.17}
+\contentsline {table}{\numberline {18}{Production GROUPING SETS Result}}{18}{table.18}
+\contentsline {table}{\numberline {19}{Showroom NTILE Result}}{19}{table.19}
+\contentsline {table}{\numberline {20}{Production NTILE Result}}{20}{table.20}
