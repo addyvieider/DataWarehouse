@@ -28,7 +28,7 @@ SELECT product_department, machine_name, ROUND(avg(quality_control_grade)::numer
 	JOIN warehouse.quality_control using (quality_control_id)
 	WHERE quality_control_grade is not NULL
 	GROUP BY CUBE(product_department, machine_name)
-	ORDER BY avg(quality_control_grade) desc;	
+	ORDER BY product_department;	
 
 SELECT showroom_name, sales_rep_name, visitor_language, sum(order_total_price)
 	FROM warehouse.showroom_visit
@@ -58,7 +58,7 @@ SELECT vl.city, count(visitor_id), NTILE(4) OVER (ORDER BY count(visitor_id)) AS
 	WHERE vl.province = 'Bozen'
 	GROUP BY vl.city;
 	
-SELECT operator_name, ROUND(sum(duration)::numeric,2), NTILE(4) OVER (ORDER BY sum(duration)) AS TILE4
+SELECT operator_name, ROUND(avg(duration)::numeric,2), NTILE(4) OVER (ORDER BY avg(duration)) AS TILE4
 	FROM warehouse.production
 	JOIN warehouse.operator using (operator_id)
 	GROUP BY operator_name;
@@ -115,7 +115,6 @@ SELECT year_actual, quarter_actual,
 			LAG(count(visitor_id), 4) OVER (ORDER BY year_actual, quarter_actual) as visitors_last_year 
 		FROM warehouse.showroom_visit
 			JOIN warehouse.date using (date_id)
-			JOIN warehouse.order using (order_id)
 			GROUP BY year_actual, quarter_actual
 			ORDER BY year_actual, quarter_actual) as last_year
 		WHERE year_actual > 2010;
