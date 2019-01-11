@@ -118,7 +118,7 @@ The second fact collects some relevant information of a production stage. For ea
 \begingroup
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{3.7cm}p{10cm}}
-        \caption{Fact table} \\
+        \caption{Fact table Showroom} \\
         Dimension & Attributes \\
         \endfirsthead \\
         Dimension & Attributes \\
@@ -155,7 +155,7 @@ The second fact collects some relevant information of a production stage. For ea
 \begingroup
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{4cm}p{9cm}}
-        \caption{Fact table} \\
+        \caption{Fact table Production} \\
         Dimension & Attributes \\
         \endfirsthead \\
         Dimension & Attributes \\
@@ -351,9 +351,9 @@ GROUP by v.visitor_sector
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{3cm}p{4cm}}
         \caption{Result of the query} \\
-        Sector & Number of visitors \\
+        Sector & Number of visits \\
         \endfirsthead \\
-        Sector & Number of visitors \\
+        Sector & Number of visits \\
         \endhead \\
         \hline \\
         Gastronomy & 2985 \\
@@ -511,10 +511,186 @@ Note: all columns with the * are foreign key columns and are carrying only the i
 \endgroup
 
 \section{Implementation}
+
+
+\subsection{Creation}
+
+\subsubsection{Showroom data mart}
+This sql script creates the table structure for the showroom visit data mart:
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+CREATE TABLE IF NOT EXISTS warehouse.location(
+  	location_id SERIAL PRIMARY KEY NOT NULL,
+  	city VARCHAR(100) NULL,
+  	district VARCHAR(100) NULL,
+	province VARCHAR(100) NULL,
+	region VARCHAR(100) NULL,
+	country VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.date
+(
+       date_id SERIAL PRIMARY KEY NOT NULL,
+       date_actual DATE NOT NULL,
+       day_name VARCHAR(9) NOT NULL,
+       day_of_week INT NOT NULL,
+       day_of_month INT NOT NULL,
+       day_of_quarter INT NOT NULL,
+       day_of_year INT NOT NULL,
+       week_of_month INT NOT NULL,
+       week_of_year INT NOT NULL,
+       month_actual INT NOT NULL,
+       month_name VARCHAR(9) NOT NULL,
+       quarter_actual INT NOT NULL,
+       quarter_name VARCHAR(9) NOT NULL,
+       year_actual INT NOT NULL,
+       mmyyyy CHAR(6) NOT NULL,
+       mmddyyyy CHAR(10) NOT NULL,
+       holiday BOOLEAN NOT NULL,
+       holiday_name VARCHAR(50),
+       season VARCHAR(20)
+);
+
+CREATE INDEX d_date_date_actual_idx ON warehouse.date(date_actual);
+
+CREATE TABLE IF NOT EXISTS warehouse.visitor(
+	visitor_id SERIAL PRIMARY KEY NOT NULL,
+	visitor_name VARCHAR(100),
+	visitor_telephone VARCHAR(100),
+	visitor_email VARCHAR(100),
+	customer_number VARCHAR(100),
+	visitor_sector VARCHAR(50),
+	visitor_gender VARCHAR(10),
+	visitor_language VARCHAR(50),
+	visitor_location_id int REFERENCES warehouse.location(location_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS warehouse.sales_representative(
+	sales_rep_id SERIAL PRIMARY KEY NOT NULL,
+	sales_rep_name VARCHAR(100) NOT NULL,
+	sales_rep_telephone VARCHAR(100) NOT NULL,
+	sales_rep_email VARCHAR(100) NOT NULL,
+	sales_rep_gender VARCHAR(10) NOT NULL,
+	sales_rep_language VARCHAR(50) NOT NULL,
+	sales_rep_location_id int REFERENCES warehouse.location(location_id) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS warehouse.showroom(
+	showroom_id SERIAL PRIMARY KEY NOT NULL,
+	showroom_name VARCHAR(100) NOT NULL,
+	showroom_telephone VARCHAR(100) NOT NULL,
+	showroom_address VARCHAR(100) NOT NULL,
+	showroom_size int NOT NULL,
+	showroom_manager VARCHAR(100) NOT NULL,
+	showroom_location_id int REFERENCES warehouse.location(location_id) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS warehouse.department(
+	department_id SERIAL PRIMARY KEY NOT NULL,
+	department_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.order(
+	order_id SERIAL PRIMARY KEY NOT NULL,
+	order_number VARCHAR(100) NOT NULL,
+	order_total_price numeric NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS warehouse.visitor_type(
+	visitor_type_id SERIAL PRIMARY KEY NOT NULL,
+	visitor_type_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.showroom_visit(
+	showroom_visit_id SERIAL PRIMARY KEY NOT NULL,
+	visitor_id int REFERENCES warehouse.visitor(visitor_id),
+	sales_rep_id int REFERENCES warehouse.sales_representative(sales_rep_id) NOT NULL,
+	showroom_id int REFERENCES warehouse.showroom(showroom_id) NOT NULL,
+	department_id int REFERENCES warehouse.department(department_id) NOT NULL,
+	date_id int REFERENCES warehouse.date(date_id) NOT NULL,
+	order_id int REFERENCES warehouse.order(order_id),
+	visitor_type_id int REFERENCES warehouse.visitor_type(visitor_type_id),
+
+	duration int NOT NULL,
+	number_of_visitors int NOT NULL
+);
+
+\end{lstlisting}
+
+
+\subsubsection{Production data mart}
+Whereas, this script creates the needed tables for the production data mart:
+
+\begin{lstlisting}[
+        language=SQL,
+        showspaces=false,
+        basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        commentstyle=\color{gray}
+     ]
+		
+CREATE TABLE IF NOT EXISTS warehouse.operator(
+  	operator_id SERIAL PRIMARY KEY NOT NULL,
+  	operator_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.quality_control(
+  	quality_control_id SERIAL PRIMARY KEY NOT NULL,
+  	quality_control_grade int NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.machine(
+  	machine_id SERIAL PRIMARY KEY NOT NULL,
+  	machine_name VARCHAR(100) NOT NULL,
+  	machine_vendor VARCHAR(100) NOT NULL,
+  	machine_purchasing_year int NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.production_stage(
+  	production_stage_id SERIAL PRIMARY KEY NOT NULL,
+  	production_stage_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.product(
+  	product_id SERIAL PRIMARY KEY NOT NULL,
+  	product_name VARCHAR(100) NOT NULL,
+  	product_number VARCHAR(100) NOT NULL,
+  	product_department VARCHAR(100) NOT NULL,
+  	product_category VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse.production(
+		production_id SERIAL PRIMARY KEY NOT NULL,
+		operator_id int REFERENCES warehouse.operator(operator_id) NOT NULL,
+		quality_control_id int REFERENCES warehouse.quality_control(quality_control_id),
+		machine_id int REFERENCES warehouse.machine(machine_id) NOT NULL,
+		production_stage_id int REFERENCES warehouse.production_stage(production_stage_id) NOT NULL,
+		product_id int REFERENCES warehouse.product(product_id),
+		start_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
+		end_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
+	
+		duration int NOT NULL,
+		raw_material_cost int NOT NULL
+);		
+		
+\end{lstlisting}
+
 \subsection{ROLLUP}
 \subsubsection{SQL query using ROLLUP for business process 1 (showroom visit)}
 
-The following sql query shows the number of visitors per showroom, in the different areas and in the different seasons. In addition there are the different partial sums. For example, for the showroom in Bolzano, first the number of visitors for the 'bedroom' area in autumn is shown, then the total number of visitors for the 'bedroom' area, regardless of the season, and finally the total number of visitors for the showroom in Bolzano, regardless of the area and the season.
+The following sql query shows the number of visits per showroom, in the different areas and in the different seasons. In addition there are the different partial sums. For example, for the showroom in Bolzano, first the number of visits for the 'bedroom' area in autumn is shown, then the total number of visits for the 'bedroom' area, regardless of the season, and finally the total number of visits for the showroom in Bolzano, regardless of the area and the season.
 
 \begin{lstlisting}[
         language=SQL,
@@ -765,7 +941,7 @@ ORDER BY product_department;
 
 \subsubsection{SQL query using GROUPING SETS for business process 1 (showroom visit)}
 
-The following query shows the number of visitors per language served by a sales representative in a showroom. Also the total number of visitors can be taken from a language in that showroom as well as the total number of visitors served by that sales representative.
+The following query shows the sum of order prices per language served by a sales representative in a showroom. Also the total sum on order prices can be taken from a language in that showroom as well as the total sum served by that sales representative.
 
 \begin{lstlisting}[
         language=SQL,
@@ -899,7 +1075,7 @@ GROUP BY GROUPING SETS(
 
 \subsubsection{SQL query using NTILE for business process 1 (showroom visit)}
 
-The following sql statement calculates the number of visitors coming from a particular location of the province of Bolzano and assigns each row to a group from 1-4, depending on the size of the number of visitors.
+The following sql statement calculates the number of visits coming from a particular location of the province of Bolzano and assigns each row to a group from 1-4, depending on the size of the number of visits.
 
 \begin{lstlisting}[
         language=SQL,
@@ -1019,7 +1195,7 @@ SELECT operator_name, ROUND(avg(duration)::numeric,2) as avg,
 
 \subsubsection{SQL query using RANK for business process 1 (showroom visit)}
 
-The following query identifies the overall total number of visitors per showroom and ranks them according to their number of visitors.
+The following query identifies the overall total number of visits per showroom and ranks them according to their number of visits.
 
 \begin{lstlisting}[
         language=SQL,
@@ -1249,7 +1425,7 @@ AS res where year_actual = 2018;
 
 \subsubsection{SQL query using period-to-period comparison for business process 1 (showroom visit)}
 
-The following query shows the total number of visitors per quartal per year. In addition, it shows the same information for the year before and difference between those two years.
+The following query shows the total number of visits per quartal per year. In addition, it shows the same information for the year before and difference between those two years.
 
 \begin{lstlisting}[
         language=SQL,
@@ -1260,17 +1436,16 @@ The following query shows the total number of visitors per quartal per year. In 
         commentstyle=\color{gray}
         ]
 SELECT year_actual, quarter_actual, 
-	visitors_this_year, visitors_last_year,
-	visitors_this_year - visitors_last_year as difference
+	visits_this_year, visits_last_year,
+	visits_this_year - visits_last_year as difference
 	FROM (
 		SELECT year_actual, quarter_actual,
-			count(visitor_id) as visitors_this_year,
+			count(visitor_id) as visits_this_year,
                         LAG(count(visitor_id), 4) OVER 
                         (ORDER BY year_actual, quarter_actual) 
-                        AS visitors_last_year 
+                        AS visits_last_year 
 		FROM warehouse.showroom_visit
 			JOIN warehouse.date using (date_id)
-			JOIN warehouse.order using (order_id)
 			GROUP BY year_actual, quarter_actual
                         ORDER BY year_actual, quarter_actual) 
 AS last_year WHERE year_actual > 2010;
@@ -1280,38 +1455,108 @@ AS last_year WHERE year_actual > 2010;
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{2cm}}
         \caption{Production period-to-period comparison result} \\
-	Year\_actual & Quarter\_actual & Visitor\_this\_year & Visitor\_last\_year & Difference \\
+	Year\_actual & Quarter\_actual & Visits\_this\_year & Visits\_last\_year & Difference \\
         \endfirsthead \\
-        Year\_actual & Quarter\_actual & Visitor\_this\_year & Visitor\_last\_year & Difference \\
+        Year\_actual & Quarter\_actual & Visits\_this\_year & Visits\_last\_year & Difference \\
         \endhead \\
         \hline \\
-        2011 & 1 & 294 & 274 & 20 \\
-        \hline \\
-        2011 & 2 & 145 & 188 & -43 \\
-        \hline \\
-        2011 & 3 & 84 & 97 & -13 \\
-        \hline \\
-        2011 & 4 & 263 & 297 & -34 \\
-        \hline \\
-        2012 & 1 & 331 & 294 & 37 \\
-        \hline \\
-        2012 & 2 & 209 & 145 & 64 \\
-        \hline \\
-        2012 & 3 & 133 & 84 & 49 \\
-        \hline \\
-        2012 & 4 & 327 & 263 & 64 \\
-        \hline \\
-        2013 & 1 & 341 & 331 & 10 \\
-        \hline \\
-        2013 & 2 & 183 & 209 & -26 \\
-        \hline \\
+        2011 & 1 & 9567 & 9775 & -208 \\
+\hline \\
+2011 & 2 & 5171 & 5993 & -822 \\
+\hline \\
+2011 & 3 & 3368 & 4018 & -650 \\
+\hline \\
+2011 & 4 & 8915 & 9975 & -1060 \\
+\hline \\
+2012 & 1 & 12976 & 9567 & 3409 \\
+\hline \\
+2012 & 2 & 8003 & 5171 & 2832 \\
+\hline \\
+2012 & 3 & 5096 & 3368 & 1728 \\
+\hline \\
+2012 & 4 & 12760 & 8915 & 3845 \\
+\hline \\
+2013 & 1 & 12049 & 12976 & -927 \\
+\hline \\
+2013 & 2 & 6377 & 8003 & -1626 \\
+\hline \\
+2013 & 3 & 4503 & 5096 & -593 \\
+\hline \\
+2013 & 4 & 11470 & 12760 & -1290 \\
+\hline \\
+
         ... & & & \\
         \hline \\
 \end{longtable}
 \endgroup
 
 \section{Data Analysis Tool}
+The two chosen visualization tools are on the one hand, Python with pyplot from the library mathplotlib and on the other hand, Power BI from Microsoft.
+The business questions are visualized by using pyplot whereas one ROLLUP query is visulaized as sunburst diagram within the Power BI environment (screen shot in figure \ref{fig:sunburst}). In the environment one is able to interact with the diagram in order to differentiate between different hierarchies.
+
+\subsection{Business questions}
+
+\begin{itemize}
+        \item Which is the best running showroom \ref{fig:best_showroom}
+        \item Where are the customers from \ref{fig:district} and \ref{fig:municipality}
+        \item Which department are the customers the most interested in \ref{fig:department}
+        \item Compare the number of visitors for a time period and/or showroom \ref{fig:month}
+\end{itemize}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/best_showroom.png}
+        \caption{
+                \label{fig:best_showroom}  
+                Best running Showroom
+        }
+\end{figure}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/district.png}
+        \caption{
+                \label{fig:district}  
+                Customer District
+        }
+\end{figure}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/municipality.png}
+        \caption{
+                \label{fig:municipality}  
+                Customer Municipality
+        }
+\end{figure}
 
 
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/department.png}
+        \caption{
+                \label{fig:department}  
+                Visitors per Department
+        }
+\end{figure}
+
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/month.png}
+        \caption{
+                \label{fig:month}  
+                Visitors per Month
+        }
+\end{figure}
+
+\begin{figure}[H] 
+        \centering
+        \includegraphics[width=\columnwidth]{../images/sunburst.PNG}
+        \caption{
+                \label{fig:sunburst}  
+                Sunburst Diagram of ROLLUP query
+        }
+\end{figure}
 
 \end{document}

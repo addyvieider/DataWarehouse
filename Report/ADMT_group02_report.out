@@ -13,25 +13,29 @@
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Fact: Showroom visit}{subsection.3.2}% 13
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Fact: Production}{subsection.3.2}% 14
 \BOOKMARK [1][-]{section.4}{Implementation}{}% 15
-\BOOKMARK [2][-]{subsection.4.1}{ROLLUP}{section.4}% 16
-\BOOKMARK [3][-]{subsubsection.4.1.1}{SQL query using ROLLUP for business process 1 \(showroom visit\)}{subsection.4.1}% 17
-\BOOKMARK [3][-]{subsubsection.4.1.2}{SQL query with ROLLUP for business process 2 \(production\)}{subsection.4.1}% 18
-\BOOKMARK [2][-]{subsection.4.2}{CUBE}{section.4}% 19
-\BOOKMARK [3][-]{subsubsection.4.2.1}{SQL query using CUBE for business process 1 \(showroom visit\)}{subsection.4.2}% 20
-\BOOKMARK [3][-]{subsubsection.4.2.2}{SQL query using CUBE for business process 2 \(production\)}{subsection.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.3}{GROUPING SETS}{section.4}% 22
-\BOOKMARK [3][-]{subsubsection.4.3.1}{SQL query using GROUPING SETS for business process 1 \(showroom visit\)}{subsection.4.3}% 23
-\BOOKMARK [3][-]{subsubsection.4.3.2}{SQL query using GROUPING SETS for business process 2 \(production\)}{subsection.4.3}% 24
-\BOOKMARK [1][-]{section.5}{Querying}{}% 25
-\BOOKMARK [2][-]{subsection.5.1}{NTILE}{section.5}% 26
-\BOOKMARK [3][-]{subsubsection.5.1.1}{SQL query using NTILE for business process 1 \(showroom visit\)}{subsection.5.1}% 27
-\BOOKMARK [3][-]{subsubsection.5.1.2}{SQL query using NTILE for business process 2 \(production\)}{subsection.5.1}% 28
-\BOOKMARK [2][-]{subsection.5.2}{RANK}{section.5}% 29
-\BOOKMARK [3][-]{subsubsection.5.2.1}{SQL query using RANK for business process 1 \(showroom visit\)}{subsection.5.2}% 30
-\BOOKMARK [3][-]{subsubsection.5.2.2}{SQL query using RANK for business process 2 \(production\)}{subsection.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.3}{WINDOWING Clause}{section.5}% 32
-\BOOKMARK [3][-]{subsubsection.5.3.1}{SQL query using a WINDOWING clause for business process 1 \(showroom visit\)}{subsection.5.3}% 33
-\BOOKMARK [3][-]{subsubsection.5.3.2}{SQL query using a WINDOWING clause for business process 2 \(production\)}{subsection.5.3}% 34
-\BOOKMARK [2][-]{subsection.5.4}{Period-to-period Comparison}{section.5}% 35
-\BOOKMARK [3][-]{subsubsection.5.4.1}{SQL query using period-to-period comparison for business process 1 \(showroom visit\)}{subsection.5.4}% 36
-\BOOKMARK [1][-]{section.6}{Data Analysis Tool}{}% 37
+\BOOKMARK [2][-]{subsection.4.1}{Creation}{section.4}% 16
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Showroom data mart}{subsection.4.1}% 17
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Production data mart}{subsection.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.2}{ROLLUP}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.1}{SQL query using ROLLUP for business process 1 \(showroom visit\)}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.2}{SQL query with ROLLUP for business process 2 \(production\)}{subsection.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.3}{CUBE}{section.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.3.1}{SQL query using CUBE for business process 1 \(showroom visit\)}{subsection.4.3}% 23
+\BOOKMARK [3][-]{subsubsection.4.3.2}{SQL query using CUBE for business process 2 \(production\)}{subsection.4.3}% 24
+\BOOKMARK [2][-]{subsection.4.4}{GROUPING SETS}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.4.1}{SQL query using GROUPING SETS for business process 1 \(showroom visit\)}{subsection.4.4}% 26
+\BOOKMARK [3][-]{subsubsection.4.4.2}{SQL query using GROUPING SETS for business process 2 \(production\)}{subsection.4.4}% 27
+\BOOKMARK [1][-]{section.5}{Querying}{}% 28
+\BOOKMARK [2][-]{subsection.5.1}{NTILE}{section.5}% 29
+\BOOKMARK [3][-]{subsubsection.5.1.1}{SQL query using NTILE for business process 1 \(showroom visit\)}{subsection.5.1}% 30
+\BOOKMARK [3][-]{subsubsection.5.1.2}{SQL query using NTILE for business process 2 \(production\)}{subsection.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.2}{RANK}{section.5}% 32
+\BOOKMARK [3][-]{subsubsection.5.2.1}{SQL query using RANK for business process 1 \(showroom visit\)}{subsection.5.2}% 33
+\BOOKMARK [3][-]{subsubsection.5.2.2}{SQL query using RANK for business process 2 \(production\)}{subsection.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.3}{WINDOWING Clause}{section.5}% 35
+\BOOKMARK [3][-]{subsubsection.5.3.1}{SQL query using a WINDOWING clause for business process 1 \(showroom visit\)}{subsection.5.3}% 36
+\BOOKMARK [3][-]{subsubsection.5.3.2}{SQL query using a WINDOWING clause for business process 2 \(production\)}{subsection.5.3}% 37
+\BOOKMARK [2][-]{subsection.5.4}{Period-to-period Comparison}{section.5}% 38
+\BOOKMARK [3][-]{subsubsection.5.4.1}{SQL query using period-to-period comparison for business process 1 \(showroom visit\)}{subsection.5.4}% 39
+\BOOKMARK [1][-]{section.6}{Data Analysis Tool}{}% 40
+\BOOKMARK [2][-]{subsection.6.1}{Business questions}{section.6}% 41
