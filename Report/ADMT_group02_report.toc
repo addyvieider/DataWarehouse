@@ -19,8 +19,8 @@
 \contentsline {subsection}{\numberline {4.2}ROLLUP}{17}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}SQL query using ROLLUP for business process 1 (showroom visit)}{17}{subsubsection.4.2.1}
 \contentsline {subsubsection}{\numberline {4.2.2}SQL query with ROLLUP for business process 2 (production)}{18}{subsubsection.4.2.2}
-\contentsline {subsection}{\numberline {4.3}CUBE}{18}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}SQL query using CUBE for business process 1 (showroom visit)}{18}{subsubsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3}CUBE}{19}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}SQL query using CUBE for business process 1 (showroom visit)}{19}{subsubsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.2}SQL query using CUBE for business process 2 (production)}{19}{subsubsection.4.3.2}
 \contentsline {subsection}{\numberline {4.4}GROUPING SETS}{20}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}SQL query using GROUPING SETS for business process 1 (showroom visit)}{20}{subsubsection.4.4.1}
