@@ -1,7 +1,6 @@
 %++++++++++++++++++++++++++++++++++++++++
 % Don't modify this section unless you know what you're doing!
 \documentclass[letterpaper,12pt]{article}
-\usepackage{csvsimple}
 \usepackage{tabularx} % extra features for tabular environment
 \usepackage{amsmath}  % improve math presentation
 \usepackage{graphicx} % takes care of graphic including machinery
@@ -14,7 +13,7 @@
 \usepackage{listings}
 \usepackage{makeidx}
 \usepackage[utf8]{inputenc}
-\usepackage{csvsimple}
+\usepackage{titling}
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
 	linkcolor=blue,        % color of internal links
@@ -27,11 +26,18 @@
 \makeindex
 
 \begin{document}
-
 \title{ADMT 2018 - Project report}
 \author{Group 02: Andreas Vieider (13177) \& Laurin Stricker (13412)}
 \date{\today}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\clearpage
 \maketitle
+\thispagestyle{empty}
+
+\newpage
 
 \tableofcontents
 \listoffigures
@@ -45,6 +51,12 @@
 \section{Introduction}
 
 The domain of our fictional company is the one of furniture production and retail. The company is located in the province of Bolzano and has several showrooms in the area and one production center.
+
+In order to get a better overview of the various visits to the many showrooms and to be able to use even more targeted advertising media, the company decided to create a data mart for this business process.
+
+The production should also increase in the future in terms of efficiency and quality. Machine processes are to be optimized and critical processes or machines are to be replaced with better solutions. A data mart was also created for this, so that the management can find faster and better solutions in cooperation with the various department heads.
+
+In the future, the company also wants to use several visualization tools and dashboards to immediately identify various key figures and numbers in the various areas of the company so that it can react in real time and optimize processes.
 
 \subsection{Business processes}
 
@@ -88,9 +100,9 @@ The second fact collects some relevant information of a production stage. For ea
         Fact & Dimensions & Measures \\
         \endhead \\
         \hline \\
-        Showroom visit & Date, Showroom, Visitor, Visitor type, Order, Department, Sales representative & Duration (AVG - additive), Amount of people (SUM - additive, AVG - additive) \\
+        Showroom visit & Date, Showroom, Visitor, Visitor type, Order, Department, Sales representative & Duration (additive: AVG), Amount of people (additive: SUM, AVG) \\
         \hline \\
-        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (AVG), Raw material cost (SUM - semi-additive; AVG - semi-additive) \\
+        Production & Start Date, End date, Product, Production Stage, Machine, Quality control, Operator & Duration (additive: AVG), Raw material cost (additive: SUM, AVG) \\
         \hline \\
 \end{longtable}
 \endgroup
@@ -191,7 +203,7 @@ The second fact collects some relevant information of a production stage. For ea
 
 \subsection{Star schemas}
 
-The following star schema fig. \ref{fig:starschemaShowroom} represent the first business process, namely the showroom visit.
+The following star schema fig. \ref{fig:starschemaShowroom} represent the first business process, namely the showroom visit. In order for being able to obtain more detailed query results, we decided to create the foreign table 'location'. With this approach for example, we are able to understand, from which particular place are the different visitors coming and are visiting which showroom in which location. Also for marketing decision the location of the showroom and the location of the different visitors is crucial.
 
 \begin{figure}[H] 
         \centering
