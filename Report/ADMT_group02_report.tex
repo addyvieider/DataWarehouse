@@ -695,9 +695,11 @@ CREATE TABLE IF NOT EXISTS warehouse.production(
 		warehouse.operator(operator_id) NOT NULL,
 	quality_control_id int REFERENCES 
 		warehouse.quality_control(quality_control_id),
-	machine_id int REFERENCES warehouse.machine(machine_id) NOT NULL,
+        machine_id int REFERENCES warehouse.machine(machine_id) 
+                NOT NULL,
 	production_stage_id int REFERENCES 
-		warehouse.production_stage(production_stage_id) NOT NULL,
+                warehouse.production_stage(production_stage_id) 
+                        NOT NULL,
 	product_id int REFERENCES warehouse.product(product_id),
 	start_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
 	end_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
@@ -1555,7 +1557,7 @@ Figure \ref{fig:district} shows the number of visitors by their municipality. Ag
         }
 \end{figure}
 
-Figure \ref{fig:district} shows the number of visitors per district. Bozen outnumbers all other districts whereas the lowest number of visitors come from Wipptal.
+Figure \ref{fig:municipality} shows the number of visitors per district. Bozen outnumbers all other districts whereas the lowest number of visitors come from Wipptal.
 
 \begin{figure}[H] 
         \centering
