@@ -67,8 +67,8 @@ One CRM process is the collection of data about visitors at the different showro
 Business questions:
 \begin{itemize}
         \item Which is the best running showroom (most visitors, most orders, etc.)
-        \item Where are the customers from (with different granularity)
-        \item Which department are the customers the most interested in
+        \item Where are the visitors from (with different granularity)
+        \item Which department are the visitors the most interested in
         \item Compare the number of visitors for a time period and/or showroom
 \end{itemize}
 
@@ -581,7 +581,8 @@ CREATE TABLE IF NOT EXISTS warehouse.visitor(
 	visitor_sector VARCHAR(50),
 	visitor_gender VARCHAR(10),
 	visitor_language VARCHAR(50),
-	visitor_location_id int REFERENCES warehouse.location(location_id)
+	visitor_location_id int REFERENCES 
+		warehouse.location(location_id)
 );
 
 
@@ -592,7 +593,8 @@ CREATE TABLE IF NOT EXISTS warehouse.sales_representative(
 	sales_rep_email VARCHAR(100) NOT NULL,
 	sales_rep_gender VARCHAR(10) NOT NULL,
 	sales_rep_language VARCHAR(50) NOT NULL,
-	sales_rep_location_id int REFERENCES warehouse.location(location_id) NOT NULL
+	sales_rep_location_id int REFERENCES 
+		warehouse.location(location_id) NOT NULL
 );
 
 
@@ -603,7 +605,8 @@ CREATE TABLE IF NOT EXISTS warehouse.showroom(
 	showroom_address VARCHAR(100) NOT NULL,
 	showroom_size int NOT NULL,
 	showroom_manager VARCHAR(100) NOT NULL,
-	showroom_location_id int REFERENCES warehouse.location(location_id) NOT NULL
+	showroom_location_id int REFERENCES 
+		warehouse.location(location_id) NOT NULL
 );
 
 
@@ -627,13 +630,16 @@ CREATE TABLE IF NOT EXISTS warehouse.visitor_type(
 CREATE TABLE IF NOT EXISTS warehouse.showroom_visit(
 	showroom_visit_id SERIAL PRIMARY KEY NOT NULL,
 	visitor_id int REFERENCES warehouse.visitor(visitor_id),
-	sales_rep_id int REFERENCES warehouse.sales_representative(sales_rep_id) NOT NULL,
-	showroom_id int REFERENCES warehouse.showroom(showroom_id) NOT NULL,
-	department_id int REFERENCES warehouse.department(department_id) NOT NULL,
+	sales_rep_id int REFERENCES 
+		warehouse.sales_representative(sales_rep_id) NOT NULL,
+	showroom_id int REFERENCES 
+		warehouse.showroom(showroom_id) NOT NULL,
+	department_id int REFERENCES 
+		warehouse.department(department_id) NOT NULL,
 	date_id int REFERENCES warehouse.date(date_id) NOT NULL,
 	order_id int REFERENCES warehouse.order(order_id),
-	visitor_type_id int REFERENCES warehouse.visitor_type(visitor_type_id),
-
+	visitor_type_id int REFERENCES 
+		warehouse.visitor_type(visitor_type_id),
 	duration int NOT NULL,
 	number_of_visitors int NOT NULL
 );
@@ -684,17 +690,19 @@ CREATE TABLE IF NOT EXISTS warehouse.product(
 );
 
 CREATE TABLE IF NOT EXISTS warehouse.production(
-		production_id SERIAL PRIMARY KEY NOT NULL,
-		operator_id int REFERENCES warehouse.operator(operator_id) NOT NULL,
-		quality_control_id int REFERENCES warehouse.quality_control(quality_control_id),
-		machine_id int REFERENCES warehouse.machine(machine_id) NOT NULL,
-		production_stage_id int REFERENCES warehouse.production_stage(production_stage_id) NOT NULL,
-		product_id int REFERENCES warehouse.product(product_id),
-		start_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
-		end_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
-	
-		duration int NOT NULL,
-		raw_material_cost int NOT NULL
+	production_id SERIAL PRIMARY KEY NOT NULL,
+	operator_id int REFERENCES 
+		warehouse.operator(operator_id) NOT NULL,
+	quality_control_id int REFERENCES 
+		warehouse.quality_control(quality_control_id),
+	machine_id int REFERENCES warehouse.machine(machine_id) NOT NULL,
+	production_stage_id int REFERENCES 
+		warehouse.production_stage(production_stage_id) NOT NULL,
+	product_id int REFERENCES warehouse.product(product_id),
+	start_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
+	end_date_id int REFERENCES warehouse.date(date_id) NOT NULL,
+	duration int NOT NULL,
+	raw_material_cost int NOT NULL
 );		
 		
 \end{lstlisting}
@@ -1466,7 +1474,7 @@ AS last_year WHERE year_actual > 2010;
 \begingroup
 \renewcommand\arraystretch{0.5}
 \begin{longtable}{p{2.5cm}p{3cm}p{3cm}p{3cm}p{2cm}}
-        \caption{Production period-to-period comparison result} \\
+        \caption{Showroom period-to-period comparison result} \\
 	Year\_actual & Quarter\_actual & Visits\_this\_year & Visits\_last\_year & Difference \\
         \endfirsthead \\
         Year\_actual & Quarter\_actual & Visits\_this\_year & Visits\_last\_year & Difference \\
@@ -1509,11 +1517,12 @@ The business questions are visualized by using pyplot whereas one ROLLUP query i
 \subsection{Business questions}
 
 \begin{itemize}
-        \item Which is the best running showroom \ref{fig:best_showroom}
-        \item Where are the customers from \ref{fig:district} and \ref{fig:municipality}
-        \item Which department are the customers the most interested in \ref{fig:department}
-        \item Compare the number of visitors for a time period and/or showroom \ref{fig:month}
+        \item Which is the best running showroom? Fig. \ref{fig:best_showroom}
+        \item Where are the customers from? Fig. \ref{fig:district} and fig. \ref{fig:municipality}
+        \item Which department are the customers the most interested in? Fig. \ref{fig:department}
+        \item Compare the number of visitors for a time period and/or showroom? Fig. \ref{fig:month}
 \end{itemize}
+
 
 \begin{figure}[H] 
         \centering
@@ -1524,24 +1533,29 @@ The business questions are visualized by using pyplot whereas one ROLLUP query i
         }
 \end{figure}
 
+Figure \ref{fig:best_showroom} shows the number of visitors per showroom in decreasing order. It becomes clear that the showroom in Bozen has nearly the double number of visitors as the next smaller showroom.
+
 \begin{figure}[H] 
         \centering
         \includegraphics[width=\columnwidth]{../images/district.png}
         \caption{
                 \label{fig:district}  
-                Customer District
+                Visitor District
         }
 \end{figure}
+
+Figure \ref{fig:district} shows the number of visitors by their municipality. Again, Bozen is with more than 25\% the biggest chunk.
 
 \begin{figure}[H] 
         \centering
         \includegraphics[width=\columnwidth]{../images/municipality.png}
         \caption{
                 \label{fig:municipality}  
-                Customer Municipality
+                Visitor Municipality
         }
 \end{figure}
 
+Figure \ref{fig:district} shows the number of visitors per district. Bozen outnumbers all other districts whereas the lowest number of visitors come from Wipptal.
 
 \begin{figure}[H] 
         \centering
@@ -1552,6 +1566,7 @@ The business questions are visualized by using pyplot whereas one ROLLUP query i
         }
 \end{figure}
 
+The next figure \ref{fig:department} visualizes the number of visitors by department. One can see that Living room, Kitchen, Hotel and Bathroom have similar numbers, whereas Children and Office are a lot smaller.
 
 \begin{figure}[H] 
         \centering
@@ -1562,6 +1577,8 @@ The business questions are visualized by using pyplot whereas one ROLLUP query i
         }
 \end{figure}
 
+Figure \ref{fig:month} shows the trend of how many visitors come to all showrooms over time. It becomes evident, that winter is a lot better than summer.
+
 \begin{figure}[H] 
         \centering
         \includegraphics[width=\columnwidth]{../images/sunburst.PNG}
@@ -1570,5 +1587,7 @@ The business questions are visualized by using pyplot whereas one ROLLUP query i
                 Sunburst Diagram of ROLLUP query
         }
 \end{figure}
+
+Figure \ref{fig:sunburst} is a screen shot from a Power-Bi report. The type of the diagram is sunburst. It is interactive and you are able to choose different levels of granularity in order to understand how many visitors you have for example in Bozen in the Kitchen department during the winter season.
 
 \end{document}
